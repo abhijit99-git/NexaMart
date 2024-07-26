@@ -1,0 +1,91 @@
+1 ) Products:
+
+ProductID (Primary key) 
+ProductName
+Price
+StockQuantity
+Description
+
+2) Categories:
+
+CategoryID (Primary Key)
+CategoryName
+Description
+
+3) Suppliers:
+
+SupplierID (Primary Key)
+SupplierName
+Address
+City
+Country
+Phone
+
+4) Customers:
+
+CustomerID (Primary Key)
+CustomerName
+Email
+Phone
+Address
+
+4) Employees:
+
+EmployeeID (Primary Key)
+FirstName
+LastName
+Phone
+HireDate
+Salary
+Department_name:
+
+5) Departments:
+
+DepartmentID (Primary Key)
+DepartmentName
+
+6) Orders:
+
+OrderID (Primary Key)
+CustomerID (connection)
+Product ID
+OrderDate
+Quantity
+TotalAmount
+Status
+
+7) Inventory:
+
+InventoryID (Primary Key)
+ProductID (connect)
+StockQuantity
+
+8) Sales:
+
+SaleID (Primary Key)
+ProductID (connect)
+SaleDate
+Quantity
+TotalPrice
+
+9) Payments:
+
+PaymentID (Primary Key)
+OrderID (Foreign Key)
+PaymentDate
+PaymentAmount
+PaymentMethod
+
+10) Suppliers:
+
+SupplierID (Primary Key)
+ProductID (connect) 
+SupplyDate
+Quantity
+TotalCost
+
+11) Admin 
+ 
+Admin ID
+adminUsername
+adminPassword
