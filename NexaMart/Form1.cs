@@ -19,7 +19,14 @@ namespace NexaMart
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if (username.Text == "" || password.Text=="")
+            {
+                MessageBox.Show("Enter correct username and password","", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+                username.ResetText();
+                password.ResetText();
+                username.Focus();
+            }
         }
 
         private void signupbtn_Click(object sender, EventArgs e)
