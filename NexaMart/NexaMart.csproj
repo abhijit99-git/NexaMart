@@ -110,5 +110,20 @@
   <ItemGroup>
     <None Include="Resources\minimize-sign.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Signup2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Signup3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Signup4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Signup5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signbutton.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

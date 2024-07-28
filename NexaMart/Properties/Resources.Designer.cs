@@ -103,6 +103,16 @@ namespace NexaMart.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap signbutton {
+            get {
+                object obj = ResourceManager.GetObject("signbutton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Signup {
             get {
                 object obj = ResourceManager.GetObject("Signup", resourceCulture);
@@ -116,6 +126,46 @@ namespace NexaMart.Properties {
         internal static System.Drawing.Bitmap Signup1 {
             get {
                 object obj = ResourceManager.GetObject("Signup1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Signup2 {
+            get {
+                object obj = ResourceManager.GetObject("Signup2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Signup3 {
+            get {
+                object obj = ResourceManager.GetObject("Signup3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Signup4 {
+            get {
+                object obj = ResourceManager.GetObject("Signup4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Signup5 {
+            get {
+                object obj = ResourceManager.GetObject("Signup5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
