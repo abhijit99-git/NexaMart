@@ -110,7 +110,7 @@
             this.adminTextDes.BackColor = System.Drawing.Color.Transparent;
             this.adminTextDes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminTextDes.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.adminTextDes.Location = new System.Drawing.Point(85, 38);
+            this.adminTextDes.Location = new System.Drawing.Point(87, 45);
             this.adminTextDes.Name = "adminTextDes";
             this.adminTextDes.Size = new System.Drawing.Size(56, 15);
             this.adminTextDes.TabIndex = 5;
@@ -122,7 +122,7 @@
             this.AdminName.BackColor = System.Drawing.Color.Transparent;
             this.AdminName.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.AdminName.Location = new System.Drawing.Point(78, 7);
+            this.AdminName.Location = new System.Drawing.Point(78, 14);
             this.AdminName.Name = "AdminName";
             this.AdminName.Size = new System.Drawing.Size(91, 31);
             this.AdminName.TabIndex = 4;
@@ -303,7 +303,7 @@
             this.dashMenu.BackColor = System.Drawing.Color.Transparent;
             this.dashMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dashMenu.Image = global::NexaMart.Properties.Resources.menu;
-            this.dashMenu.Location = new System.Drawing.Point(17, 10);
+            this.dashMenu.Location = new System.Drawing.Point(19, 14);
             this.dashMenu.Name = "dashMenu";
             this.dashMenu.Size = new System.Drawing.Size(32, 28);
             this.dashMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
