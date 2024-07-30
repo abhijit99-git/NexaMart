@@ -45,11 +45,11 @@
             // 
             // signupClick
             // 
+            this.signupClick.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.signupClick.BackColor = System.Drawing.Color.Transparent;
             this.signupClick.BackgroundImage = global::NexaMart.Properties.Resources.signbutton;
             this.signupClick.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.signupClick.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.signupClick.Dock = System.Windows.Forms.DockStyle.Fill;
             this.signupClick.Location = new System.Drawing.Point(3, 3);
             this.signupClick.Name = "signupClick";
             this.signupClick.Size = new System.Drawing.Size(275, 104);

@@ -54,9 +54,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.SidebarTimer = new System.Windows.Forms.Timer(this.components);
+            this.FIllDashPanel = new System.Windows.Forms.Panel();
+            this.StraigthLine = new System.Windows.Forms.PictureBox();
             this.dashMinimize = new System.Windows.Forms.PictureBox();
             this.closeDash = new System.Windows.Forms.PictureBox();
-            this.StraigthLine = new System.Windows.Forms.PictureBox();
             this.sidebar.SuspendLayout();
             this.AdminPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -73,9 +74,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.LogoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StraigthLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeDash)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StraigthLine)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebar
@@ -122,7 +123,7 @@
             this.adminTextDes.BackColor = System.Drawing.Color.Transparent;
             this.adminTextDes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminTextDes.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.adminTextDes.Location = new System.Drawing.Point(77, 45);
+            this.adminTextDes.Location = new System.Drawing.Point(87, 45);
             this.adminTextDes.Name = "adminTextDes";
             this.adminTextDes.Size = new System.Drawing.Size(56, 15);
             this.adminTextDes.TabIndex = 5;
@@ -144,10 +145,10 @@
             // 
             this.dashMenu.BackColor = System.Drawing.Color.Transparent;
             this.dashMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dashMenu.Image = global::NexaMart.Properties.Resources.menu;
-            this.dashMenu.Location = new System.Drawing.Point(19, 14);
+            this.dashMenu.Image = global::NexaMart.Properties.Resources.option;
+            this.dashMenu.Location = new System.Drawing.Point(15, 14);
             this.dashMenu.Name = "dashMenu";
-            this.dashMenu.Size = new System.Drawing.Size(32, 28);
+            this.dashMenu.Size = new System.Drawing.Size(36, 31);
             this.dashMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dashMenu.TabIndex = 1;
             this.dashMenu.TabStop = false;
@@ -155,6 +156,7 @@
             // 
             // HomePanel
             // 
+            this.HomePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(219)))), ((int)(((byte)(249)))));
             this.HomePanel.Controls.Add(this.HomeText);
             this.HomePanel.Controls.Add(this.pictureBox1);
             this.HomePanel.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -162,17 +164,20 @@
             this.HomePanel.Name = "HomePanel";
             this.HomePanel.Size = new System.Drawing.Size(209, 66);
             this.HomePanel.TabIndex = 4;
+            this.HomePanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.HomePanel_MouseClick);
             // 
             // HomeText
             // 
             this.HomeText.AutoSize = true;
             this.HomeText.BackColor = System.Drawing.Color.Transparent;
             this.HomeText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
             this.HomeText.Location = new System.Drawing.Point(75, 9);
             this.HomeText.Name = "HomeText";
             this.HomeText.Size = new System.Drawing.Size(68, 28);
             this.HomeText.TabIndex = 5;
             this.HomeText.Text = "Home";
+            this.HomeText.Click += new System.EventHandler(this.HomeText_Click);
             this.HomeText.MouseLeave += new System.EventHandler(this.HomeText_MouseLeave);
             this.HomeText.MouseHover += new System.EventHandler(this.HomeText_MouseHover);
             // 
@@ -187,6 +192,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // CategoryPanel
             // 
@@ -197,17 +203,20 @@
             this.CategoryPanel.Name = "CategoryPanel";
             this.CategoryPanel.Size = new System.Drawing.Size(209, 66);
             this.CategoryPanel.TabIndex = 5;
+            this.CategoryPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CategoryPanel_MouseClick);
             // 
             // Categories
             // 
             this.Categories.AutoSize = true;
             this.Categories.BackColor = System.Drawing.Color.Transparent;
             this.Categories.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Categories.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
             this.Categories.Location = new System.Drawing.Point(65, 9);
             this.Categories.Name = "Categories";
             this.Categories.Size = new System.Drawing.Size(108, 28);
             this.Categories.TabIndex = 5;
             this.Categories.Text = "Categories";
+            this.Categories.Click += new System.EventHandler(this.Categories_Click);
             this.Categories.MouseLeave += new System.EventHandler(this.Categories_MouseLeave);
             this.Categories.MouseHover += new System.EventHandler(this.Categories_MouseHover);
             // 
@@ -222,6 +231,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // ProfilePanel
             // 
@@ -232,17 +242,20 @@
             this.ProfilePanel.Name = "ProfilePanel";
             this.ProfilePanel.Size = new System.Drawing.Size(209, 66);
             this.ProfilePanel.TabIndex = 6;
+            this.ProfilePanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ProfilePanel_MouseClick);
             // 
             // Profile
             // 
             this.Profile.AutoSize = true;
             this.Profile.BackColor = System.Drawing.Color.Transparent;
             this.Profile.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Profile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
             this.Profile.Location = new System.Drawing.Point(75, 9);
             this.Profile.Name = "Profile";
             this.Profile.Size = new System.Drawing.Size(71, 28);
             this.Profile.TabIndex = 5;
             this.Profile.Text = "Profile";
+            this.Profile.Click += new System.EventHandler(this.Profile_Click);
             this.Profile.MouseLeave += new System.EventHandler(this.Profile_MouseLeave);
             this.Profile.MouseHover += new System.EventHandler(this.Profile_MouseHover);
             // 
@@ -257,6 +270,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // panel7
             // 
@@ -288,17 +302,20 @@
             this.AboutPanel.Name = "AboutPanel";
             this.AboutPanel.Size = new System.Drawing.Size(205, 51);
             this.AboutPanel.TabIndex = 5;
+            this.AboutPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AboutPanel_MouseClick);
             // 
             // Aboutus
             // 
             this.Aboutus.AutoSize = true;
             this.Aboutus.BackColor = System.Drawing.Color.Transparent;
             this.Aboutus.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aboutus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
             this.Aboutus.Location = new System.Drawing.Point(75, 9);
             this.Aboutus.Name = "Aboutus";
             this.Aboutus.Size = new System.Drawing.Size(95, 28);
             this.Aboutus.TabIndex = 5;
             this.Aboutus.Text = "About us";
+            this.Aboutus.Click += new System.EventHandler(this.Aboutus_Click);
             this.Aboutus.MouseLeave += new System.EventHandler(this.Aboutus_MouseLeave);
             this.Aboutus.MouseHover += new System.EventHandler(this.Aboutus_MouseHover);
             // 
@@ -313,6 +330,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // LogoutPanel
             // 
@@ -330,7 +348,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
             this.label4.Location = new System.Drawing.Point(79, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 28);
@@ -358,31 +376,13 @@
             this.SidebarTimer.Interval = 10;
             this.SidebarTimer.Tick += new System.EventHandler(this.SidebarTimer_Tick);
             // 
-            // dashMinimize
+            // FIllDashPanel
             // 
-            this.dashMinimize.BackColor = System.Drawing.Color.Transparent;
-            this.dashMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dashMinimize.Image = global::NexaMart.Properties.Resources.minimize_sign1;
-            this.dashMinimize.Location = new System.Drawing.Point(1308, 12);
-            this.dashMinimize.Name = "dashMinimize";
-            this.dashMinimize.Size = new System.Drawing.Size(27, 23);
-            this.dashMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.dashMinimize.TabIndex = 3;
-            this.dashMinimize.TabStop = false;
-            this.dashMinimize.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // closeDash
-            // 
-            this.closeDash.BackColor = System.Drawing.Color.Transparent;
-            this.closeDash.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closeDash.Image = global::NexaMart.Properties.Resources.cancel;
-            this.closeDash.Location = new System.Drawing.Point(1351, 12);
-            this.closeDash.Name = "closeDash";
-            this.closeDash.Size = new System.Drawing.Size(27, 23);
-            this.closeDash.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.closeDash.TabIndex = 2;
-            this.closeDash.TabStop = false;
-            this.closeDash.Click += new System.EventHandler(this.closeDash_Click);
+            this.FIllDashPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.FIllDashPanel.Location = new System.Drawing.Point(234, 33);
+            this.FIllDashPanel.Name = "FIllDashPanel";
+            this.FIllDashPanel.Size = new System.Drawing.Size(1144, 743);
+            this.FIllDashPanel.TabIndex = 5;
             // 
             // StraigthLine
             // 
@@ -394,15 +394,42 @@
             this.StraigthLine.TabIndex = 4;
             this.StraigthLine.TabStop = false;
             // 
+            // dashMinimize
+            // 
+            this.dashMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.dashMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dashMinimize.Image = global::NexaMart.Properties.Resources.minimize_sign1;
+            this.dashMinimize.Location = new System.Drawing.Point(1318, 4);
+            this.dashMinimize.Name = "dashMinimize";
+            this.dashMinimize.Size = new System.Drawing.Size(27, 23);
+            this.dashMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.dashMinimize.TabIndex = 7;
+            this.dashMinimize.TabStop = false;
+            this.dashMinimize.Click += new System.EventHandler(this.dashMinimize_Click);
+            // 
+            // closeDash
+            // 
+            this.closeDash.BackColor = System.Drawing.Color.Transparent;
+            this.closeDash.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeDash.Image = global::NexaMart.Properties.Resources.cancel;
+            this.closeDash.Location = new System.Drawing.Point(1351, 4);
+            this.closeDash.Name = "closeDash";
+            this.closeDash.Size = new System.Drawing.Size(27, 23);
+            this.closeDash.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.closeDash.TabIndex = 6;
+            this.closeDash.TabStop = false;
+            this.closeDash.Click += new System.EventHandler(this.closeDash_Click_1);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1390, 785);
-            this.Controls.Add(this.StraigthLine);
             this.Controls.Add(this.dashMinimize);
             this.Controls.Add(this.closeDash);
+            this.Controls.Add(this.FIllDashPanel);
+            this.Controls.Add(this.StraigthLine);
             this.Controls.Add(this.sidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -432,9 +459,9 @@
             this.LogoutPanel.ResumeLayout(false);
             this.LogoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StraigthLine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeDash)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StraigthLine)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -444,8 +471,6 @@
         private System.Windows.Forms.FlowLayoutPanel sidebar;
         private System.Windows.Forms.Panel AdminPanel;
         private System.Windows.Forms.PictureBox dashMenu;
-        private System.Windows.Forms.PictureBox closeDash;
-        private System.Windows.Forms.PictureBox dashMinimize;
         private System.Windows.Forms.Label AdminName;
         private System.Windows.Forms.Panel HomePanel;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -468,5 +493,8 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox StraigthLine;
+        private System.Windows.Forms.Panel FIllDashPanel;
+        private System.Windows.Forms.PictureBox dashMinimize;
+        private System.Windows.Forms.PictureBox closeDash;
     }
 }

@@ -78,7 +78,7 @@ namespace NexaMart
             }
             else
             {
-                MessageBox.Show(" ㅤ       Sign up Sucessfully!      ㅤ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(" ㅤ  Sign up Sucessfully!    ㅤ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Application.Restart();
             }
         }
