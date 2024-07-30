@@ -97,10 +97,10 @@
             // 
             // AdminPanel
             // 
+            this.AdminPanel.Controls.Add(this.dashMenu);
             this.AdminPanel.Controls.Add(this.pictureBox6);
             this.AdminPanel.Controls.Add(this.adminTextDes);
             this.AdminPanel.Controls.Add(this.AdminName);
-            this.AdminPanel.Controls.Add(this.dashMenu);
             this.AdminPanel.Location = new System.Drawing.Point(3, 3);
             this.AdminPanel.Name = "AdminPanel";
             this.AdminPanel.Size = new System.Drawing.Size(209, 104);
@@ -146,9 +146,9 @@
             this.dashMenu.BackColor = System.Drawing.Color.Transparent;
             this.dashMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dashMenu.Image = global::NexaMart.Properties.Resources.option;
-            this.dashMenu.Location = new System.Drawing.Point(15, 14);
+            this.dashMenu.Location = new System.Drawing.Point(12, 20);
             this.dashMenu.Name = "dashMenu";
-            this.dashMenu.Size = new System.Drawing.Size(36, 31);
+            this.dashMenu.Size = new System.Drawing.Size(29, 25);
             this.dashMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dashMenu.TabIndex = 1;
             this.dashMenu.TabStop = false;
@@ -162,7 +162,7 @@
             this.HomePanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.HomePanel.Location = new System.Drawing.Point(3, 113);
             this.HomePanel.Name = "HomePanel";
-            this.HomePanel.Size = new System.Drawing.Size(209, 66);
+            this.HomePanel.Size = new System.Drawing.Size(209, 53);
             this.HomePanel.TabIndex = 4;
             this.HomePanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.HomePanel_MouseClick);
             // 
@@ -188,7 +188,7 @@
             this.pictureBox1.Image = global::NexaMart.Properties.Resources.house;
             this.pictureBox1.Location = new System.Drawing.Point(8, 9);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 33);
+            this.pictureBox1.Size = new System.Drawing.Size(37, 31);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -199,9 +199,9 @@
             this.CategoryPanel.Controls.Add(this.Categories);
             this.CategoryPanel.Controls.Add(this.pictureBox2);
             this.CategoryPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CategoryPanel.Location = new System.Drawing.Point(3, 185);
+            this.CategoryPanel.Location = new System.Drawing.Point(3, 172);
             this.CategoryPanel.Name = "CategoryPanel";
-            this.CategoryPanel.Size = new System.Drawing.Size(209, 66);
+            this.CategoryPanel.Size = new System.Drawing.Size(209, 53);
             this.CategoryPanel.TabIndex = 5;
             this.CategoryPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CategoryPanel_MouseClick);
             // 
@@ -227,7 +227,7 @@
             this.pictureBox2.Image = global::NexaMart.Properties.Resources.inventory;
             this.pictureBox2.Location = new System.Drawing.Point(8, 9);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(39, 33);
+            this.pictureBox2.Size = new System.Drawing.Size(37, 31);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
@@ -238,9 +238,9 @@
             this.ProfilePanel.Controls.Add(this.Profile);
             this.ProfilePanel.Controls.Add(this.pictureBox3);
             this.ProfilePanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ProfilePanel.Location = new System.Drawing.Point(3, 257);
+            this.ProfilePanel.Location = new System.Drawing.Point(3, 231);
             this.ProfilePanel.Name = "ProfilePanel";
-            this.ProfilePanel.Size = new System.Drawing.Size(209, 66);
+            this.ProfilePanel.Size = new System.Drawing.Size(209, 53);
             this.ProfilePanel.TabIndex = 6;
             this.ProfilePanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ProfilePanel_MouseClick);
             // 
@@ -266,7 +266,7 @@
             this.pictureBox3.Image = global::NexaMart.Properties.Resources.user;
             this.pictureBox3.Location = new System.Drawing.Point(8, 9);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(39, 33);
+            this.pictureBox3.Size = new System.Drawing.Size(37, 31);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
@@ -277,7 +277,7 @@
             this.panel7.Controls.Add(this.pictureBox7);
             this.panel7.Controls.Add(this.AboutPanel);
             this.panel7.Controls.Add(this.LogoutPanel);
-            this.panel7.Location = new System.Drawing.Point(3, 329);
+            this.panel7.Location = new System.Drawing.Point(3, 290);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(209, 466);
             this.panel7.TabIndex = 7;
