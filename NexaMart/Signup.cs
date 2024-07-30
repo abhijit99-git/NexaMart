@@ -103,6 +103,12 @@ namespace NexaMart
         {
             WindowState = FormWindowState.Minimized;
         }
-     
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            f.Show();
+            this.Close();
+        }
     }
 }
