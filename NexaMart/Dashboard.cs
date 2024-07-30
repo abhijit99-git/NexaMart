@@ -85,6 +85,8 @@ namespace NexaMart
 
         }
         */
+
+        private Form activeForm = null;
         private void SidebarTimer_Tick(object sender, EventArgs e)
         {
             int leftGap = 10; 
@@ -120,6 +122,47 @@ namespace NexaMart
                     SidebarTimer.Stop();
                 }
             }
+
+            if (activeForm != null)
+            {
+                AdjustFormLayout();
+            }
+        }
+
+        private void AdjustFormLayout()
+        {
+           
+            if (activeForm != null)
+            {
+                activeForm.Refresh(); 
+            }
+        }
+
+        public void loadform(object formObject)
+        {
+            Form newForm = formObject as Form;
+            if (newForm == null) return;
+
+           
+            if (activeForm != null && activeForm.GetType() == newForm.GetType())
+            {
+                return;
+            }
+
+           
+            if (activeForm != null)
+            {
+                activeForm.Hide();
+            }
+
+            
+            activeForm = newForm;
+            activeForm.TopLevel = false;
+            activeForm.Dock = DockStyle.Fill;
+            this.FIllDashPanel.Controls.Add(activeForm);
+            this.FIllDashPanel.Tag = activeForm;
+            activeForm.BringToFront();
+            activeForm.Show();
         }
 
 
@@ -321,6 +364,7 @@ namespace NexaMart
 
         // Fill dashboard forms
 
+        /*
         public void loadform(object Form)
         {
         
@@ -333,6 +377,7 @@ namespace NexaMart
             this.FIllDashPanel.Tag = f;
             f.Show();
         }
+        */
 
     
 
