@@ -13,7 +13,8 @@ namespace NexaMart
    
     public partial class Dashboard : Form
     {
-        Form1 f= new Form1 ();
+        Form1 f = new Form1();
+        public string Adminname { get; set; }
         bool BarExpand;
         public Dashboard()
         {
@@ -59,6 +60,7 @@ namespace NexaMart
             if (BarExpand)
             {
                 sidebar.Width -= 10;
+                StraigthLine.Visible = false;
                 if (sidebar.Width == sidebar.MinimumSize.Width)
                 {
                     BarExpand = false;
@@ -68,6 +70,7 @@ namespace NexaMart
             else
             {
                 sidebar.Width += 10;
+                StraigthLine.Visible = true;
                 if (sidebar.Width == sidebar.MaximumSize.Width)
                 {
                     BarExpand = true;
@@ -85,6 +88,8 @@ namespace NexaMart
         private void Dashboard_Load(object sender, EventArgs e)
         {
             SidebarTimer.Start();
+            AdminName.Text = Adminname;
+            
    
         }
 

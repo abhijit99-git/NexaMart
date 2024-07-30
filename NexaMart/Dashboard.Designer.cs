@@ -55,6 +55,7 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.StraigthLine = new System.Windows.Forms.PictureBox();
             this.sidebar.SuspendLayout();
             this.AdminPanel.SuspendLayout();
             this.HomePanel.SuspendLayout();
@@ -73,6 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StraigthLine)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebar
@@ -107,8 +109,8 @@
             this.adminTextDes.AutoSize = true;
             this.adminTextDes.BackColor = System.Drawing.Color.Transparent;
             this.adminTextDes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminTextDes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.adminTextDes.Location = new System.Drawing.Point(85, 39);
+            this.adminTextDes.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.adminTextDes.Location = new System.Drawing.Point(85, 38);
             this.adminTextDes.Name = "adminTextDes";
             this.adminTextDes.Size = new System.Drawing.Size(56, 15);
             this.adminTextDes.TabIndex = 5;
@@ -120,7 +122,7 @@
             this.AdminName.BackColor = System.Drawing.Color.Transparent;
             this.AdminName.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.AdminName.Location = new System.Drawing.Point(74, 8);
+            this.AdminName.Location = new System.Drawing.Point(78, 7);
             this.AdminName.Name = "AdminName";
             this.AdminName.Size = new System.Drawing.Size(91, 31);
             this.AdminName.TabIndex = 4;
@@ -381,12 +383,23 @@
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
+            // StraigthLine
+            // 
+            this.StraigthLine.Image = global::NexaMart.Properties.Resources.Straigth_Line;
+            this.StraigthLine.Location = new System.Drawing.Point(218, -2);
+            this.StraigthLine.Name = "StraigthLine";
+            this.StraigthLine.Size = new System.Drawing.Size(10, 806);
+            this.StraigthLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.StraigthLine.TabIndex = 4;
+            this.StraigthLine.TabStop = false;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1390, 785);
+            this.Controls.Add(this.StraigthLine);
             this.Controls.Add(this.dashMinimize);
             this.Controls.Add(this.closeDash);
             this.Controls.Add(this.sidebar);
@@ -419,6 +432,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StraigthLine)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -451,5 +465,6 @@
         private System.Windows.Forms.Label adminTextDes;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox StraigthLine;
     }
 }
