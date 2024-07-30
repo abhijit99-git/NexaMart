@@ -78,7 +78,7 @@ namespace NexaMart
             }
             else
             {
-                MessageBox.Show(" Sign up Sucessfully!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(" ㅤ       Sign up Sucessfully!      ㅤ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Application.Restart();
             }
         }
@@ -90,11 +90,13 @@ namespace NexaMart
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            DialogResult res = MessageBox.Show("   Exit?   ", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult res = MessageBox.Show("ㅤ      Exit?   ㅤ  ", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (res == DialogResult.Yes)
             {
                 Application.Exit();
             }
+
+            int val;
         }
 
         private void pictureBox3_Click_1(object sender, EventArgs e)

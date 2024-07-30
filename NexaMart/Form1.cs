@@ -81,7 +81,7 @@ namespace NexaMart
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            DialogResult res = MessageBox.Show("   Exit?   ", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult res = MessageBox.Show("ㅤ      Exit?   ㅤ  ", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (res == DialogResult.Yes)
             {
                 Application.Exit();

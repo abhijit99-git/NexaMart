@@ -263,6 +263,16 @@ namespace NexaMart.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Straigth_Line {
+            get {
+                object obj = ResourceManager.GetObject("Straigth Line", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ui {
             get {
                 object obj = ResourceManager.GetObject("ui", resourceCulture);
