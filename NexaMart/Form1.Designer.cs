@@ -123,7 +123,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::NexaMart.Properties.Resources.minimize_sign;
-            this.pictureBox3.Location = new System.Drawing.Point(1306, 45);
+            this.pictureBox3.Location = new System.Drawing.Point(1321, 3);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(22, 19);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -137,7 +137,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::NexaMart.Properties.Resources.ui;
-            this.pictureBox1.Location = new System.Drawing.Point(1347, 45);
+            this.pictureBox1.Location = new System.Drawing.Point(1362, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(20, 19);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -218,7 +218,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox username;
         private System.Windows.Forms.Button Loginbtn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox password;
@@ -227,6 +226,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.TextBox username;
     }
 }
 

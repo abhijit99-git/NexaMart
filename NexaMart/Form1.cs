@@ -59,7 +59,10 @@ namespace NexaMart
             }
             else
             {
-                System.Diagnostics.Process.Start("https://www.linkedin.com/feed/");
+               // System.Diagnostics.Process.Start("https://www.linkedin.com/feed/");
+               Dashboard d= new Dashboard();
+                d.Show();
+                this.Hide();
                 username.ResetText();
                 password.ResetText();
             }

@@ -52,7 +52,7 @@
             this.signupClick.Dock = System.Windows.Forms.DockStyle.Fill;
             this.signupClick.Location = new System.Drawing.Point(3, 3);
             this.signupClick.Name = "signupClick";
-            this.signupClick.Size = new System.Drawing.Size(306, 119);
+            this.signupClick.Size = new System.Drawing.Size(275, 104);
             this.signupClick.TabIndex = 7;
             this.signupClick.TabStop = false;
             this.signupClick.Click += new System.EventHandler(this.pictureBox4_Click);
@@ -110,12 +110,12 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.signupClick, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(929, 399);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(949, 427);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(312, 125);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(281, 110);
             this.tableLayoutPanel1.TabIndex = 8;
             // 
             // pictureBox3
