@@ -121,6 +121,7 @@ namespace NexaMart
             {
                 AdjustFormLayout();
             }
+           
         }
 
         private void AdjustFormLayout()
