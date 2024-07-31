@@ -64,7 +64,7 @@ namespace NexaMart
                     sidebar.Width = sidebar.MinimumSize.Width;
                     FIllDashPanel.Location = new Point(sidebar.Width + leftGap, FIllDashPanel.Location.Y);
                     FIllDashPanel.Width = this.Width - sidebar.Width - leftGap;
-
+                    
                     if (homepanelclicked == true)
                     {
                         loadform(new HomeForm());
@@ -149,7 +149,6 @@ namespace NexaMart
                 activeForm.Hide();
             }
 
-            
             activeForm = newForm;
             activeForm.TopLevel = false;
             activeForm.Dock = DockStyle.Fill;
