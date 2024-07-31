@@ -178,6 +178,9 @@
   <data name="inventory" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\inventory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="HomeMenuHe(orignal)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HomeMenuHe(orignal).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="signbutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\signbutton.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -186,6 +189,9 @@
   </data>
   <data name="Signup2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Signup2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ProfileMenuPanel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ProfileMenuPanel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Signup3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Signup3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,7 +220,7 @@
   <data name="Back-Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Back-Green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HomeMenuHe(orignal)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HomeMenuHe(orignal).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AboutMenuPanel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AboutMenuPanel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -233,5 +233,11 @@
   <ItemGroup>
     <None Include="Resources\HomeMenuHe%28orignal%29.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProfileMenuPanel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutMenuPanel.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

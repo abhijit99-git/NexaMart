@@ -64,6 +64,7 @@ namespace NexaMart
                     sidebar.Width = sidebar.MinimumSize.Width;
                     FIllDashPanel.Location = new Point(sidebar.Width + leftGap, FIllDashPanel.Location.Y);
                     FIllDashPanel.Width = this.Width - sidebar.Width - leftGap;
+
                     if (homepanelclicked == true)
                     {
                         loadform(new HomeForm());
@@ -72,7 +73,15 @@ namespace NexaMart
                     {
                         loadform(new CategoriesForm());
                     }
-                
+                    else if (profilepanelclicked == true)
+                    {
+                        loadform(new ProfileForm());
+                    }
+                    else if (aboutpanelclicked == true)
+                    {
+                        loadform(new AboutForm());
+                    }
+
                     BarExpand = false;
                     SidebarTimer.Stop();
                 }
@@ -94,6 +103,14 @@ namespace NexaMart
                     else if (categoripanelclicked == true)
                     {
                         loadform(new CategoriesForm());
+                    }
+                    else if (profilepanelclicked == true)
+                    {
+                        loadform(new ProfileForm());
+                    }
+                    else if (aboutpanelclicked == true)
+                    {
+                        loadform(new AboutForm());
                     }
                     BarExpand = true;
                     SidebarTimer.Stop();
@@ -315,11 +332,13 @@ namespace NexaMart
         private void ProfilePanel_MouseClick(object sender, MouseEventArgs e)
         {
             selectpanel("Profile");
+            loadform(new ProfileForm());
         }
 
         private void AboutPanel_MouseClick(object sender, MouseEventArgs e)
         {
             selectpanel("about");
+            loadform(new AboutForm());
         }
 
         private void HomeText_Click(object sender, EventArgs e)
@@ -337,11 +356,13 @@ namespace NexaMart
         private void Profile_Click(object sender, EventArgs e)
         {
             selectpanel("Profile");
+            loadform(new ProfileForm());
         }
 
         private void Aboutus_Click(object sender, EventArgs e)
         {
             selectpanel("about");
+            loadform(new AboutForm());
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
@@ -359,11 +380,13 @@ namespace NexaMart
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             selectpanel("Profile");
+            loadform(new ProfileForm());
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             selectpanel("about");
+            loadform(new AboutForm());
         }
 
         //end selction panel
