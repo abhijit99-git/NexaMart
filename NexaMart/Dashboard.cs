@@ -48,6 +48,7 @@ namespace NexaMart
      
 
         private Form activeForm = null;
+
         private void SidebarTimer_Tick(object sender, EventArgs e)
         {
             int leftGap = 10; 
@@ -63,7 +64,15 @@ namespace NexaMart
                     sidebar.Width = sidebar.MinimumSize.Width;
                     FIllDashPanel.Location = new Point(sidebar.Width + leftGap, FIllDashPanel.Location.Y);
                     FIllDashPanel.Width = this.Width - sidebar.Width - leftGap;
-                    loadform(new HomeForm());
+                    if (homepanelclicked == true)
+                    {
+                        loadform(new HomeForm());
+                    }
+                    else if (categoripanelclicked == true)
+                    {
+                        loadform(new CategoriesForm());
+                    }
+                
                     BarExpand = false;
                     SidebarTimer.Stop();
                 }
@@ -78,7 +87,14 @@ namespace NexaMart
                     sidebar.Width = sidebar.MaximumSize.Width;
                     FIllDashPanel.Location = new Point(sidebar.Width + leftGap, FIllDashPanel.Location.Y);
                     FIllDashPanel.Width = this.Width - sidebar.Width - leftGap - rightGap;
-                    loadform(new HomeForm());
+                    if (homepanelclicked == true)
+                    {
+                        loadform(new HomeForm());
+                    }
+                    else if (categoripanelclicked == true)
+                    {
+                        loadform(new CategoriesForm());
+                    }
                     BarExpand = true;
                     SidebarTimer.Stop();
                 }
@@ -226,6 +242,10 @@ namespace NexaMart
 
 
         // mouse event end  
+        bool homepanelclicked = false;
+        bool categoripanelclicked = false;
+        bool profilepanelclicked = false;
+        bool aboutpanelclicked = false;
         void selectpanel(String panel)
         {
             if (panel == "Home")
@@ -234,7 +254,12 @@ namespace NexaMart
                 CategoryPanel.BackColor = Color.AliceBlue;
                 ProfilePanel.BackColor = Color.AliceBlue;
                 AboutPanel.BackColor = Color.AliceBlue;
- 
+
+                homepanelclicked = true;
+                categoripanelclicked = false;
+                profilepanelclicked = false;
+                aboutpanelclicked = false;
+
             }
             else if (panel == "Category")
             {
@@ -242,7 +267,11 @@ namespace NexaMart
                 HomePanel.BackColor = Color.AliceBlue;
                 ProfilePanel.BackColor = Color.AliceBlue;
                 AboutPanel.BackColor = Color.AliceBlue;
-     
+
+                homepanelclicked = false;
+                categoripanelclicked = true;
+                profilepanelclicked = false;
+                aboutpanelclicked = false;
 
             }
             else if (panel == "Profile")
@@ -251,6 +280,11 @@ namespace NexaMart
                 CategoryPanel.BackColor = Color.AliceBlue;
                 HomePanel.BackColor = Color.AliceBlue;
                 AboutPanel.BackColor = Color.AliceBlue;
+
+                homepanelclicked = false;
+                categoripanelclicked = false;
+                profilepanelclicked = true;
+                aboutpanelclicked = false;
             }
             else if (panel == "about")
             {
@@ -258,7 +292,12 @@ namespace NexaMart
                 CategoryPanel.BackColor = Color.AliceBlue;
                 ProfilePanel.BackColor = Color.AliceBlue;
                 HomePanel.BackColor = Color.AliceBlue;
- 
+
+                homepanelclicked = false;
+                categoripanelclicked = false;
+                profilepanelclicked = false;
+                aboutpanelclicked = true;
+
             }
         }
         private void HomePanel_MouseClick(object sender, MouseEventArgs e)
@@ -270,6 +309,7 @@ namespace NexaMart
         private void CategoryPanel_MouseClick(object sender, MouseEventArgs e)
         {
             selectpanel("Category");
+            loadform(new CategoriesForm());
         }
 
         private void ProfilePanel_MouseClick(object sender, MouseEventArgs e)
@@ -285,11 +325,13 @@ namespace NexaMart
         private void HomeText_Click(object sender, EventArgs e)
         {
             selectpanel("Home");
+            loadform(new HomeForm());
         }
 
         private void Categories_Click(object sender, EventArgs e)
         {
             selectpanel("Category");
+            loadform(new CategoriesForm());
         }
 
         private void Profile_Click(object sender, EventArgs e)
@@ -305,11 +347,13 @@ namespace NexaMart
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             selectpanel("Home");
+            loadform(new HomeForm());
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             selectpanel("Category");
+            loadform(new CategoriesForm());
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

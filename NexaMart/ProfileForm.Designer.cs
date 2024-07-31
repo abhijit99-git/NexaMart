@@ -1,6 +1,6 @@
 ﻿namespace NexaMart
 {
-    partial class CategoriesForm
+    partial class ProfileForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,17 +30,16 @@
         {
             this.SuspendLayout();
             // 
-            // CategoriesForm
+            // ProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::NexaMart.Properties.Resources.HomeMenuP;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1144, 743);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "CategoriesForm";
+            this.Name = "ProfileForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CategoriesForm";
+            this.Text = "ProfileForm";
             this.ResumeLayout(false);
 
         }

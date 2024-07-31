@@ -331,9 +331,9 @@
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox8.Image = global::NexaMart.Properties.Resources.user1;
-            this.pictureBox8.Location = new System.Drawing.Point(109, 20);
+            this.pictureBox8.Location = new System.Drawing.Point(109, 13);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(33, 28);
+            this.pictureBox8.Size = new System.Drawing.Size(42, 35);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 2;
             this.pictureBox8.TabStop = false;
