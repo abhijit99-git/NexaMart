@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.banner1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -47,7 +47,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.panel1);
+            this.flowLayoutPanel1.Controls.Add(this.banner1);
             this.flowLayoutPanel1.Controls.Add(this.panel2);
             this.flowLayoutPanel1.Controls.Add(this.panel3);
             this.flowLayoutPanel1.Controls.Add(this.panel4);
@@ -61,14 +61,14 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1120, 719);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // panel1
+            // banner1
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.BackgroundImage = global::NexaMart.Properties.Resources.back_button;
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1078, 202);
-            this.panel1.TabIndex = 0;
+            this.banner1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.banner1.BackgroundImage = global::NexaMart.Properties.Resources.back_button;
+            this.banner1.Location = new System.Drawing.Point(12, 12);
+            this.banner1.Name = "banner1";
+            this.banner1.Size = new System.Drawing.Size(1078, 202);
+            this.banner1.TabIndex = 0;
             // 
             // panel2
             // 
@@ -147,9 +147,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Panel banner1;
         public System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Panel panel4;
@@ -157,5 +155,6 @@
         public System.Windows.Forms.Panel panel6;
         public System.Windows.Forms.Panel panel7;
         public System.Windows.Forms.Panel panel8;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

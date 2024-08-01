@@ -13,6 +13,7 @@ namespace NexaMart
    
     public partial class Dashboard : Form
     {
+
         Form1 f = new Form1();
         public string Adminname { get; set; }
         bool BarExpand;
@@ -20,6 +21,7 @@ namespace NexaMart
         {
             InitializeComponent();
             this.SetStyle(ControlStyles.ResizeRedraw, true);
+           
         }
         private const int cGrip = 16;
         private const int cCaption = 32;
@@ -83,7 +85,12 @@ namespace NexaMart
                     }
 
                     BarExpand = false;
+                    HomeForm f = new HomeForm();
+                    f.banner1.Width = 1090;
+                    loadform(f);
                     SidebarTimer.Stop();
+              
+                 
                 }
             }
             else
@@ -112,7 +119,9 @@ namespace NexaMart
                     {
                         loadform(new AboutForm());
                     }
+         
                     BarExpand = true;
+                 
                     SidebarTimer.Stop();
                 }
             }
@@ -121,8 +130,10 @@ namespace NexaMart
             {
                 AdjustFormLayout();
             }
-           
         }
+
+
+     
 
         private void AdjustFormLayout()
         {
@@ -162,12 +173,11 @@ namespace NexaMart
 
 
 
-        bool ans = false;
+        bool issmall = false;
         private void dashMenu_Click(object sender, EventArgs e)
         {
             SidebarTimer.Start();
      
-            
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
@@ -180,10 +190,6 @@ namespace NexaMart
 
         }
 
-        public void minimizefromHomeform()
-        {
-            
-        }
 
         private void LogoutPanel_MouseClick(object sender, MouseEventArgs e)
         {

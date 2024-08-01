@@ -12,11 +12,11 @@ namespace NexaMart
 {
     public partial class HomeForm : Form
     {
+     
         public HomeForm()
         {
             InitializeComponent();
         }
-
 
     }
 }

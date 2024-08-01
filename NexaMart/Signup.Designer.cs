@@ -152,7 +152,7 @@
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::NexaMart.Properties.Resources.Back_Green;
-            this.pictureBox2.Location = new System.Drawing.Point(1336, 734);
+            this.pictureBox2.Location = new System.Drawing.Point(1328, 729);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(33, 31);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
