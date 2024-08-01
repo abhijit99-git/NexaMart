@@ -31,13 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.banner1 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,13 +45,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Controls.Add(this.banner1);
+            this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Controls.Add(this.panel2);
             this.flowLayoutPanel1.Controls.Add(this.panel3);
             this.flowLayoutPanel1.Controls.Add(this.panel4);
-            this.flowLayoutPanel1.Controls.Add(this.panel5);
-            this.flowLayoutPanel1.Controls.Add(this.panel6);
-            this.flowLayoutPanel1.Controls.Add(this.panel7);
-            this.flowLayoutPanel1.Controls.Add(this.panel8);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(9);
@@ -64,67 +58,61 @@
             // banner1
             // 
             this.banner1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.banner1.BackgroundImage = global::NexaMart.Properties.Resources.back_button;
+            this.banner1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("banner1.BackgroundImage")));
+            this.banner1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.banner1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.banner1.Location = new System.Drawing.Point(12, 12);
+            this.banner1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
             this.banner1.Name = "banner1";
-            this.banner1.Size = new System.Drawing.Size(1078, 202);
+            this.banner1.Size = new System.Drawing.Size(1078, 372);
             this.banner1.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel1.Location = new System.Drawing.Point(12, 392);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1078, 372);
+            this.panel1.TabIndex = 1;
             // 
             // panel2
             // 
-            this.panel2.BackgroundImage = global::NexaMart.Properties.Resources.Back_Green;
-            this.panel2.Location = new System.Drawing.Point(12, 220);
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel2.Location = new System.Drawing.Point(12, 772);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1078, 202);
-            this.panel2.TabIndex = 1;
+            this.panel2.Size = new System.Drawing.Size(1078, 372);
+            this.panel2.TabIndex = 2;
             // 
             // panel3
             // 
-            this.panel3.BackgroundImage = global::NexaMart.Properties.Resources.house;
-            this.panel3.Location = new System.Drawing.Point(12, 428);
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel3.Location = new System.Drawing.Point(12, 1152);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1078, 202);
-            this.panel3.TabIndex = 2;
+            this.panel3.Size = new System.Drawing.Size(1078, 372);
+            this.panel3.TabIndex = 3;
             // 
             // panel4
             // 
-            this.panel4.BackgroundImage = global::NexaMart.Properties.Resources.inventory;
-            this.panel4.Location = new System.Drawing.Point(12, 636);
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel4.Location = new System.Drawing.Point(12, 1532);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1078, 202);
-            this.panel4.TabIndex = 3;
-            // 
-            // panel5
-            // 
-            this.panel5.BackgroundImage = global::NexaMart.Properties.Resources.information;
-            this.panel5.Location = new System.Drawing.Point(12, 844);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1078, 202);
-            this.panel5.TabIndex = 4;
-            // 
-            // panel6
-            // 
-            this.panel6.BackgroundImage = global::NexaMart.Properties.Resources.logout;
-            this.panel6.Location = new System.Drawing.Point(12, 1052);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1078, 202);
-            this.panel6.TabIndex = 5;
-            // 
-            // panel7
-            // 
-            this.panel7.BackgroundImage = global::NexaMart.Properties.Resources.user1;
-            this.panel7.Location = new System.Drawing.Point(12, 1260);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1078, 202);
-            this.panel7.TabIndex = 6;
-            // 
-            // panel8
-            // 
-            this.panel8.BackgroundImage = global::NexaMart.Properties.Resources.user;
-            this.panel8.Location = new System.Drawing.Point(12, 1468);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1078, 202);
-            this.panel8.TabIndex = 7;
+            this.panel4.Size = new System.Drawing.Size(1078, 380);
+            this.panel4.TabIndex = 4;
             // 
             // HomeForm
             // 
@@ -148,13 +136,10 @@
 
         #endregion
         public System.Windows.Forms.Panel banner1;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Panel panel4;
-        public System.Windows.Forms.Panel panel5;
-        public System.Windows.Forms.Panel panel6;
-        public System.Windows.Forms.Panel panel7;
-        public System.Windows.Forms.Panel panel8;
-        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

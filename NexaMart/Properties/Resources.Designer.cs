@@ -93,6 +93,16 @@ namespace NexaMart.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BillingBanner {
+            get {
+                object obj = ResourceManager.GetObject("BillingBanner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap black_line {
             get {
                 object obj = ResourceManager.GetObject("black line", resourceCulture);
@@ -106,6 +116,16 @@ namespace NexaMart.Properties {
         internal static System.Drawing.Bitmap cancel {
             get {
                 object obj = ResourceManager.GetObject("cancel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EmployeeBanner {
+            get {
+                object obj = ResourceManager.GetObject("EmployeeBanner", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,6 +303,26 @@ namespace NexaMart.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap OrderBanner {
+            get {
+                object obj = ResourceManager.GetObject("OrderBanner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ProductBanner {
+            get {
+                object obj = ResourceManager.GetObject("ProductBanner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ProfileMenuPanel {
             get {
                 object obj = ResourceManager.GetObject("ProfileMenuPanel", resourceCulture);
@@ -376,6 +416,16 @@ namespace NexaMart.Properties {
         internal static System.Drawing.Bitmap Straigth_Line {
             get {
                 object obj = ResourceManager.GetObject("Straigth Line", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap suppliersBanner {
+            get {
+                object obj = ResourceManager.GetObject("suppliersBanner", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -276,7 +276,7 @@
             // 
             // SidebarTimer
             // 
-            this.SidebarTimer.Interval = 10;
+            this.SidebarTimer.Interval = 7;
             this.SidebarTimer.Tick += new System.EventHandler(this.SidebarTimer_Tick);
             // 
             // FIllDashPanel

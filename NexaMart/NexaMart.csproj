@@ -239,5 +239,20 @@
   <ItemGroup>
     <None Include="Resources\AboutMenuPanel.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EmployeeBanner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProductBanner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OrderBanner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suppliersBanner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BillingBanner.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
