@@ -85,12 +85,8 @@ namespace NexaMart
                     }
 
                     BarExpand = false;
-                    HomeForm f = new HomeForm();
-                    f.banner1.Width = 1090;
-                    loadform(f);
                     SidebarTimer.Stop();
-              
-                 
+
                 }
             }
             else
@@ -173,7 +169,6 @@ namespace NexaMart
 
 
 
-        bool issmall = false;
         private void dashMenu_Click(object sender, EventArgs e)
         {
             SidebarTimer.Start();
