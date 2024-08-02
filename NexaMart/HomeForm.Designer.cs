@@ -111,7 +111,7 @@
             this.panel4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel4.Location = new System.Drawing.Point(12, 1532);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1078, 380);
+            this.panel4.Size = new System.Drawing.Size(1078, 372);
             this.panel4.TabIndex = 4;
             // 
             // HomeForm
