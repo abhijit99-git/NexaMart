@@ -16,5 +16,20 @@ namespace NexaMart
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/abhijit99-git");
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+           // System.Diagnostics.Process.Start("");
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.linkedin.com/feed/");
+        }
     }
 }

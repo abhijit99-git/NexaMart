@@ -220,13 +220,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Loginbtn;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox password;
         private System.Windows.Forms.Button signupbtn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.TextBox username;
+        public System.Windows.Forms.TextBox password;
     }
 }
 

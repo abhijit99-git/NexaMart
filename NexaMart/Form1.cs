@@ -60,13 +60,17 @@ namespace NexaMart
             else
             {
                 Dashboard d= new Dashboard();
+              
                 if (username.Text.Length > 7)
                 {
                     d.Adminname = "Admin";
+  
+
                 }
                 else
                 {
                     d.Adminname = username.Text;
+                
                 }
                // System.Diagnostics.Process.Start("https://www.linkedin.com/feed/");
                 d.Show();

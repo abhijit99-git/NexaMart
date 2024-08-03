@@ -53,6 +53,7 @@ namespace NexaMart
 
         private void SidebarTimer_Tick(object sender, EventArgs e)
         {
+     
             int leftGap = 10; 
             int rightGap = 20; 
 
@@ -66,7 +67,7 @@ namespace NexaMart
                     sidebar.Width = sidebar.MinimumSize.Width;
                     FIllDashPanel.Location = new Point(sidebar.Width + leftGap, FIllDashPanel.Location.Y);
                     FIllDashPanel.Width = this.Width - sidebar.Width - leftGap;
-                    
+
                     if (homepanelclicked == true)
                     {
                         loadform(new HomeForm());
