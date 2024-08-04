@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+using System.Data.OleDb;
 
 namespace NexaMart
 {
@@ -17,6 +18,8 @@ namespace NexaMart
 
     public partial class Form1 : Form
     {
+
+        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\C# programs\VS PROGRAMS\\NexaMart\NexaMart\NexaMartDB.accdb");
         public Form1()
         {
             InitializeComponent();
@@ -60,23 +63,49 @@ namespace NexaMart
             else
             {
                 Dashboard d= new Dashboard();
-              
-                if (username.Text.Length > 7)
-                {
-                    d.Adminname = "Admin";
-  
 
-                }
-                else
+                try
                 {
-                    d.Adminname = username.Text;
-                
+                    con.Open();
+                    string query = "Select ad_name,ad_password from Admin where ad_name='" + username.Text + "' and ad_password='" + password.Text + "'";
+                    OleDbCommand cmd = new OleDbCommand(query, con);
+                    OleDbDataReader read= cmd.ExecuteReader();
+
+
+                    //perform
+                    if (read.Read())
+                    {
+
+                        if (username.Text.Length > 7)
+                        {
+                            d.Adminname = "Admin";
+
+
+                        }
+                        else
+                        {
+                            d.Adminname = username.Text;
+
+                        }
+
+                        d.Show();
+                        this.Hide();
+                        username.ResetText();
+                        password.ResetText();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Enter correct username and password", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-               // System.Diagnostics.Process.Start("https://www.linkedin.com/feed/");
-                d.Show();
-                this.Hide();
-                username.ResetText();
-                password.ResetText();
+                catch (Exception ex)
+                {
+                    MessageBox.Show("error " + ex);
+                }
+                finally
+                {
+                    con.Close();
+                }
             }
         }
 

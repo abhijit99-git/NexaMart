@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Data.OleDb;
 
 namespace NexaMart
 {
     public partial class Signup : Form
     {
+
+        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\C# programs\VS PROGRAMS\\NexaMart\NexaMart\NexaMartDB.accdb");
         public Signup()
         {
             InitializeComponent();
@@ -78,6 +82,22 @@ namespace NexaMart
             }
             else
             {
+                try
+                {
+                    con.Open();
+                    string query = "INSERT INTO Admin (ad_name, ad_password) VALUES ('" + signupUser.Text + "', '" + signupPass.Text + "')";
+                    OleDbCommand cmd = new OleDbCommand(query, con);
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("error "+ex);
+                }
+                finally
+                {
+                    con.Close();
+                }
+
                 MessageBox.Show(" ㅤ  Sign up Sucessfully!    ㅤ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Application.Restart();
             }
