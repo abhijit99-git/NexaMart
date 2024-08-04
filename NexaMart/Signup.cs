@@ -64,11 +64,6 @@ namespace NexaMart
 
 
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-           
-        }
-
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
@@ -130,5 +125,9 @@ namespace NexaMart
             f.Show();
             this.Close();
         }
+
+ 
+
+        
     }
 }

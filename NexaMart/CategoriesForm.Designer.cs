@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategoriesForm));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Managebtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -38,6 +40,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -65,6 +68,8 @@
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.Managebtn);
             this.panel4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel4.Location = new System.Drawing.Point(12, 12);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
@@ -72,6 +77,37 @@
             this.panel4.Size = new System.Drawing.Size(1086, 273);
             this.panel4.TabIndex = 4;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Impact", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(730, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(216, 53);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Categories";
+            // 
+            // Managebtn
+            // 
+            this.Managebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(27)))), ((int)(((byte)(26)))));
+            this.Managebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Managebtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(164)))), ((int)(((byte)(41)))));
+            this.Managebtn.FlatAppearance.BorderSize = 2;
+            this.Managebtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(164)))), ((int)(((byte)(41)))));
+            this.Managebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Managebtn.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Managebtn.ForeColor = System.Drawing.Color.White;
+            this.Managebtn.Location = new System.Drawing.Point(770, 157);
+            this.Managebtn.Name = "Managebtn";
+            this.Managebtn.Size = new System.Drawing.Size(128, 42);
+            this.Managebtn.TabIndex = 1;
+            this.Managebtn.Text = "Manage";
+            this.Managebtn.UseVisualStyleBackColor = false;
+            this.Managebtn.MouseLeave += new System.EventHandler(this.Managebtn_MouseLeave);
+            this.Managebtn.MouseHover += new System.EventHandler(this.Managebtn_MouseHover);
             // 
             // panel1
             // 
@@ -148,7 +184,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::NexaMart.Properties.Resources.HomeMenuP;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1144, 743);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -157,6 +192,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CategoriesForm";
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -171,5 +208,7 @@
         public System.Windows.Forms.Panel panel5;
         public System.Windows.Forms.Panel panel6;
         public System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button Managebtn;
     }
 }

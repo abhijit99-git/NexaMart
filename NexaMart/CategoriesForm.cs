@@ -22,5 +22,17 @@ namespace NexaMart
    
            
         }
+
+        private void Managebtn_MouseHover(object sender, EventArgs e)
+        {
+            //Managebtn.BackColor = Color.FromArgb(136, 164, 41);
+            //Managebtn.ForeColor = Color.White;
+        }
+
+        private void Managebtn_MouseLeave(object sender, EventArgs e)
+        {
+            //Managebtn.BackColor = Color.Transparent;
+            //Managebtn.ForeColor = Color.FromArgb(136, 164, 41);
+        }
     }
 }

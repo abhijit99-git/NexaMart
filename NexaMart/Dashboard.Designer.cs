@@ -59,6 +59,8 @@
             this.dashMinimize = new System.Windows.Forms.PictureBox();
             this.closeDash = new System.Windows.Forms.PictureBox();
             this.StraigthLine = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.sidebar.SuspendLayout();
             this.AdminPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -79,6 +81,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dashMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeDash)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StraigthLine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebar
@@ -99,6 +103,7 @@
             // 
             // AdminPanel
             // 
+            this.AdminPanel.Controls.Add(this.pictureBox10);
             this.AdminPanel.Controls.Add(this.pictureBox8);
             this.AdminPanel.Controls.Add(this.dashMenu);
             this.AdminPanel.Controls.Add(this.pictureBox6);
@@ -289,6 +294,7 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.pictureBox9);
             this.panel7.Controls.Add(this.pictureBox7);
             this.panel7.Controls.Add(this.AboutPanel);
             this.panel7.Controls.Add(this.LogoutPanel);
@@ -438,6 +444,30 @@
             this.StraigthLine.TabStop = false;
             this.StraigthLine.Visible = false;
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(11, 346);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(50, 48);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 8;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(3, 76);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(50, 48);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 9;
+            this.pictureBox10.TabStop = false;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -481,6 +511,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dashMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeDash)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StraigthLine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -516,5 +548,7 @@
         private System.Windows.Forms.PictureBox closeDash;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox pictureBox9;
     }
 }

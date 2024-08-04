@@ -37,6 +37,7 @@
             this.updateText = new System.Windows.Forms.Label();
             this.updatePic = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ReceiptApply = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.PasswordProfileName = new System.Windows.Forms.Label();
             this.AdminProfileName = new System.Windows.Forms.Label();
@@ -48,6 +49,7 @@
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.updatePic)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ReceiptApply)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -133,6 +135,7 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.ReceiptApply);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.PasswordProfileName);
             this.panel1.Controls.Add(this.AdminProfileName);
@@ -154,6 +157,20 @@
             this.panel1.Size = new System.Drawing.Size(1111, 715);
             this.panel1.TabIndex = 9;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // ReceiptApply
+            // 
+            this.ReceiptApply.BackColor = System.Drawing.Color.Transparent;
+            this.ReceiptApply.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ReceiptApply.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReceiptApply.Image = ((System.Drawing.Image)(resources.GetObject("ReceiptApply.Image")));
+            this.ReceiptApply.Location = new System.Drawing.Point(492, 478);
+            this.ReceiptApply.Name = "ReceiptApply";
+            this.ReceiptApply.Size = new System.Drawing.Size(30, 26);
+            this.ReceiptApply.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ReceiptApply.TabIndex = 18;
+            this.ReceiptApply.TabStop = false;
+            this.ReceiptApply.Click += new System.EventHandler(this.ReceiptApply_Click);
             // 
             // pictureBox5
             // 
@@ -220,7 +237,6 @@
             this.ReceiptName.Name = "ReceiptName";
             this.ReceiptName.Size = new System.Drawing.Size(258, 22);
             this.ReceiptName.TabIndex = 12;
-            this.ReceiptName.TextChanged += new System.EventHandler(this.ReceiptName_TextChanged);
             // 
             // label4
             // 
@@ -262,7 +278,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::NexaMart.Properties.Resources.ProfileMenuPanel;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1144, 743);
             this.Controls.Add(this.panel1);
@@ -270,9 +285,11 @@
             this.Name = "ProfileForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProfileForm";
+            this.Load += new System.EventHandler(this.ProfileForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.updatePic)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ReceiptApply)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -300,5 +317,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox5;
         public System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox ReceiptApply;
     }
 }

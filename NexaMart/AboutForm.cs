@@ -24,7 +24,7 @@ namespace NexaMart
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-           // System.Diagnostics.Process.Start("");
+           System.Diagnostics.Process.Start("https://www.instagram.com/shivprasad.suryawanshi967?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==");
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
