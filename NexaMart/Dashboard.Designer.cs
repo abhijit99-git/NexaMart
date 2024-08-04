@@ -83,7 +83,7 @@
             // 
             // sidebar
             // 
-            this.sidebar.BackColor = System.Drawing.Color.AliceBlue;
+            this.sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(45)))), ((int)(((byte)(51)))));
             this.sidebar.Controls.Add(this.AdminPanel);
             this.sidebar.Controls.Add(this.HomePanel);
             this.sidebar.Controls.Add(this.CategoryPanel);
@@ -114,7 +114,7 @@
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox8.Image = global::NexaMart.Properties.Resources.user1;
-            this.pictureBox8.Location = new System.Drawing.Point(109, 13);
+            this.pictureBox8.Location = new System.Drawing.Point(106, 13);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(42, 35);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -125,7 +125,7 @@
             // 
             this.dashMenu.BackColor = System.Drawing.Color.Transparent;
             this.dashMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dashMenu.Image = global::NexaMart.Properties.Resources.option;
+            this.dashMenu.Image = ((System.Drawing.Image)(resources.GetObject("dashMenu.Image")));
             this.dashMenu.Location = new System.Drawing.Point(12, 20);
             this.dashMenu.Name = "dashMenu";
             this.dashMenu.Size = new System.Drawing.Size(33, 28);
@@ -137,7 +137,7 @@
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Image = global::NexaMart.Properties.Resources.black_line;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(56, 100);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(139, 24);
@@ -150,7 +150,7 @@
             this.adminTextDes.AutoSize = true;
             this.adminTextDes.BackColor = System.Drawing.Color.Transparent;
             this.adminTextDes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminTextDes.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.adminTextDes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.adminTextDes.Location = new System.Drawing.Point(92, 82);
             this.adminTextDes.Name = "adminTextDes";
             this.adminTextDes.Size = new System.Drawing.Size(56, 15);
@@ -162,7 +162,7 @@
             this.AdminName.AutoSize = true;
             this.AdminName.BackColor = System.Drawing.Color.Transparent;
             this.AdminName.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.AdminName.ForeColor = System.Drawing.Color.White;
             this.AdminName.Location = new System.Drawing.Point(82, 51);
             this.AdminName.Name = "AdminName";
             this.AdminName.Size = new System.Drawing.Size(91, 31);
@@ -186,7 +186,7 @@
             this.HomeText.AutoSize = true;
             this.HomeText.BackColor = System.Drawing.Color.Transparent;
             this.HomeText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HomeText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.HomeText.ForeColor = System.Drawing.Color.SeaGreen;
             this.HomeText.Location = new System.Drawing.Point(65, 9);
             this.HomeText.Name = "HomeText";
             this.HomeText.Size = new System.Drawing.Size(68, 28);
@@ -225,7 +225,7 @@
             this.Categories.AutoSize = true;
             this.Categories.BackColor = System.Drawing.Color.Transparent;
             this.Categories.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Categories.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Categories.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Categories.Location = new System.Drawing.Point(65, 9);
             this.Categories.Name = "Categories";
             this.Categories.Size = new System.Drawing.Size(108, 28);
@@ -264,7 +264,7 @@
             this.Profile.AutoSize = true;
             this.Profile.BackColor = System.Drawing.Color.Transparent;
             this.Profile.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Profile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Profile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Profile.Location = new System.Drawing.Point(65, 9);
             this.Profile.Name = "Profile";
             this.Profile.Size = new System.Drawing.Size(71, 28);
@@ -300,7 +300,7 @@
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Image = global::NexaMart.Properties.Resources.black_line;
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
             this.pictureBox7.Location = new System.Drawing.Point(56, 370);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(139, 24);
@@ -324,7 +324,7 @@
             this.Aboutus.AutoSize = true;
             this.Aboutus.BackColor = System.Drawing.Color.Transparent;
             this.Aboutus.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Aboutus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Aboutus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Aboutus.Location = new System.Drawing.Point(65, 9);
             this.Aboutus.Name = "Aboutus";
             this.Aboutus.Size = new System.Drawing.Size(95, 28);
@@ -363,7 +363,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label4.Location = new System.Drawing.Point(65, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 28);
@@ -442,7 +442,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(1390, 785);
             this.Controls.Add(this.dashMinimize);
             this.Controls.Add(this.closeDash);

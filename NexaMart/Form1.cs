@@ -88,6 +88,7 @@ namespace NexaMart
 
                         }
 
+                        d.Adminpass = password.Text;
                         d.Show();
                         this.Hide();
                         username.ResetText();

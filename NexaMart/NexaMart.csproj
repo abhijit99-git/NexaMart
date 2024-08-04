@@ -59,6 +59,18 @@
     <Compile Include="CategoriesForm.Designer.cs">
       <DependentUpon>CategoriesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\PROD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\PROD.Designer.cs">
+      <DependentUpon>PROD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ProductTemplate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ProductTemplate.Designer.cs">
+      <DependentUpon>ProductTemplate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +113,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CategoriesForm.resx">
       <DependentUpon>CategoriesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\PROD.resx">
+      <DependentUpon>PROD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ProductTemplate.resx">
+      <DependentUpon>ProductTemplate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>

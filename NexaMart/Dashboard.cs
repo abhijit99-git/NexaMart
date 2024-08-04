@@ -15,7 +15,11 @@ namespace NexaMart
     {
 
         Form1 f = new Form1();
-        public string Adminname { get; set; }
+        public  string Adminname { get; set; }
+        public  string Adminpass { get; set; }
+
+        ProfileForm pf;
+
         bool BarExpand;
         public Dashboard()
         {
@@ -78,7 +82,7 @@ namespace NexaMart
                     }
                     else if (profilepanelclicked == true)
                     {
-                        loadform(new ProfileForm());
+                        loadform(pf);
                     }
                     else if (aboutpanelclicked == true)
                     {
@@ -110,7 +114,7 @@ namespace NexaMart
                     }
                     else if (profilepanelclicked == true)
                     {
-                        loadform(new ProfileForm());
+                        loadform(pf);
                     }
                     else if (aboutpanelclicked == true)
                     {
@@ -179,7 +183,9 @@ namespace NexaMart
         private void Dashboard_Load(object sender, EventArgs e)
         {
             SidebarTimer.Start();
+            pf = new ProfileForm(Adminname, Adminpass);
             AdminName.Text = Adminname;
+            selectpanel("Home");
             loadform(new HomeForm());
 
 
@@ -215,7 +221,8 @@ namespace NexaMart
 
         private void label4_MouseLeave(object sender, EventArgs e)
         {
-            label4.ForeColor = Color.FromArgb(64, 64, 64);
+           
+            label4.ForeColor = Color.FromArgb(224, 224,244);
         }
 
         private void Aboutus_MouseHover(object sender, EventArgs e)
@@ -225,7 +232,11 @@ namespace NexaMart
 
         private void Aboutus_MouseLeave(object sender, EventArgs e)
         {
-            Aboutus.ForeColor = Color.FromArgb(64, 64, 64);
+            if (aboutpanelclicked != true)
+            {
+                Aboutus.ForeColor = Color.FromArgb(224, 224, 244);
+            }
+            
 
         }
 
@@ -241,7 +252,11 @@ namespace NexaMart
 
         private void Categories_MouseLeave(object sender, EventArgs e)
         {
-            Categories.ForeColor = Color.FromArgb(64, 64, 64);
+            if (categoripanelclicked != true)
+            {
+                Categories.ForeColor = Color.FromArgb(224, 224, 244);
+            }
+           
         }
 
         private void HomeText_MouseHover(object sender, EventArgs e)
@@ -251,12 +266,20 @@ namespace NexaMart
 
         private void HomeText_MouseLeave(object sender, EventArgs e)
         {
-            HomeText.ForeColor = Color.FromArgb(64, 64, 64);
+            if (homepanelclicked != true)
+            {
+                HomeText.ForeColor = Color.FromArgb(224, 224, 244);
+            }
+           
         }
 
         private void Profile_MouseLeave(object sender, EventArgs e)
         {
-            Profile.ForeColor = Color.FromArgb(64, 64, 64);
+            if (profilepanelclicked != true)
+            {
+                Profile.ForeColor = Color.FromArgb(224, 224, 244);
+            }
+            
         }
 
 
@@ -269,10 +292,14 @@ namespace NexaMart
         {
             if (panel == "Home")
             {
-                HomePanel.BackColor = Color.FromArgb(213, 226, 250);
-                CategoryPanel.BackColor = Color.AliceBlue;
-                ProfilePanel.BackColor = Color.AliceBlue;
-                AboutPanel.BackColor = Color.AliceBlue;
+                HomePanel.BackColor = Color.FromArgb(206, 237, 200);
+                CategoryPanel.BackColor = Color.FromArgb(34, 45, 51);
+                ProfilePanel.BackColor = Color.FromArgb(34, 45, 51);
+                AboutPanel.BackColor = Color.FromArgb(34, 45, 51);
+                HomeText.ForeColor = Color.SeaGreen;
+                Categories.ForeColor= Color.FromArgb(224, 224, 244);
+                Aboutus.ForeColor= Color.FromArgb(224, 224, 244);
+                Profile.ForeColor= Color.FromArgb(224, 224, 244);
 
                 homepanelclicked = true;
                 categoripanelclicked = false;
@@ -283,9 +310,13 @@ namespace NexaMart
             else if (panel == "Category")
             {
                 CategoryPanel.BackColor = Color.FromArgb(206, 237, 200);
-                HomePanel.BackColor = Color.AliceBlue;
-                ProfilePanel.BackColor = Color.AliceBlue;
-                AboutPanel.BackColor = Color.AliceBlue;
+                HomePanel.BackColor = Color.FromArgb(34, 45, 51);
+                ProfilePanel.BackColor = Color.FromArgb(34, 45, 51);
+                AboutPanel.BackColor = Color.FromArgb(34, 45, 51);
+                Categories.ForeColor = Color.SeaGreen;
+                HomeText.ForeColor = Color.FromArgb(224, 224, 244);
+                Aboutus.ForeColor = Color.FromArgb(224, 224, 244);
+                Profile.ForeColor = Color.FromArgb(224, 224, 244);
 
                 homepanelclicked = false;
                 categoripanelclicked = true;
@@ -295,10 +326,14 @@ namespace NexaMart
             }
             else if (panel == "Profile")
             {
-                ProfilePanel.BackColor = Color.FromArgb(211, 211, 252);
-                CategoryPanel.BackColor = Color.AliceBlue;
-                HomePanel.BackColor = Color.AliceBlue;
-                AboutPanel.BackColor = Color.AliceBlue;
+                ProfilePanel.BackColor = Color.FromArgb(206, 237, 200);
+                CategoryPanel.BackColor = Color.FromArgb(34, 45, 51);
+                HomePanel.BackColor = Color.FromArgb(34, 45, 51);
+                AboutPanel.BackColor = Color.FromArgb(34, 45, 51);
+                Profile.ForeColor = Color.SeaGreen;
+                Categories.ForeColor = Color.FromArgb(224, 224, 244);
+                Aboutus.ForeColor = Color.FromArgb(224, 224, 244);
+                HomeText.ForeColor = Color.FromArgb(224, 224, 244);
 
                 homepanelclicked = false;
                 categoripanelclicked = false;
@@ -307,10 +342,14 @@ namespace NexaMart
             }
             else if (panel == "about")
             {
-                AboutPanel.BackColor = Color.FromArgb(206, 230, 234);
-                CategoryPanel.BackColor = Color.AliceBlue;
-                ProfilePanel.BackColor = Color.AliceBlue;
-                HomePanel.BackColor = Color.AliceBlue;
+                AboutPanel.BackColor = Color.FromArgb(206, 237, 200);
+                CategoryPanel.BackColor = Color.FromArgb(34, 45, 51);
+                ProfilePanel.BackColor = Color.FromArgb(34, 45, 51);
+                HomePanel.BackColor = Color.FromArgb(34, 45, 51);
+                Aboutus.ForeColor = Color.SeaGreen;
+                Categories.ForeColor = Color.FromArgb(224, 224, 244);
+                HomeText.ForeColor = Color.FromArgb(224, 224, 244);
+                Profile.ForeColor = Color.FromArgb(224, 224, 244);
 
                 homepanelclicked = false;
                 categoripanelclicked = false;
@@ -334,7 +373,7 @@ namespace NexaMart
         private void ProfilePanel_MouseClick(object sender, MouseEventArgs e)
         {
             selectpanel("Profile");
-            loadform(new ProfileForm());
+            loadform(pf);
         }
 
         private void AboutPanel_MouseClick(object sender, MouseEventArgs e)
@@ -358,7 +397,7 @@ namespace NexaMart
         private void Profile_Click(object sender, EventArgs e)
         {
             selectpanel("Profile");
-            loadform(new ProfileForm());
+            loadform(pf);
         }
 
         private void Aboutus_Click(object sender, EventArgs e)
@@ -382,7 +421,7 @@ namespace NexaMart
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             selectpanel("Profile");
-            loadform(new ProfileForm());
+            loadform(pf);
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)

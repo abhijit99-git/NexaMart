@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileForm));
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.changeName = new System.Windows.Forms.TextBox();
             this.usernameProfile = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.changePass = new System.Windows.Forms.TextBox();
             this.passwordProfile = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.updateText = new System.Windows.Forms.Label();
+            this.updatePic = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.PasswordProfileName = new System.Windows.Forms.Label();
@@ -46,7 +46,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updatePic)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -66,12 +66,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "PROFILE";
             // 
-            // textBox1
+            // changeName
             // 
-            this.textBox1.Location = new System.Drawing.Point(79, 243);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(258, 22);
-            this.textBox1.TabIndex = 3;
+            this.changeName.Location = new System.Drawing.Point(79, 243);
+            this.changeName.Name = "changeName";
+            this.changeName.Size = new System.Drawing.Size(258, 22);
+            this.changeName.TabIndex = 3;
             // 
             // usernameProfile
             // 
@@ -85,12 +85,12 @@
             this.usernameProfile.TabIndex = 4;
             this.usernameProfile.Text = "Username";
             // 
-            // textBox2
+            // changePass
             // 
-            this.textBox2.Location = new System.Drawing.Point(79, 304);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(258, 22);
-            this.textBox2.TabIndex = 5;
+            this.changePass.Location = new System.Drawing.Point(79, 304);
+            this.changePass.Name = "changePass";
+            this.changePass.Size = new System.Drawing.Size(258, 22);
+            this.changePass.TabIndex = 5;
             // 
             // passwordProfile
             // 
@@ -104,30 +104,30 @@
             this.passwordProfile.TabIndex = 6;
             this.passwordProfile.Text = "Password";
             // 
-            // label2
+            // updateText
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(156, 359);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 25);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "UPDATE";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.updateText.AutoSize = true;
+            this.updateText.BackColor = System.Drawing.Color.Transparent;
+            this.updateText.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.updateText.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.updateText.Location = new System.Drawing.Point(156, 359);
+            this.updateText.Name = "updateText";
+            this.updateText.Size = new System.Drawing.Size(87, 25);
+            this.updateText.TabIndex = 7;
+            this.updateText.Text = "UPDATE";
+            this.updateText.Click += new System.EventHandler(this.updateText_Click);
             // 
-            // pictureBox1
+            // updatePic
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(130, 350);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(149, 42);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.updatePic.BackColor = System.Drawing.Color.Transparent;
+            this.updatePic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.updatePic.Location = new System.Drawing.Point(130, 350);
+            this.updatePic.Name = "updatePic";
+            this.updatePic.Size = new System.Drawing.Size(149, 42);
+            this.updatePic.TabIndex = 8;
+            this.updatePic.TabStop = false;
+            this.updatePic.Click += new System.EventHandler(this.updatePic_Click);
             // 
             // panel1
             // 
@@ -142,12 +142,12 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.updateText);
+            this.panel1.Controls.Add(this.updatePic);
             this.panel1.Controls.Add(this.passwordProfile);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.changePass);
             this.panel1.Controls.Add(this.usernameProfile);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.changeName);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 16);
             this.panel1.Name = "panel1";
@@ -270,7 +270,7 @@
             this.Name = "ProfileForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProfileForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updatePic)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -284,12 +284,12 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox changeName;
         private System.Windows.Forms.Label usernameProfile;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox changePass;
         private System.Windows.Forms.Label passwordProfile;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label updateText;
+        private System.Windows.Forms.PictureBox updatePic;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label PasswordProfileName;
