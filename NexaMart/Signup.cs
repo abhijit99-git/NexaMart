@@ -126,8 +126,6 @@ namespace NexaMart
             this.Close();
         }
 
- 
-
-        
+    
     }
 }

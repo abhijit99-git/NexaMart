@@ -48,9 +48,9 @@
             this.signupClick.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("signupClick.BackgroundImage")));
             this.signupClick.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.signupClick.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.signupClick.Location = new System.Drawing.Point(899, 485);
+            this.signupClick.Location = new System.Drawing.Point(827, 454);
             this.signupClick.Name = "signupClick";
-            this.signupClick.Size = new System.Drawing.Size(169, 53);
+            this.signupClick.Size = new System.Drawing.Size(205, 72);
             this.signupClick.TabIndex = 7;
             this.signupClick.TabStop = false;
             this.signupClick.Click += new System.EventHandler(this.pictureBox4_Click);
@@ -62,7 +62,7 @@
             this.signupPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.signupPass.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signupPass.ForeColor = System.Drawing.Color.Indigo;
-            this.signupPass.Location = new System.Drawing.Point(854, 425);
+            this.signupPass.Location = new System.Drawing.Point(769, 394);
             this.signupPass.Name = "signupPass";
             this.signupPass.PasswordChar = '*';
             this.signupPass.Size = new System.Drawing.Size(263, 20);
@@ -76,7 +76,7 @@
             this.signupUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.signupUser.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signupUser.ForeColor = System.Drawing.Color.Indigo;
-            this.signupUser.Location = new System.Drawing.Point(854, 322);
+            this.signupUser.Location = new System.Drawing.Point(769, 273);
             this.signupUser.Name = "signupUser";
             this.signupUser.Size = new System.Drawing.Size(263, 20);
             this.signupUser.TabIndex = 5;
@@ -87,7 +87,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::NexaMart.Properties.Resources.minimize_sign;
-            this.pictureBox3.Location = new System.Drawing.Point(1317, 12);
+            this.pictureBox3.Location = new System.Drawing.Point(1082, 12);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(22, 19);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -101,7 +101,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::NexaMart.Properties.Resources.cancel;
-            this.pictureBox1.Location = new System.Drawing.Point(1358, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(1123, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(20, 19);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -128,7 +128,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1390, 787);
+            this.ClientSize = new System.Drawing.Size(1155, 703);
             this.Controls.Add(this.signupClick);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
@@ -138,7 +138,6 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1390, 785);
             this.Name = "Signup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Signup";
