@@ -63,7 +63,7 @@ namespace NexaMart
 
             if (BarExpand)
             {
-                sidebar.Width -= 10;
+                sidebar.Width -= 20;
                 StraigthLine.Visible = false;
 
                 if (sidebar.Width <= sidebar.MinimumSize.Width)
@@ -96,7 +96,7 @@ namespace NexaMart
             }
             else
             {
-                sidebar.Width += 10;
+                sidebar.Width += 20;
                 StraigthLine.Visible = true;
 
                 if (sidebar.Width >= sidebar.MaximumSize.Width)
