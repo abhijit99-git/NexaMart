@@ -31,45 +31,45 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.banner1 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.HomeTextBanner = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.EmployeesTXT = new System.Windows.Forms.Label();
-            this.OrdersTXT = new System.Windows.Forms.Label();
-            this.ProductsTXT = new System.Windows.Forms.Label();
-            this.SuppliersTXT = new System.Windows.Forms.Label();
-            this.BillingTXT = new System.Windows.Forms.Label();
-            this.InventoryTXT = new System.Windows.Forms.Label();
+            this.HomeTextBanner = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.employeeBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.EmployeesTXT = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.OrderBtn = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.OrdersTXT = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.ProductBtn = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.ProductsTXT = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.SupplierBtn = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.SuppliersTXT = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.BillingBtn = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.BillingTXT = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.inventoryBtn = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.Managebtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.InventoryTXT = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.banner1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel10.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,65 +106,17 @@
             this.banner1.Size = new System.Drawing.Size(1080, 361);
             this.banner1.TabIndex = 0;
             // 
-            // panel1
+            // label1
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.OrdersTXT);
-            this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel1.Location = new System.Drawing.Point(552, 382);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(519, 278);
-            this.panel1.TabIndex = 1;
-            // 
-            // panel10
-            // 
-            this.panel10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel10.BackgroundImage")));
-            this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel10.Controls.Add(this.button3);
-            this.panel10.Controls.Add(this.pictureBox4);
-            this.panel10.Controls.Add(this.SuppliersTXT);
-            this.panel10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel10.Location = new System.Drawing.Point(552, 671);
-            this.panel10.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(519, 278);
-            this.panel10.TabIndex = 2;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.Managebtn);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.EmployeesTXT);
-            this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel2.Location = new System.Drawing.Point(12, 381);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 3, 8, 5);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(529, 281);
-            this.panel2.TabIndex = 7;
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Controls.Add(this.button2);
-            this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Controls.Add(this.ProductsTXT);
-            this.panel4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel4.Location = new System.Drawing.Point(12, 670);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 3, 8, 5);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(529, 281);
-            this.panel4.TabIndex = 8;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Leelawadee", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(161, 191);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(227, 15);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "MANAGE YOUR TASKS EFFORTLESSLY";
             // 
             // HomeTextBanner
             // 
@@ -178,47 +130,48 @@
             this.HomeTextBanner.TabIndex = 1;
             this.HomeTextBanner.Text = "Home";
             // 
-            // label1
+            // panel2
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Leelawadee", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(161, 191);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(227, 15);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "MANAGE YOUR TASKS EFFORTLESSLY";
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.employeeBtn);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.EmployeesTXT);
+            this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel2.Location = new System.Drawing.Point(12, 381);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 3, 8, 5);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(529, 281);
+            this.panel2.TabIndex = 7;
             // 
-            // panel3
+            // employeeBtn
             // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Controls.Add(this.pictureBox5);
-            this.panel3.Controls.Add(this.BillingTXT);
-            this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel3.Location = new System.Drawing.Point(12, 959);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 3, 8, 5);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(529, 281);
-            this.panel3.TabIndex = 9;
+            this.employeeBtn.BackColor = System.Drawing.Color.Transparent;
+            this.employeeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.employeeBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.employeeBtn.FlatAppearance.BorderSize = 2;
+            this.employeeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen;
+            this.employeeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.employeeBtn.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeeBtn.ForeColor = System.Drawing.Color.White;
+            this.employeeBtn.Location = new System.Drawing.Point(190, 173);
+            this.employeeBtn.Name = "employeeBtn";
+            this.employeeBtn.Size = new System.Drawing.Size(128, 42);
+            this.employeeBtn.TabIndex = 4;
+            this.employeeBtn.Text = "Manage";
+            this.employeeBtn.UseVisualStyleBackColor = false;
             // 
-            // panel5
+            // pictureBox1
             // 
-            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Controls.Add(this.button5);
-            this.panel5.Controls.Add(this.pictureBox6);
-            this.panel5.Controls.Add(this.InventoryTXT);
-            this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel5.Location = new System.Drawing.Point(552, 959);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(519, 281);
-            this.panel5.TabIndex = 10;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(378, 111);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 59);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // EmployeesTXT
             // 
@@ -232,6 +185,49 @@
             this.EmployeesTXT.TabIndex = 2;
             this.EmployeesTXT.Text = "EMPLOYEES";
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.OrderBtn);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.OrdersTXT);
+            this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel1.Location = new System.Drawing.Point(552, 382);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(521, 278);
+            this.panel1.TabIndex = 1;
+            // 
+            // OrderBtn
+            // 
+            this.OrderBtn.BackColor = System.Drawing.Color.Transparent;
+            this.OrderBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.OrderBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.OrderBtn.FlatAppearance.BorderSize = 2;
+            this.OrderBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.OrderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OrderBtn.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderBtn.ForeColor = System.Drawing.Color.White;
+            this.OrderBtn.Location = new System.Drawing.Point(175, 172);
+            this.OrderBtn.Name = "OrderBtn";
+            this.OrderBtn.Size = new System.Drawing.Size(128, 42);
+            this.OrderBtn.TabIndex = 5;
+            this.OrderBtn.Text = "Manage";
+            this.OrderBtn.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(345, 110);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(60, 59);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
             // OrdersTXT
             // 
             this.OrdersTXT.AutoSize = true;
@@ -243,6 +239,49 @@
             this.OrdersTXT.Size = new System.Drawing.Size(171, 59);
             this.OrdersTXT.TabIndex = 3;
             this.OrdersTXT.Text = "ORDERS";
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.Controls.Add(this.ProductBtn);
+            this.panel4.Controls.Add(this.pictureBox3);
+            this.panel4.Controls.Add(this.ProductsTXT);
+            this.panel4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel4.Location = new System.Drawing.Point(12, 670);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 3, 8, 5);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(529, 281);
+            this.panel4.TabIndex = 8;
+            // 
+            // ProductBtn
+            // 
+            this.ProductBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ProductBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ProductBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.ProductBtn.FlatAppearance.BorderSize = 2;
+            this.ProductBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet;
+            this.ProductBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ProductBtn.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductBtn.ForeColor = System.Drawing.Color.White;
+            this.ProductBtn.Location = new System.Drawing.Point(190, 173);
+            this.ProductBtn.Name = "ProductBtn";
+            this.ProductBtn.Size = new System.Drawing.Size(128, 42);
+            this.ProductBtn.TabIndex = 5;
+            this.ProductBtn.Text = "Manage";
+            this.ProductBtn.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(378, 111);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(60, 59);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
             // 
             // ProductsTXT
             // 
@@ -256,6 +295,49 @@
             this.ProductsTXT.TabIndex = 3;
             this.ProductsTXT.Text = "PRODUCTS";
             // 
+            // panel10
+            // 
+            this.panel10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel10.BackgroundImage")));
+            this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel10.Controls.Add(this.SupplierBtn);
+            this.panel10.Controls.Add(this.pictureBox4);
+            this.panel10.Controls.Add(this.SuppliersTXT);
+            this.panel10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel10.Location = new System.Drawing.Point(552, 671);
+            this.panel10.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(521, 278);
+            this.panel10.TabIndex = 2;
+            // 
+            // SupplierBtn
+            // 
+            this.SupplierBtn.BackColor = System.Drawing.Color.Transparent;
+            this.SupplierBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.SupplierBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.SupplierBtn.FlatAppearance.BorderSize = 2;
+            this.SupplierBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Brown;
+            this.SupplierBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SupplierBtn.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SupplierBtn.ForeColor = System.Drawing.Color.White;
+            this.SupplierBtn.Location = new System.Drawing.Point(190, 172);
+            this.SupplierBtn.Name = "SupplierBtn";
+            this.SupplierBtn.Size = new System.Drawing.Size(128, 42);
+            this.SupplierBtn.TabIndex = 5;
+            this.SupplierBtn.Text = "Manage";
+            this.SupplierBtn.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(369, 110);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(60, 63);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            // 
             // SuppliersTXT
             // 
             this.SuppliersTXT.AutoSize = true;
@@ -267,6 +349,49 @@
             this.SuppliersTXT.Size = new System.Drawing.Size(223, 59);
             this.SuppliersTXT.TabIndex = 3;
             this.SuppliersTXT.Text = "SUPPLIERS";
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Controls.Add(this.BillingBtn);
+            this.panel3.Controls.Add(this.pictureBox5);
+            this.panel3.Controls.Add(this.BillingTXT);
+            this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel3.Location = new System.Drawing.Point(12, 959);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 3, 8, 5);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(529, 281);
+            this.panel3.TabIndex = 9;
+            // 
+            // BillingBtn
+            // 
+            this.BillingBtn.BackColor = System.Drawing.Color.Transparent;
+            this.BillingBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BillingBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BillingBtn.FlatAppearance.BorderSize = 2;
+            this.BillingBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SaddleBrown;
+            this.BillingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BillingBtn.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BillingBtn.ForeColor = System.Drawing.Color.White;
+            this.BillingBtn.Location = new System.Drawing.Point(190, 173);
+            this.BillingBtn.Name = "BillingBtn";
+            this.BillingBtn.Size = new System.Drawing.Size(128, 42);
+            this.BillingBtn.TabIndex = 5;
+            this.BillingBtn.Text = "Manage";
+            this.BillingBtn.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(339, 111);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(60, 59);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 4;
+            this.pictureBox5.TabStop = false;
             // 
             // BillingTXT
             // 
@@ -280,72 +405,37 @@
             this.BillingTXT.TabIndex = 3;
             this.BillingTXT.Text = "BILLING";
             // 
-            // InventoryTXT
+            // panel5
             // 
-            this.InventoryTXT.AutoSize = true;
-            this.InventoryTXT.BackColor = System.Drawing.Color.Transparent;
-            this.InventoryTXT.Font = new System.Drawing.Font("Impact", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InventoryTXT.ForeColor = System.Drawing.Color.White;
-            this.InventoryTXT.Location = new System.Drawing.Point(135, 111);
-            this.InventoryTXT.Name = "InventoryTXT";
-            this.InventoryTXT.Size = new System.Drawing.Size(228, 59);
-            this.InventoryTXT.TabIndex = 3;
-            this.InventoryTXT.Text = "INVENTORY";
+            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel5.Controls.Add(this.inventoryBtn);
+            this.panel5.Controls.Add(this.pictureBox6);
+            this.panel5.Controls.Add(this.InventoryTXT);
+            this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel5.Location = new System.Drawing.Point(552, 959);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(521, 281);
+            this.panel5.TabIndex = 10;
             // 
-            // pictureBox1
+            // inventoryBtn
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(378, 111);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 59);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(345, 110);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(60, 59);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(378, 111);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(60, 59);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(369, 110);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(60, 63);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(339, 111);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(60, 59);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
+            this.inventoryBtn.BackColor = System.Drawing.Color.Transparent;
+            this.inventoryBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.inventoryBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.inventoryBtn.FlatAppearance.BorderSize = 2;
+            this.inventoryBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.inventoryBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.inventoryBtn.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventoryBtn.ForeColor = System.Drawing.Color.White;
+            this.inventoryBtn.Location = new System.Drawing.Point(190, 173);
+            this.inventoryBtn.Name = "inventoryBtn";
+            this.inventoryBtn.Size = new System.Drawing.Size(128, 42);
+            this.inventoryBtn.TabIndex = 5;
+            this.inventoryBtn.Text = "Manage";
+            this.inventoryBtn.UseVisualStyleBackColor = false;
             // 
             // pictureBox6
             // 
@@ -358,107 +448,17 @@
             this.pictureBox6.TabIndex = 4;
             this.pictureBox6.TabStop = false;
             // 
-            // Managebtn
+            // InventoryTXT
             // 
-            this.Managebtn.BackColor = System.Drawing.Color.Transparent;
-            this.Managebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Managebtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Managebtn.FlatAppearance.BorderSize = 2;
-            this.Managebtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen;
-            this.Managebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Managebtn.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Managebtn.ForeColor = System.Drawing.Color.White;
-            this.Managebtn.Location = new System.Drawing.Point(190, 173);
-            this.Managebtn.Name = "Managebtn";
-            this.Managebtn.Size = new System.Drawing.Size(128, 42);
-            this.Managebtn.TabIndex = 4;
-            this.Managebtn.Text = "Manage";
-            this.Managebtn.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(175, 172);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 42);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Manage";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(190, 173);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 42);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Manage";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Brown;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(190, 172);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(128, 42);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Manage";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SaddleBrown;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(190, 173);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(128, 42);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Manage";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button5.FlatAppearance.BorderSize = 2;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(190, 173);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(128, 42);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Manage";
-            this.button5.UseVisualStyleBackColor = false;
+            this.InventoryTXT.AutoSize = true;
+            this.InventoryTXT.BackColor = System.Drawing.Color.Transparent;
+            this.InventoryTXT.Font = new System.Drawing.Font("Impact", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InventoryTXT.ForeColor = System.Drawing.Color.White;
+            this.InventoryTXT.Location = new System.Drawing.Point(135, 111);
+            this.InventoryTXT.Name = "InventoryTXT";
+            this.InventoryTXT.Size = new System.Drawing.Size(228, 59);
+            this.InventoryTXT.TabIndex = 3;
+            this.InventoryTXT.Text = "INVENTORY";
             // 
             // HomeForm
             // 
@@ -477,23 +477,23 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.banner1.ResumeLayout(false);
             this.banner1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
@@ -522,11 +522,11 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Button Managebtn;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button employeeBtn;
+        private System.Windows.Forms.Button OrderBtn;
+        private System.Windows.Forms.Button ProductBtn;
+        private System.Windows.Forms.Button SupplierBtn;
+        private System.Windows.Forms.Button BillingBtn;
+        private System.Windows.Forms.Button inventoryBtn;
     }
 }

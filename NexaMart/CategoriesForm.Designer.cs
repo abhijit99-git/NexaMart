@@ -124,7 +124,7 @@
             this.panel2.Location = new System.Drawing.Point(12, 574);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1086, 282);
+            this.panel2.Size = new System.Drawing.Size(1086, 316);
             this.panel2.TabIndex = 6;
             // 
             // panel3
@@ -133,10 +133,10 @@
             this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel3.Location = new System.Drawing.Point(12, 864);
+            this.panel3.Location = new System.Drawing.Point(12, 898);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1086, 273);
+            this.panel3.Size = new System.Drawing.Size(1086, 288);
             this.panel3.TabIndex = 7;
             // 
             // CategoriesForm
