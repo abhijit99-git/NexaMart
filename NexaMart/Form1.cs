@@ -89,6 +89,8 @@ namespace NexaMart
                         }
 
                         d.Adminpass = password.Text;
+                        HomeForm home = new HomeForm(d);
+                        d.sethome(home);
                         d.Show();
                         this.Hide();
                         username.ResetText();

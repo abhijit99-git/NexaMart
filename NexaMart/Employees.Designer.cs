@@ -28,12 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employees));
+            this.clickbtn = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // clickbtn
+            // 
+            this.clickbtn.BackColor = System.Drawing.Color.Transparent;
+            this.clickbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.clickbtn.FlatAppearance.BorderColor = System.Drawing.Color.SeaGreen;
+            this.clickbtn.FlatAppearance.BorderSize = 2;
+            this.clickbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen;
+            this.clickbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clickbtn.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clickbtn.ForeColor = System.Drawing.Color.DarkGreen;
+            this.clickbtn.Location = new System.Drawing.Point(412, 311);
+            this.clickbtn.Name = "clickbtn";
+            this.clickbtn.Size = new System.Drawing.Size(170, 69);
+            this.clickbtn.TabIndex = 5;
+            this.clickbtn.Text = "Manage";
+            this.clickbtn.UseVisualStyleBackColor = false;
+            this.clickbtn.Click += new System.EventHandler(this.clickbtn_Click);
+            // 
+            // Employees
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1054, 723);
+            this.Controls.Add(this.clickbtn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Employees";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employees";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button clickbtn;
     }
 }

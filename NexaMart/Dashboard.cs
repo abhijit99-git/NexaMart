@@ -13,7 +13,7 @@ namespace NexaMart
    
     public partial class Dashboard : Form
     {
-
+        HomeForm home;
         Form1 f = new Form1();
         public  string Adminname { get; set; }
         public  string Adminpass { get; set; }
@@ -27,6 +27,13 @@ namespace NexaMart
             this.SetStyle(ControlStyles.ResizeRedraw, true);
            
         }
+
+        public void sethome(HomeForm h)
+        {
+            home = h;
+        }
+       
+        //MoveForm
         private const int cGrip = 16;
         private const int cCaption = 32;
         protected override void WndProc(ref Message m)
@@ -49,7 +56,7 @@ namespace NexaMart
             }
             base.WndProc(ref m);
         }
-
+        //EndMoveForm
 
      
 
@@ -74,7 +81,7 @@ namespace NexaMart
 
                     if (homepanelclicked == true)
                     {
-                        loadform(new HomeForm());
+                        loadform(home);
                     }
                     else if (categoripanelclicked == true)
                     {
@@ -106,7 +113,7 @@ namespace NexaMart
                     FIllDashPanel.Width = this.Width - sidebar.Width - leftGap - rightGap;
                     if (homepanelclicked == true)
                     {
-                        loadform(new HomeForm());
+                        loadform(home);
                     }
                     else if (categoripanelclicked == true)
                     {
@@ -186,7 +193,7 @@ namespace NexaMart
             pf = new ProfileForm(Adminname, Adminpass);
             AdminName.Text = Adminname;
             selectpanel("Home");
-            loadform(new HomeForm());
+            loadform(home);
 
 
 
@@ -361,7 +368,8 @@ namespace NexaMart
         private void HomePanel_MouseClick(object sender, MouseEventArgs e)
         {
             selectpanel("Home");
-            loadform(new HomeForm());
+            loadform(home);
+            
         }
 
         private void CategoryPanel_MouseClick(object sender, MouseEventArgs e)
@@ -385,7 +393,7 @@ namespace NexaMart
         private void HomeText_Click(object sender, EventArgs e)
         {
             selectpanel("Home");
-            loadform(new HomeForm());
+            loadform(home);
         }
 
         private void Categories_Click(object sender, EventArgs e)
@@ -409,7 +417,7 @@ namespace NexaMart
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             selectpanel("Home");
-            loadform(new HomeForm());
+            loadform(home);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

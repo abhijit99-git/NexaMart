@@ -161,6 +161,7 @@
             this.employeeBtn.TabIndex = 4;
             this.employeeBtn.Text = "Manage";
             this.employeeBtn.UseVisualStyleBackColor = false;
+            this.employeeBtn.Click += new System.EventHandler(this.employeeBtn_Click);
             // 
             // pictureBox1
             // 

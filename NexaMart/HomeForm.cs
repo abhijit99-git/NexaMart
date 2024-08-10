@@ -12,11 +12,23 @@ namespace NexaMart
 {
     public partial class HomeForm : Form
     {
-     
+
+        Dashboard CurrD;
         public HomeForm()
         {
             InitializeComponent();
         }
 
+        public HomeForm(Dashboard d)
+        {
+            InitializeComponent();
+            CurrD = d;
+        }
+
+        private void employeeBtn_Click(object sender, EventArgs e)
+        {
+            CurrD.loadform(new Employees());
+            this.Hide();
+        }
     }
 }
