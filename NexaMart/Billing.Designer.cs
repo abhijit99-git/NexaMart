@@ -42,7 +42,7 @@
             this.clickbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clickbtn.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clickbtn.ForeColor = System.Drawing.Color.DarkGreen;
-            this.clickbtn.Location = new System.Drawing.Point(506, 299);
+            this.clickbtn.Location = new System.Drawing.Point(324, 365);
             this.clickbtn.Name = "clickbtn";
             this.clickbtn.Size = new System.Drawing.Size(170, 69);
             this.clickbtn.TabIndex = 6;
@@ -53,7 +53,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1054, 723);
+            this.ClientSize = new System.Drawing.Size(1151, 755);
             this.Controls.Add(this.clickbtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

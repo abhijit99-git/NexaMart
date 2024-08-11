@@ -23,9 +23,15 @@ namespace NexaMart
         {
 
         }
-        
 
+        private void comboBox1_DropDownClosed(object sender, EventArgs e)
+        {
+            empID.Focus();
+        }
 
-
+        private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
 }
