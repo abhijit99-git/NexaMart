@@ -42,7 +42,7 @@
             this.clickbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clickbtn.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clickbtn.ForeColor = System.Drawing.Color.DarkGreen;
-            this.clickbtn.Location = new System.Drawing.Point(640, 438);
+            this.clickbtn.Location = new System.Drawing.Point(496, 299);
             this.clickbtn.Name = "clickbtn";
             this.clickbtn.Size = new System.Drawing.Size(170, 69);
             this.clickbtn.TabIndex = 6;
