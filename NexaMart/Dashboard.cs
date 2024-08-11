@@ -16,7 +16,7 @@ namespace NexaMart
 
 
         //  Object declaration section 
-        HomeForm home;
+       public HomeForm home;
         Form1 f = new Form1();
 
         public Employees emp = new Employees();
@@ -38,6 +38,7 @@ namespace NexaMart
         {
             InitializeComponent();
             this.SetStyle(ControlStyles.ResizeRedraw, true);
+            emp.setDash(this);
            
         }
 

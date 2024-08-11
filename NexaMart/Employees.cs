@@ -5,14 +5,17 @@ using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace NexaMart
 {
     public partial class Employees : Form
     {
+        Dashboard CurrD;
 
         OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\C# programs\VS PROGRAMS\\NexaMart\NexaMart\NexaMartDB.accdb");
         public Employees()
@@ -20,10 +23,15 @@ namespace NexaMart
             InitializeComponent();
         }
 
+        public void setDash(Dashboard d)
+        {
+            CurrD = d;
+        }
+
         void fill()
         {
             con.Open();
-            OleDbDataAdapter da = new OleDbDataAdapter("Select *from Employees", con);
+            OleDbDataAdapter da = new OleDbDataAdapter("Select *from Employees order by ID", con);
             DataTable dt = new DataTable();
             da.Fill(dt);
             EmployeesGrid.DataSource = dt;
@@ -38,10 +46,6 @@ namespace NexaMart
         }
 
 
-        private void clickbtn_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void comboBox1_DropDownClosed(object sender, EventArgs e)
         {
@@ -55,6 +59,86 @@ namespace NexaMart
 
         private void Employees_Load(object sender, EventArgs e)
         {
+            fill();
+        }
+
+        private void EmpExit_Click(object sender, EventArgs e)
+        {
+            CurrD.loadform(CurrD.home);
+            CurrD.isemployees = false;
+            empID.Clear();
+            empName.Clear();
+            empContact.Clear();
+            empSalary.Clear();
+            empHireDate.ResetText();
+            empRole.Text = "Select Role";
+            
+            this.Hide();
+            
+        }
+
+        private void empAdd_Click(object sender, EventArgs e)
+        {
+  
+            try
+            {
+                con.Open();
+                OleDbCommand cmd = new OleDbCommand("Insert into Employees values(" + Convert.ToInt32(empID.Text) + ",'" + empName.Text + "','" + empContact.Text + "','" + empHireDate.Value.ToString("d-M-yyyy") + "'," + Convert.ToInt32(empSalary.Text) + ",'" + empRole.Text + "')", con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Added Successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Record Already Present","",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            finally
+            {
+                con.Close();
+            }
+            fill();
+        }
+
+        private void empUpdate_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                con.Open();
+
+                OleDbCommand cmd = new OleDbCommand("Update Employees set Ename='"+empName.Text+ "', Ephone= '" + empContact.Text + "', hire_date='"+ empHireDate.Value.ToString("d-M-yyyy") + "' ,Esalary="+ Convert.ToInt32(empSalary.Text) + " , Role='"+empRole.Text+"' where ID="+ Convert.ToInt32(empID.Text) + " ", con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Updated Successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Record Not Present", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                con.Close();
+            }
+            fill();
+        }
+
+        private void empDelete_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                con.Open();
+
+                OleDbCommand cmd = new OleDbCommand("Delete from Employees where ID="+Convert.ToInt32(empID.Text)+"",con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Deleted Successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Record Not Present", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                con.Close();
+            }
             fill();
         }
     }
