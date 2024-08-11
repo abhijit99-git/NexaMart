@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace NexaMart
 {
-    public partial class Employees : Form
+    public partial class Billing : Form
     {
-        public Employees()
+        public Billing()
         {
             InitializeComponent();
         }
-
-     
-
-        private void clickbtn_Click(object sender, EventArgs e)
-        {
-
-        }
-        
-
-
-
     }
 }

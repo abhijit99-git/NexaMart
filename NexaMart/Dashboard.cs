@@ -13,8 +13,21 @@ namespace NexaMart
    
     public partial class Dashboard : Form
     {
+
+
+        //  Object declaration section 
         HomeForm home;
         Form1 f = new Form1();
+
+        public Employees emp = new Employees();
+        public Billing bill= new Billing();
+        public Suppliers sup= new Suppliers();
+        public Orders order= new Orders();
+        public Customers cust= new Customers();
+        public Prodcuts prod = new Prodcuts();
+
+        //section end
+
         public  string Adminname { get; set; }
         public  string Adminpass { get; set; }
 
@@ -81,7 +94,7 @@ namespace NexaMart
 
                     if (homepanelclicked == true)
                     {
-                        loadform(home);
+                        loadHomeOption();
                     }
                     else if (categoripanelclicked == true)
                     {
@@ -113,7 +126,7 @@ namespace NexaMart
                     FIllDashPanel.Width = this.Width - sidebar.Width - leftGap - rightGap;
                     if (homepanelclicked == true)
                     {
-                        loadform(home);
+                        loadHomeOption();
                     }
                     else if (categoripanelclicked == true)
                     {
@@ -178,7 +191,46 @@ namespace NexaMart
             activeForm.Show();
         }
 
-
+        // Checking true and false function for loading Home Options
+       public bool isemployees=false;
+       public bool issuupliers=false;
+       public bool isbilling=false;
+       public bool iscustomers = false;
+       public bool isproduct = false;
+       public bool isorders = false;
+        public void loadHomeOption()
+        {
+            if (isemployees == true)
+            {
+                loadform(emp);
+            }
+            else if (issuupliers == true)
+            {
+                loadform(sup);
+            }
+            else if (isorders == true)
+            {
+                loadform(order);
+            }
+            else if (iscustomers == true)
+            {
+                loadform(cust);
+            }
+            else if (isproduct == true)
+            {
+                loadform(prod);
+            }
+            else if (isbilling == true)
+            {
+                loadform(bill);
+            }
+            else
+            {
+                loadform(home);
+            }
+        } 
+            
+        // end load home home options 
 
 
         private void dashMenu_Click(object sender, EventArgs e)
@@ -367,8 +419,11 @@ namespace NexaMart
         }
         private void HomePanel_MouseClick(object sender, MouseEventArgs e)
         {
+
+            loadHomeOption();
+
             selectpanel("Home");
-            loadform(home);
+            //loadform(home);
             
         }
 
@@ -393,7 +448,9 @@ namespace NexaMart
         private void HomeText_Click(object sender, EventArgs e)
         {
             selectpanel("Home");
-            loadform(home);
+            loadHomeOption();
+ 
+            //loadform(home);
         }
 
         private void Categories_Click(object sender, EventArgs e)
@@ -417,7 +474,9 @@ namespace NexaMart
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             selectpanel("Home");
-            loadform(home);
+            loadHomeOption();
+
+            //loadform(home);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

@@ -54,9 +54,9 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.BillingTXT = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.inventoryBtn = new System.Windows.Forms.Button();
+            this.CustomersBtn = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.InventoryTXT = new System.Windows.Forms.Label();
+            this.CustomersTXT = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.banner1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -217,6 +217,7 @@
             this.OrderBtn.TabIndex = 5;
             this.OrderBtn.Text = "Manage";
             this.OrderBtn.UseVisualStyleBackColor = false;
+            this.OrderBtn.Click += new System.EventHandler(this.OrderBtn_Click);
             // 
             // pictureBox2
             // 
@@ -272,6 +273,7 @@
             this.ProductBtn.TabIndex = 5;
             this.ProductBtn.Text = "Manage";
             this.ProductBtn.UseVisualStyleBackColor = false;
+            this.ProductBtn.Click += new System.EventHandler(this.ProductBtn_Click);
             // 
             // pictureBox3
             // 
@@ -327,6 +329,7 @@
             this.SupplierBtn.TabIndex = 5;
             this.SupplierBtn.Text = "Manage";
             this.SupplierBtn.UseVisualStyleBackColor = false;
+            this.SupplierBtn.Click += new System.EventHandler(this.SupplierBtn_Click);
             // 
             // pictureBox4
             // 
@@ -382,6 +385,7 @@
             this.BillingBtn.TabIndex = 5;
             this.BillingBtn.Text = "Manage";
             this.BillingBtn.UseVisualStyleBackColor = false;
+            this.BillingBtn.Click += new System.EventHandler(this.BillingBtn_Click);
             // 
             // pictureBox5
             // 
@@ -411,9 +415,9 @@
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Controls.Add(this.inventoryBtn);
+            this.panel5.Controls.Add(this.CustomersBtn);
             this.panel5.Controls.Add(this.pictureBox6);
-            this.panel5.Controls.Add(this.InventoryTXT);
+            this.panel5.Controls.Add(this.CustomersTXT);
             this.panel5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel5.Location = new System.Drawing.Point(552, 959);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
@@ -421,45 +425,46 @@
             this.panel5.Size = new System.Drawing.Size(521, 281);
             this.panel5.TabIndex = 10;
             // 
-            // inventoryBtn
+            // CustomersBtn
             // 
-            this.inventoryBtn.BackColor = System.Drawing.Color.Transparent;
-            this.inventoryBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.inventoryBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.inventoryBtn.FlatAppearance.BorderSize = 2;
-            this.inventoryBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.inventoryBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inventoryBtn.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventoryBtn.ForeColor = System.Drawing.Color.White;
-            this.inventoryBtn.Location = new System.Drawing.Point(190, 173);
-            this.inventoryBtn.Name = "inventoryBtn";
-            this.inventoryBtn.Size = new System.Drawing.Size(128, 42);
-            this.inventoryBtn.TabIndex = 5;
-            this.inventoryBtn.Text = "Manage";
-            this.inventoryBtn.UseVisualStyleBackColor = false;
+            this.CustomersBtn.BackColor = System.Drawing.Color.Transparent;
+            this.CustomersBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.CustomersBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.CustomersBtn.FlatAppearance.BorderSize = 2;
+            this.CustomersBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.CustomersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CustomersBtn.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustomersBtn.ForeColor = System.Drawing.Color.White;
+            this.CustomersBtn.Location = new System.Drawing.Point(204, 173);
+            this.CustomersBtn.Name = "CustomersBtn";
+            this.CustomersBtn.Size = new System.Drawing.Size(128, 42);
+            this.CustomersBtn.TabIndex = 5;
+            this.CustomersBtn.Text = "Manage";
+            this.CustomersBtn.UseVisualStyleBackColor = false;
+            this.CustomersBtn.Click += new System.EventHandler(this.CustomersBtn_Click);
             // 
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(369, 117);
+            this.pictureBox6.Location = new System.Drawing.Point(393, 117);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(58, 53);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 4;
             this.pictureBox6.TabStop = false;
             // 
-            // InventoryTXT
+            // CustomersTXT
             // 
-            this.InventoryTXT.AutoSize = true;
-            this.InventoryTXT.BackColor = System.Drawing.Color.Transparent;
-            this.InventoryTXT.Font = new System.Drawing.Font("Impact", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InventoryTXT.ForeColor = System.Drawing.Color.White;
-            this.InventoryTXT.Location = new System.Drawing.Point(135, 111);
-            this.InventoryTXT.Name = "InventoryTXT";
-            this.InventoryTXT.Size = new System.Drawing.Size(228, 59);
-            this.InventoryTXT.TabIndex = 3;
-            this.InventoryTXT.Text = "INVENTORY";
+            this.CustomersTXT.AutoSize = true;
+            this.CustomersTXT.BackColor = System.Drawing.Color.Transparent;
+            this.CustomersTXT.Font = new System.Drawing.Font("Impact", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustomersTXT.ForeColor = System.Drawing.Color.White;
+            this.CustomersTXT.Location = new System.Drawing.Point(135, 111);
+            this.CustomersTXT.Name = "CustomersTXT";
+            this.CustomersTXT.Size = new System.Drawing.Size(252, 59);
+            this.CustomersTXT.TabIndex = 3;
+            this.CustomersTXT.Text = "CUSTOMERS";
             // 
             // HomeForm
             // 
@@ -516,7 +521,7 @@
         private System.Windows.Forms.Label ProductsTXT;
         private System.Windows.Forms.Label SuppliersTXT;
         private System.Windows.Forms.Label BillingTXT;
-        private System.Windows.Forms.Label InventoryTXT;
+        private System.Windows.Forms.Label CustomersTXT;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -528,6 +533,6 @@
         private System.Windows.Forms.Button ProductBtn;
         private System.Windows.Forms.Button SupplierBtn;
         private System.Windows.Forms.Button BillingBtn;
-        private System.Windows.Forms.Button inventoryBtn;
+        private System.Windows.Forms.Button CustomersBtn;
     }
 }
