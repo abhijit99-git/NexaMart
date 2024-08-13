@@ -29,40 +29,37 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Orders));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.EmployeesGrid = new System.Windows.Forms.DataGridView();
+            this.OrderGrid = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.EmpExit = new System.Windows.Forms.Button();
-            this.empRole = new System.Windows.Forms.ComboBox();
-            this.empDelete = new System.Windows.Forms.Button();
-            this.empUpdate = new System.Windows.Forms.Button();
-            this.empAdd = new System.Windows.Forms.Button();
+            this.ordEXIT = new System.Windows.Forms.Button();
+            this.ordDelete = new System.Windows.Forms.Button();
+            this.ordUPDATE = new System.Windows.Forms.Button();
+            this.ordADD = new System.Windows.Forms.Button();
+            this.orderTot = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.categorySelect = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.empHireDate = new System.Windows.Forms.DateTimePicker();
-            this.empSalary = new System.Windows.Forms.TextBox();
+            this.ProductSelect = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.OrderDate = new System.Windows.Forms.DateTimePicker();
+            this.orderQTY = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.empName = new System.Windows.Forms.TextBox();
+            this.orderCustID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.empID = new System.Windows.Forms.TextBox();
+            this.OrdID = new System.Windows.Forms.TextBox();
             this.LineColored = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.usernameProfile = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.StatusSelect = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeesGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -77,173 +74,205 @@
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
-            // EmployeesGrid
+            // OrderGrid
             // 
-            this.EmployeesGrid.AllowUserToResizeColumns = false;
-            this.EmployeesGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(191)))), ((int)(((byte)(148)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(58)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
-            this.EmployeesGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.EmployeesGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.EmployeesGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(203)))), ((int)(((byte)(161)))));
-            this.EmployeesGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EmployeesGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.EmployeesGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(148)))), ((int)(((byte)(99)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(58)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EmployeesGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.EmployeesGrid.ColumnHeadersHeight = 40;
-            this.EmployeesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(202)))), ((int)(((byte)(160)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(58)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.EmployeesGrid.DefaultCellStyle = dataGridViewCellStyle12;
-            this.EmployeesGrid.EnableHeadersVisualStyles = false;
-            this.EmployeesGrid.GridColor = System.Drawing.Color.SeaGreen;
-            this.EmployeesGrid.Location = new System.Drawing.Point(457, 13);
-            this.EmployeesGrid.MultiSelect = false;
-            this.EmployeesGrid.Name = "EmployeesGrid";
-            this.EmployeesGrid.ReadOnly = true;
-            this.EmployeesGrid.RowHeadersVisible = false;
-            this.EmployeesGrid.RowHeadersWidth = 51;
-            this.EmployeesGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.EmployeesGrid.RowTemplate.Height = 40;
-            this.EmployeesGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.EmployeesGrid.Size = new System.Drawing.Size(685, 728);
-            this.EmployeesGrid.TabIndex = 14;
+            this.OrderGrid.AllowUserToResizeColumns = false;
+            this.OrderGrid.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(181)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.OrderGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.OrderGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.OrderGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(201)))), ((int)(((byte)(248)))));
+            this.OrderGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.OrderGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.OrderGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(170)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(136)))), ((int)(((byte)(228)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.OrderGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.OrderGrid.ColumnHeadersHeight = 40;
+            this.OrderGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(201)))), ((int)(((byte)(248)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.OrderGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            this.OrderGrid.EnableHeadersVisualStyles = false;
+            this.OrderGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(201)))), ((int)(((byte)(248)))));
+            this.OrderGrid.Location = new System.Drawing.Point(457, 13);
+            this.OrderGrid.MultiSelect = false;
+            this.OrderGrid.Name = "OrderGrid";
+            this.OrderGrid.ReadOnly = true;
+            this.OrderGrid.RowHeadersVisible = false;
+            this.OrderGrid.RowHeadersWidth = 51;
+            this.OrderGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.OrderGrid.RowTemplate.Height = 40;
+            this.OrderGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.OrderGrid.Size = new System.Drawing.Size(685, 728);
+            this.OrderGrid.TabIndex = 14;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.EmpExit);
-            this.panel2.Controls.Add(this.empDelete);
-            this.panel2.Controls.Add(this.empUpdate);
-            this.panel2.Controls.Add(this.empAdd);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.ordEXIT);
+            this.panel2.Controls.Add(this.ordDelete);
+            this.panel2.Controls.Add(this.ordUPDATE);
+            this.panel2.Controls.Add(this.ordADD);
+            this.panel2.Controls.Add(this.orderTot);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label8);
             this.panel2.Location = new System.Drawing.Point(10, 476);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(431, 227);
             this.panel2.TabIndex = 13;
             // 
-            // EmpExit
+            // ordEXIT
             // 
-            this.EmpExit.BackColor = System.Drawing.Color.Transparent;
-            this.EmpExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.EmpExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.EmpExit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(156)))), ((int)(((byte)(113)))));
-            this.EmpExit.FlatAppearance.BorderSize = 2;
-            this.EmpExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(156)))), ((int)(((byte)(113)))));
-            this.EmpExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EmpExit.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmpExit.ForeColor = System.Drawing.Color.DarkGreen;
-            this.EmpExit.Location = new System.Drawing.Point(12, 169);
-            this.EmpExit.Name = "EmpExit";
-            this.EmpExit.Size = new System.Drawing.Size(406, 41);
-            this.EmpExit.TabIndex = 9;
-            this.EmpExit.Text = "EXIT";
-            this.EmpExit.UseVisualStyleBackColor = false;
+            this.ordEXIT.BackColor = System.Drawing.Color.Transparent;
+            this.ordEXIT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ordEXIT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ordEXIT.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.ordEXIT.FlatAppearance.BorderSize = 2;
+            this.ordEXIT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
+            this.ordEXIT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ordEXIT.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ordEXIT.ForeColor = System.Drawing.Color.SteelBlue;
+            this.ordEXIT.Location = new System.Drawing.Point(12, 169);
+            this.ordEXIT.Name = "ordEXIT";
+            this.ordEXIT.Size = new System.Drawing.Size(406, 41);
+            this.ordEXIT.TabIndex = 9;
+            this.ordEXIT.Text = "EXIT";
+            this.ordEXIT.UseVisualStyleBackColor = false;
+            this.ordEXIT.Click += new System.EventHandler(this.ordEXIT_Click);
             // 
-            // empRole
+            // ordDelete
             // 
-            this.empRole.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empRole.ForeColor = System.Drawing.Color.SeaGreen;
-            this.empRole.FormattingEnabled = true;
-            this.empRole.Location = new System.Drawing.Point(136, 134);
-            this.empRole.Name = "empRole";
-            this.empRole.Size = new System.Drawing.Size(263, 31);
-            this.empRole.TabIndex = 8;
-            this.empRole.Text = "Select Category";
+            this.ordDelete.BackColor = System.Drawing.Color.Transparent;
+            this.ordDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ordDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ordDelete.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.ordDelete.FlatAppearance.BorderSize = 2;
+            this.ordDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
+            this.ordDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ordDelete.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ordDelete.ForeColor = System.Drawing.Color.SteelBlue;
+            this.ordDelete.Location = new System.Drawing.Point(318, 98);
+            this.ordDelete.Name = "ordDelete";
+            this.ordDelete.Size = new System.Drawing.Size(100, 46);
+            this.ordDelete.TabIndex = 7;
+            this.ordDelete.Text = "DELETE";
+            this.ordDelete.UseVisualStyleBackColor = false;
             // 
-            // empDelete
+            // ordUPDATE
             // 
-            this.empDelete.BackColor = System.Drawing.Color.Transparent;
-            this.empDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.empDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.empDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(156)))), ((int)(((byte)(113)))));
-            this.empDelete.FlatAppearance.BorderSize = 2;
-            this.empDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(156)))), ((int)(((byte)(113)))));
-            this.empDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.empDelete.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empDelete.ForeColor = System.Drawing.Color.DarkGreen;
-            this.empDelete.Location = new System.Drawing.Point(318, 98);
-            this.empDelete.Name = "empDelete";
-            this.empDelete.Size = new System.Drawing.Size(100, 46);
-            this.empDelete.TabIndex = 7;
-            this.empDelete.Text = "DELETE";
-            this.empDelete.UseVisualStyleBackColor = false;
+            this.ordUPDATE.BackColor = System.Drawing.Color.Transparent;
+            this.ordUPDATE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ordUPDATE.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ordUPDATE.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.ordUPDATE.FlatAppearance.BorderSize = 2;
+            this.ordUPDATE.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
+            this.ordUPDATE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ordUPDATE.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ordUPDATE.ForeColor = System.Drawing.Color.SteelBlue;
+            this.ordUPDATE.Location = new System.Drawing.Point(166, 98);
+            this.ordUPDATE.Name = "ordUPDATE";
+            this.ordUPDATE.Size = new System.Drawing.Size(105, 46);
+            this.ordUPDATE.TabIndex = 6;
+            this.ordUPDATE.Text = "UPDATE";
+            this.ordUPDATE.UseVisualStyleBackColor = false;
             // 
-            // empUpdate
+            // ordADD
             // 
-            this.empUpdate.BackColor = System.Drawing.Color.Transparent;
-            this.empUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.empUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.empUpdate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(156)))), ((int)(((byte)(113)))));
-            this.empUpdate.FlatAppearance.BorderSize = 2;
-            this.empUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(156)))), ((int)(((byte)(113)))));
-            this.empUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.empUpdate.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empUpdate.ForeColor = System.Drawing.Color.DarkGreen;
-            this.empUpdate.Location = new System.Drawing.Point(166, 98);
-            this.empUpdate.Name = "empUpdate";
-            this.empUpdate.Size = new System.Drawing.Size(105, 46);
-            this.empUpdate.TabIndex = 6;
-            this.empUpdate.Text = "UPDATE";
-            this.empUpdate.UseVisualStyleBackColor = false;
+            this.ordADD.BackColor = System.Drawing.Color.Transparent;
+            this.ordADD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ordADD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ordADD.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.ordADD.FlatAppearance.BorderSize = 2;
+            this.ordADD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
+            this.ordADD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ordADD.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ordADD.ForeColor = System.Drawing.Color.SteelBlue;
+            this.ordADD.Location = new System.Drawing.Point(12, 98);
+            this.ordADD.Name = "ordADD";
+            this.ordADD.Size = new System.Drawing.Size(107, 46);
+            this.ordADD.TabIndex = 5;
+            this.ordADD.Text = "ADD";
+            this.ordADD.UseVisualStyleBackColor = false;
             // 
-            // empAdd
+            // orderTot
             // 
-            this.empAdd.BackColor = System.Drawing.Color.Transparent;
-            this.empAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.empAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.empAdd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(156)))), ((int)(((byte)(113)))));
-            this.empAdd.FlatAppearance.BorderSize = 2;
-            this.empAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(156)))), ((int)(((byte)(113)))));
-            this.empAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.empAdd.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empAdd.ForeColor = System.Drawing.Color.DarkGreen;
-            this.empAdd.Location = new System.Drawing.Point(12, 98);
-            this.empAdd.Name = "empAdd";
-            this.empAdd.Size = new System.Drawing.Size(107, 46);
-            this.empAdd.TabIndex = 5;
-            this.empAdd.Text = "ADD";
-            this.empAdd.UseVisualStyleBackColor = false;
+            this.orderTot.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.orderTot.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderTot.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.orderTot.Location = new System.Drawing.Point(120, 22);
+            this.orderTot.Name = "orderTot";
+            this.orderTot.ReadOnly = true;
+            this.orderTot.Size = new System.Drawing.Size(258, 27);
+            this.orderTot.TabIndex = 28;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label10.Location = new System.Drawing.Point(58, 24);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(42, 20);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "Total";
+            // 
+            // categorySelect
+            // 
+            this.categorySelect.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categorySelect.ForeColor = System.Drawing.Color.SteelBlue;
+            this.categorySelect.FormattingEnabled = true;
+            this.categorySelect.Items.AddRange(new object[] {
+            "Fruits",
+            "Household",
+            "Vegetables",
+            "Dry Fruits",
+            "Dairy and Beverages",
+            "Packaged Snacks",
+            "Beauty and Cosmetics"});
+            this.categorySelect.Location = new System.Drawing.Point(42, 134);
+            this.categorySelect.Name = "categorySelect";
+            this.categorySelect.Size = new System.Drawing.Size(349, 28);
+            this.categorySelect.TabIndex = 8;
+            this.categorySelect.Text = "Select Category";
+            this.categorySelect.SelectedIndexChanged += new System.EventHandler(this.categorySelect_SelectedIndexChanged);
+            this.categorySelect.DropDownClosed += new System.EventHandler(this.empRole_DropDownClosed);
+            this.categorySelect.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.empRole_KeyPress);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.empRole);
-            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.StatusSelect);
+            this.panel1.Controls.Add(this.ProductSelect);
+            this.panel1.Controls.Add(this.categorySelect);
             this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.empHireDate);
-            this.panel1.Controls.Add(this.empSalary);
+            this.panel1.Controls.Add(this.OrderDate);
+            this.panel1.Controls.Add(this.orderQTY);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.empName);
+            this.panel1.Controls.Add(this.orderCustID);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.empID);
+            this.panel1.Controls.Add(this.OrdID);
             this.panel1.Controls.Add(this.LineColored);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.usernameProfile);
             this.panel1.Location = new System.Drawing.Point(10, 67);
@@ -251,75 +280,101 @@
             this.panel1.Size = new System.Drawing.Size(431, 382);
             this.panel1.TabIndex = 12;
             // 
-            // empHireDate
+            // ProductSelect
             // 
-            this.empHireDate.CalendarFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empHireDate.Location = new System.Drawing.Point(141, 239);
-            this.empHireDate.Name = "empHireDate";
-            this.empHireDate.Size = new System.Drawing.Size(237, 22);
-            this.empHireDate.TabIndex = 25;
+            this.ProductSelect.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductSelect.ForeColor = System.Drawing.Color.SteelBlue;
+            this.ProductSelect.FormattingEnabled = true;
+            this.ProductSelect.Location = new System.Drawing.Point(42, 184);
+            this.ProductSelect.Name = "ProductSelect";
+            this.ProductSelect.Size = new System.Drawing.Size(349, 28);
+            this.ProductSelect.TabIndex = 32;
+            this.ProductSelect.Text = "Select Product";
+            this.ProductSelect.DropDownClosed += new System.EventHandler(this.comboBox1_DropDownClosed);
+            this.ProductSelect.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
             // 
-            // empSalary
+            // label12
             // 
-            this.empSalary.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.empSalary.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empSalary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.empSalary.Location = new System.Drawing.Point(141, 279);
-            this.empSalary.Name = "empSalary";
-            this.empSalary.Size = new System.Drawing.Size(258, 20);
-            this.empSalary.TabIndex = 24;
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label12.Location = new System.Drawing.Point(38, 328);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(50, 20);
+            this.label12.TabIndex = 29;
+            this.label12.Text = "Status";
+            // 
+            // OrderDate
+            // 
+            this.OrderDate.CalendarFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrderDate.CalendarForeColor = System.Drawing.Color.DodgerBlue;
+            this.OrderDate.Location = new System.Drawing.Point(146, 239);
+            this.OrderDate.Name = "OrderDate";
+            this.OrderDate.Size = new System.Drawing.Size(237, 22);
+            this.OrderDate.TabIndex = 25;
+            // 
+            // orderQTY
+            // 
+            this.orderQTY.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.orderQTY.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderQTY.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.orderQTY.Location = new System.Drawing.Point(146, 279);
+            this.orderQTY.Name = "orderQTY";
+            this.orderQTY.Size = new System.Drawing.Size(258, 20);
+            this.orderQTY.TabIndex = 24;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label9.Location = new System.Drawing.Point(137, 289);
+            this.label9.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label9.Location = new System.Drawing.Point(142, 289);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(249, 20);
             this.label9.TabIndex = 23;
             this.label9.Text = "________________________________________";
             // 
-            // empName
+            // orderCustID
             // 
-            this.empName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.empName.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.empName.Location = new System.Drawing.Point(141, 84);
-            this.empName.Name = "empName";
-            this.empName.Size = new System.Drawing.Size(258, 20);
-            this.empName.TabIndex = 18;
+            this.orderCustID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.orderCustID.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderCustID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.orderCustID.Location = new System.Drawing.Point(146, 84);
+            this.orderCustID.Name = "orderCustID";
+            this.orderCustID.Size = new System.Drawing.Size(258, 20);
+            this.orderCustID.TabIndex = 18;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label6.Location = new System.Drawing.Point(137, 94);
+            this.label6.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label6.Location = new System.Drawing.Point(142, 94);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(249, 20);
             this.label6.TabIndex = 17;
             this.label6.Text = "________________________________________";
             // 
-            // empID
+            // OrdID
             // 
-            this.empID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.empID.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.empID.Location = new System.Drawing.Point(141, 32);
-            this.empID.Name = "empID";
-            this.empID.Size = new System.Drawing.Size(258, 20);
-            this.empID.TabIndex = 16;
+            this.OrdID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.OrdID.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OrdID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.OrdID.Location = new System.Drawing.Point(146, 32);
+            this.OrdID.Name = "OrdID";
+            this.OrdID.Size = new System.Drawing.Size(258, 20);
+            this.OrdID.TabIndex = 16;
             // 
             // LineColored
             // 
             this.LineColored.AutoSize = true;
             this.LineColored.BackColor = System.Drawing.Color.Transparent;
             this.LineColored.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LineColored.ForeColor = System.Drawing.Color.SeaGreen;
-            this.LineColored.Location = new System.Drawing.Point(137, 41);
+            this.LineColored.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.LineColored.Location = new System.Drawing.Point(142, 41);
             this.LineColored.Name = "LineColored";
             this.LineColored.Size = new System.Drawing.Size(249, 20);
             this.LineColored.TabIndex = 11;
@@ -348,18 +403,6 @@
             this.label4.Size = new System.Drawing.Size(85, 20);
             this.label4.TabIndex = 8;
             this.label4.Text = "Order Date";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(38, 155);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 20);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Product";
             // 
             // label2
             // 
@@ -397,84 +440,21 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "MANAGE ORDERS";
             // 
-            // textBox1
+            // StatusSelect
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.Location = new System.Drawing.Point(120, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(258, 20);
-            this.textBox1.TabIndex = 28;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label8.Location = new System.Drawing.Point(116, 32);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(249, 20);
-            this.label8.TabIndex = 27;
-            this.label8.Text = "________________________________________";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label10.Location = new System.Drawing.Point(60, 22);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(42, 20);
-            this.label10.TabIndex = 26;
-            this.label10.Text = "Total";
-            // 
-            // textBox2
-            // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox2.Location = new System.Drawing.Point(141, 323);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(258, 20);
-            this.textBox2.TabIndex = 31;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label11.Location = new System.Drawing.Point(137, 333);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(249, 20);
-            this.label11.TabIndex = 30;
-            this.label11.Text = "________________________________________";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label12.Location = new System.Drawing.Point(38, 323);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(50, 20);
-            this.label12.TabIndex = 29;
-            this.label12.Text = "Status";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(136, 181);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(263, 31);
-            this.comboBox1.TabIndex = 32;
-            this.comboBox1.Text = "Select Product";
+            this.StatusSelect.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StatusSelect.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.StatusSelect.FormattingEnabled = true;
+            this.StatusSelect.Items.AddRange(new object[] {
+            "PAID",
+            "PENDING"});
+            this.StatusSelect.Location = new System.Drawing.Point(146, 323);
+            this.StatusSelect.Name = "StatusSelect";
+            this.StatusSelect.Size = new System.Drawing.Size(245, 28);
+            this.StatusSelect.TabIndex = 33;
+            this.StatusSelect.Text = "Select Status";
+            this.StatusSelect.DropDownClosed += new System.EventHandler(this.StatusSelect_DropDownClosed);
+            this.StatusSelect.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.StatusSelect_KeyPress);
             // 
             // Orders
             // 
@@ -482,7 +462,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1151, 755);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.EmployeesGrid);
+            this.Controls.Add(this.OrderGrid);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -491,8 +471,9 @@
             this.Name = "Orders";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Orders";
+            this.Load += new System.EventHandler(this.Orders_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeesGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -505,33 +486,30 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView EmployeesGrid;
+        private System.Windows.Forms.DataGridView OrderGrid;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button EmpExit;
-        private System.Windows.Forms.ComboBox empRole;
-        private System.Windows.Forms.Button empDelete;
-        private System.Windows.Forms.Button empUpdate;
-        private System.Windows.Forms.Button empAdd;
+        private System.Windows.Forms.Button ordEXIT;
+        private System.Windows.Forms.ComboBox categorySelect;
+        private System.Windows.Forms.Button ordDelete;
+        private System.Windows.Forms.Button ordUPDATE;
+        private System.Windows.Forms.Button ordADD;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DateTimePicker empHireDate;
-        private System.Windows.Forms.TextBox empSalary;
+        private System.Windows.Forms.DateTimePicker OrderDate;
+        private System.Windows.Forms.TextBox orderQTY;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox empName;
+        private System.Windows.Forms.TextBox orderCustID;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox empID;
+        private System.Windows.Forms.TextBox OrdID;
         private System.Windows.Forms.Label LineColored;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label usernameProfile;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox ProductSelect;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox orderTot;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox StatusSelect;
     }
 }

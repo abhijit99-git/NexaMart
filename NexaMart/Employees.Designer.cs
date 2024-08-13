@@ -372,7 +372,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.EmployeesGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.EmployeesGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.EmployeesGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(203)))), ((int)(((byte)(161)))));
+            this.EmployeesGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(202)))), ((int)(((byte)(160)))));
             this.EmployeesGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EmployeesGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.EmployeesGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -468,9 +468,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox empName;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView EmployeesGrid;
         private System.Windows.Forms.DateTimePicker empHireDate;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button EmpExit;
+        public System.Windows.Forms.DataGridView EmployeesGrid;
     }
 }

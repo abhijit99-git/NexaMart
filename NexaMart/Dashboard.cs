@@ -39,6 +39,7 @@ namespace NexaMart
             InitializeComponent();
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             emp.setDash(this);
+            order.SetDashInOrder(this);
            
         }
 
@@ -109,7 +110,7 @@ namespace NexaMart
                     {
                         loadform(new AboutForm());
                     }
-
+                
                     BarExpand = false;
                     SidebarTimer.Stop();
 

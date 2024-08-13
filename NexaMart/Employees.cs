@@ -21,6 +21,7 @@ namespace NexaMart
         public Employees()
         {
             InitializeComponent();
+           
         }
 
         public void setDash(Dashboard d)
