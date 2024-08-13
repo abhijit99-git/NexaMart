@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employees));
             this.empAdd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -75,7 +75,7 @@
             this.empAdd.ForeColor = System.Drawing.Color.DarkGreen;
             this.empAdd.Location = new System.Drawing.Point(12, 98);
             this.empAdd.Name = "empAdd";
-            this.empAdd.Size = new System.Drawing.Size(113, 46);
+            this.empAdd.Size = new System.Drawing.Size(107, 46);
             this.empAdd.TabIndex = 5;
             this.empAdd.Text = "ADD";
             this.empAdd.UseVisualStyleBackColor = false;
@@ -112,7 +112,7 @@
             this.panel1.Controls.Add(this.usernameProfile);
             this.panel1.Location = new System.Drawing.Point(12, 66);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(449, 382);
+            this.panel1.Size = new System.Drawing.Size(431, 382);
             this.panel1.TabIndex = 7;
             // 
             // empHireDate
@@ -281,7 +281,7 @@
             this.panel2.Controls.Add(this.empAdd);
             this.panel2.Location = new System.Drawing.Point(12, 475);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(449, 227);
+            this.panel2.Size = new System.Drawing.Size(431, 227);
             this.panel2.TabIndex = 8;
             // 
             // EmpExit
@@ -297,7 +297,7 @@
             this.EmpExit.ForeColor = System.Drawing.Color.DarkGreen;
             this.EmpExit.Location = new System.Drawing.Point(12, 169);
             this.EmpExit.Name = "EmpExit";
-            this.EmpExit.Size = new System.Drawing.Size(419, 41);
+            this.EmpExit.Size = new System.Drawing.Size(406, 41);
             this.EmpExit.TabIndex = 9;
             this.EmpExit.Text = "EXIT";
             this.EmpExit.UseVisualStyleBackColor = false;
@@ -334,7 +334,7 @@
             this.empDelete.ForeColor = System.Drawing.Color.DarkGreen;
             this.empDelete.Location = new System.Drawing.Point(318, 98);
             this.empDelete.Name = "empDelete";
-            this.empDelete.Size = new System.Drawing.Size(113, 46);
+            this.empDelete.Size = new System.Drawing.Size(100, 46);
             this.empDelete.TabIndex = 7;
             this.empDelete.Text = "DELETE";
             this.empDelete.UseVisualStyleBackColor = false;
@@ -353,7 +353,7 @@
             this.empUpdate.ForeColor = System.Drawing.Color.DarkGreen;
             this.empUpdate.Location = new System.Drawing.Point(166, 98);
             this.empUpdate.Name = "empUpdate";
-            this.empUpdate.Size = new System.Drawing.Size(113, 46);
+            this.empUpdate.Size = new System.Drawing.Size(105, 46);
             this.empUpdate.TabIndex = 6;
             this.empUpdate.Text = "UPDATE";
             this.empUpdate.UseVisualStyleBackColor = false;
@@ -363,42 +363,42 @@
             // 
             this.EmployeesGrid.AllowUserToResizeColumns = false;
             this.EmployeesGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(191)))), ((int)(((byte)(148)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(58)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
-            this.EmployeesGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(191)))), ((int)(((byte)(148)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(58)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.EmployeesGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.EmployeesGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.EmployeesGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(203)))), ((int)(((byte)(161)))));
             this.EmployeesGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EmployeesGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.EmployeesGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(148)))), ((int)(((byte)(99)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(58)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EmployeesGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(148)))), ((int)(((byte)(99)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(58)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EmployeesGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.EmployeesGrid.ColumnHeadersHeight = 40;
             this.EmployeesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(202)))), ((int)(((byte)(160)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(58)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.EmployeesGrid.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(202)))), ((int)(((byte)(160)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(92)))), ((int)(((byte)(58)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.EmployeesGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.EmployeesGrid.EnableHeadersVisualStyles = false;
             this.EmployeesGrid.GridColor = System.Drawing.Color.SeaGreen;
-            this.EmployeesGrid.Location = new System.Drawing.Point(478, 12);
+            this.EmployeesGrid.Location = new System.Drawing.Point(459, 12);
             this.EmployeesGrid.MultiSelect = false;
             this.EmployeesGrid.Name = "EmployeesGrid";
             this.EmployeesGrid.ReadOnly = true;
@@ -407,7 +407,7 @@
             this.EmployeesGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.EmployeesGrid.RowTemplate.Height = 40;
             this.EmployeesGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.EmployeesGrid.Size = new System.Drawing.Size(666, 728);
+            this.EmployeesGrid.Size = new System.Drawing.Size(685, 728);
             this.EmployeesGrid.TabIndex = 9;
             // 
             // pictureBox1

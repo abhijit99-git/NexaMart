@@ -79,6 +79,15 @@ namespace NexaMart
 
         private void empAdd_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Convert.ToInt32(empID.Text);
+                Convert.ToInt32(empSalary.Text);
+            }
+            catch (Exception ex){
+                MessageBox.Show("Enter Correct value ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
   
             try
             {
