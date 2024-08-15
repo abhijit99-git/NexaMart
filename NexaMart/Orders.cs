@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Security.Cryptography;
+using System.Data.Common;
 
 namespace NexaMart 
 {
     public partial class Orders : Form
     {
 
+        DataTable dt = new DataTable();
         Dashboard CurrD;
 
         Form1 formcon= new Form1();
@@ -34,7 +36,7 @@ namespace NexaMart
         {
             con.Open();
             OleDbDataAdapter da = new OleDbDataAdapter("Select *from Orders order by order_id", con);
-            DataTable dt = new DataTable();
+            
             da.Fill(dt);
             OrderGrid.DataSource = dt;
             con.Close();
@@ -89,18 +91,44 @@ namespace NexaMart
 
         private void categorySelect_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            //Loading Products 
+            ProductSelect.Items.Clear();
             ProductSelect.Text = "Select Product";
-            if (categorySelect.SelectedItem == "Fruits")
+            Form1 formPro = new Form1();
+            OleDbConnection conPro = formPro.con;
+            OleDbDataAdapter daP = new OleDbDataAdapter($"Select *from Products where Category_name='{categorySelect.SelectedItem.ToString()}'", conPro);
+            DataTable dtP = new DataTable();
+
+            try
             {
-                ProductSelect.Items.Add("Mango");
-                ProductSelect.Items.Add("Apple");
-                ProductSelect.Items.Add("Pineapple");
-                ProductSelect.Items.Add("Grapes");
+                daP.Fill(dtP);
+
+                for (int i = 0; i < dtP.Rows.Count; i++)
+                {
+                    ProductSelect.Items.Add(dtP.Rows[i]["product_name"].ToString());
+                }
             }
-            else
+            catch (Exception ex)
             {
-                ProductSelect.Items.Clear();
+                MessageBox.Show(ex.ToString());
             }
+
+            // end loading section
+
+
+            //ProductSelect.Text = "Select Product";
+            //if (categorySelect.SelectedItem == "Fruits")
+            //{
+            //    ProductSelect.Items.Add("Mango");
+            //    ProductSelect.Items.Add("Apple");
+            //    ProductSelect.Items.Add("Pineapple");
+            //    ProductSelect.Items.Add("Grapes");
+            //}
+            //else
+            //{
+            //    ProductSelect.Items.Clear();
+            //}
         }
 
         private void StatusSelect_DropDownClosed(object sender, EventArgs e)
@@ -117,6 +145,30 @@ namespace NexaMart
         {
             con = formcon.con;
             fill();
+            int cnt = OrderGrid.Rows.Count - 1;
+           
+            //Loading Categories 
+            categorySelect.Items.Clear();  
+             Form1 form1= new Form1();
+            OleDbConnection conCat = form1.con;
+            OleDbDataAdapter da = new OleDbDataAdapter("Select *from Categories order by cate_id", conCat);
+            DataTable dt = new DataTable();
+
+            try
+            {
+                da.Fill(dt);
+
+                for(int i = 0; i < dt.Rows.Count; i++)
+                {
+                    categorySelect.Items.Add(dt.Rows[i]["cate_name"].ToString());
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+            // end loading section
         }
     }
 }

@@ -64,6 +64,7 @@ namespace NexaMart
         {
             con = formcon.con;
             fill();
+
         }
 
         private void EmpExit_Click(object sender, EventArgs e)
