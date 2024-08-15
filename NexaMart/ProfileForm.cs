@@ -15,11 +15,15 @@ namespace NexaMart
 
     public partial class ProfileForm : Form
     {
-        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\C# programs\VS PROGRAMS\\NexaMart\NexaMart\NexaMartDB.accdb");
+        Form1 formcon = new Form1();
+
+        OleDbConnection con;
+       // OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\C# programs\VS PROGRAMS\\NexaMart\NexaMart\NexaMartDB.accdb");
 
         public ProfileForm()
         {
             InitializeComponent();
+            
 
         }
 
@@ -110,6 +114,8 @@ namespace NexaMart
 
         private void ProfileForm_Load(object sender, EventArgs e)
         {
+            con = formcon.con;
+            
             try
             {
                 con.Open();
