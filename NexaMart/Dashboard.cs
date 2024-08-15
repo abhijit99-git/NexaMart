@@ -110,11 +110,12 @@ namespace NexaMart
                     {
                         loadform(new AboutForm());
                     }
-                
+
                     BarExpand = false;
                     SidebarTimer.Stop();
 
                 }
+                FIllDashPanel.Padding = new Padding(80, 0, 0, 0);
             }
             else
             {
@@ -144,7 +145,7 @@ namespace NexaMart
                     }
          
                     BarExpand = true;
-                 
+                    FIllDashPanel.Padding = new Padding(0, 0, 0, 0);
                     SidebarTimer.Stop();
                 }
             }

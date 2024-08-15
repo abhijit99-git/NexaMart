@@ -10,12 +10,13 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Security.Cryptography;
 using System.Data.Common;
+using static System.Net.WebRequestMethods;
 
 namespace NexaMart 
 {
     public partial class Orders : Form
     {
-
+        int ProductPrice = 0;
         DataTable dt = new DataTable();
         Dashboard CurrD;
 
@@ -34,11 +35,12 @@ namespace NexaMart
 
         void fill()
         {
+            OrderGrid.ClearSelection();
             con.Open();
             OleDbDataAdapter da = new OleDbDataAdapter("Select *from Orders order by order_id", con);
-            
-            da.Fill(dt);
-            OrderGrid.DataSource = dt;
+            DataTable dtt= new DataTable();
+            da.Fill(dtt);
+            OrderGrid.DataSource = dtt;
             con.Close();
             OrderGrid.Columns[0].HeaderText = "ID";
             OrderGrid.Columns[1].HeaderText = "CustmerID";
@@ -47,6 +49,7 @@ namespace NexaMart
             OrderGrid.Columns[4].HeaderText = "QTY";
             OrderGrid.Columns[5].HeaderText = "Total";
             OrderGrid.Columns[6].HeaderText = "Status";
+          
 
         }
 
@@ -95,6 +98,9 @@ namespace NexaMart
             //Loading Products 
             ProductSelect.Items.Clear();
             ProductSelect.Text = "Select Product";
+            orderQTY.Text = "";
+            orderTot.Text = "";
+            ProductPrice = 0;
             Form1 formPro = new Form1();
             OleDbConnection conPro = formPro.con;
             OleDbDataAdapter daP = new OleDbDataAdapter($"Select *from Products where Category_name='{categorySelect.SelectedItem.ToString()}'", conPro);
@@ -117,18 +123,6 @@ namespace NexaMart
             // end loading section
 
 
-            //ProductSelect.Text = "Select Product";
-            //if (categorySelect.SelectedItem == "Fruits")
-            //{
-            //    ProductSelect.Items.Add("Mango");
-            //    ProductSelect.Items.Add("Apple");
-            //    ProductSelect.Items.Add("Pineapple");
-            //    ProductSelect.Items.Add("Grapes");
-            //}
-            //else
-            //{
-            //    ProductSelect.Items.Clear();
-            //}
         }
 
         private void StatusSelect_DropDownClosed(object sender, EventArgs e)
@@ -169,6 +163,135 @@ namespace NexaMart
             }
 
             // end loading section
+        }
+
+
+
+        private void orderQTY_TextChanged(object sender, EventArgs e)
+        {
+   
+            if (ProductSelect.Text=="Select Product")
+            {
+                orderTot.Text = "";
+                MessageBox.Show("Please Select Product Or Enter Correct Quantity","",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            else
+            {
+
+
+                try
+                {
+               
+                    Form1 formQty = new Form1();
+                    OleDbConnection conQty = formQty.con;
+                    OleDbDataAdapter daQ = new OleDbDataAdapter($"Select *from Products where Category_name='{categorySelect.SelectedItem.ToString()}'", conQty);
+                    DataTable dtQ = new DataTable();
+                    daQ.Fill(dtQ);
+
+             
+
+                    if (ProductSelect.SelectedIndex >=0)
+                    {
+                        ProductPrice =Convert.ToInt32(dtQ.Rows[ProductSelect.SelectedIndex]["p_price"]);
+
+                        if (orderQTY.Text == "")
+                        {
+                            orderTot.Text = (ProductPrice * Convert.ToInt32(1)).ToString();
+                        }
+                        else
+                        {
+                            orderTot.Text = (ProductPrice * Convert.ToInt32(orderQTY.Text)).ToString();
+                        }
+                    }
+                   
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Enter Correct Quantity", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    orderTot.Text = "";
+                }
+            }
+        }
+
+        private void ProductSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            orderTot.Text = "";
+            orderQTY.Text = "";
+        }
+
+        private void ordADD_Click(object sender, EventArgs e)
+        {
+            OleDbConnection conInsert = formcon.con;
+
+            try
+            {
+                conInsert.Open();
+                OleDbCommand cmd = new OleDbCommand("Insert into Orders values(" + Convert.ToInt32(OrdID.Text) + ", " + Convert.ToInt32(orderCustID.Text) + ", '" + ProductSelect.Text + "', '" + OrderDate.Value.ToString("d-M-yyyy") + "'," + Convert.ToInt32(orderQTY.Text) + "," + Convert.ToInt32(orderTot.Text) + ",'" + StatusSelect.Text + "')", conInsert);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Record Added", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Record already present or value mismatch", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conInsert.Close();
+                OrdID.Text = "";
+                orderCustID.Text = "";
+                OrderDate.Text = "";
+                orderQTY.Text = "";
+                orderTot.Text = "";
+                categorySelect.Text = "Select Category";
+                ProductSelect.Text = "Select Product";
+                ProductSelect.Items.Clear();
+            }
+            fill();
+        }
+
+        private void ordUPDATE_Click(object sender, EventArgs e)
+        {
+            OleDbConnection conInsert = formcon.con;
+            try
+            {
+                conInsert.Open();
+
+                OleDbCommand cmd = new OleDbCommand("Update Orders set custmer_id= " + Convert.ToInt32(orderCustID.Text) + ", p_name='" + ProductSelect.Text + "', order_date='" + OrderDate.Value.ToString("d-M-yyyy") + "', qty=" + Convert.ToInt32(orderQTY.Text) + ", total_amt=" + Convert.ToInt32(orderTot.Text) + ", status='" + StatusSelect.Text + "' where order_id=" + Convert.ToInt32(OrdID.Text) + " ", conInsert);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Updated Successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Record Not Present", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conInsert.Close();
+            }
+            fill();
+        }
+
+        private void ordDelete_Click(object sender, EventArgs e)
+        {
+            OleDbConnection con= formcon.con;
+
+            try
+            {
+                con.Open();
+
+                OleDbCommand cmd = new OleDbCommand("Delete from Orders where order_id=" + Convert.ToInt32(OrdID.Text) + "", con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Deleted Successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Record Not Present", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                con.Close();
+            }
+            fill();
         }
     }
 }
