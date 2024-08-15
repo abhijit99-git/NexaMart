@@ -46,5 +46,10 @@ namespace NexaMart
         {
             System.Diagnostics.Process.Start("https://www.linkedin.com/in/shivprasad-suryawanshi-2045092a9/");
         }
+
+        private void AboutForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

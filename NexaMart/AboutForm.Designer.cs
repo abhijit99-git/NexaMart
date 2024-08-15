@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.LinkedinShiv = new System.Windows.Forms.PictureBox();
+            this.InstagramShiv = new System.Windows.Forms.PictureBox();
+            this.GithubShiv = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -40,10 +43,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.LinkedinShiv = new System.Windows.Forms.PictureBox();
-            this.InstagramShiv = new System.Windows.Forms.PictureBox();
-            this.GithubShiv = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LinkedinShiv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InstagramShiv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GithubShiv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -51,9 +54,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LinkedinShiv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.InstagramShiv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GithubShiv)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,6 +77,45 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1116, 715);
             this.panel1.TabIndex = 10;
+            // 
+            // LinkedinShiv
+            // 
+            this.LinkedinShiv.BackColor = System.Drawing.Color.Transparent;
+            this.LinkedinShiv.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LinkedinShiv.Image = ((System.Drawing.Image)(resources.GetObject("LinkedinShiv.Image")));
+            this.LinkedinShiv.Location = new System.Drawing.Point(210, 350);
+            this.LinkedinShiv.Name = "LinkedinShiv";
+            this.LinkedinShiv.Size = new System.Drawing.Size(36, 35);
+            this.LinkedinShiv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.LinkedinShiv.TabIndex = 23;
+            this.LinkedinShiv.TabStop = false;
+            this.LinkedinShiv.Click += new System.EventHandler(this.LinkedinShiv_Click);
+            // 
+            // InstagramShiv
+            // 
+            this.InstagramShiv.BackColor = System.Drawing.Color.Transparent;
+            this.InstagramShiv.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.InstagramShiv.Image = ((System.Drawing.Image)(resources.GetObject("InstagramShiv.Image")));
+            this.InstagramShiv.Location = new System.Drawing.Point(126, 350);
+            this.InstagramShiv.Name = "InstagramShiv";
+            this.InstagramShiv.Size = new System.Drawing.Size(36, 35);
+            this.InstagramShiv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.InstagramShiv.TabIndex = 22;
+            this.InstagramShiv.TabStop = false;
+            this.InstagramShiv.Click += new System.EventHandler(this.InstagramShiv_Click);
+            // 
+            // GithubShiv
+            // 
+            this.GithubShiv.BackColor = System.Drawing.Color.Transparent;
+            this.GithubShiv.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GithubShiv.Image = ((System.Drawing.Image)(resources.GetObject("GithubShiv.Image")));
+            this.GithubShiv.Location = new System.Drawing.Point(38, 350);
+            this.GithubShiv.Name = "GithubShiv";
+            this.GithubShiv.Size = new System.Drawing.Size(36, 35);
+            this.GithubShiv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.GithubShiv.TabIndex = 21;
+            this.GithubShiv.TabStop = false;
+            this.GithubShiv.Click += new System.EventHandler(this.GithubShiv_Click);
             // 
             // pictureBox5
             // 
@@ -197,45 +236,6 @@
             this.pictureBox9.TabIndex = 20;
             this.pictureBox9.TabStop = false;
             // 
-            // LinkedinShiv
-            // 
-            this.LinkedinShiv.BackColor = System.Drawing.Color.Transparent;
-            this.LinkedinShiv.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LinkedinShiv.Image = ((System.Drawing.Image)(resources.GetObject("LinkedinShiv.Image")));
-            this.LinkedinShiv.Location = new System.Drawing.Point(210, 350);
-            this.LinkedinShiv.Name = "LinkedinShiv";
-            this.LinkedinShiv.Size = new System.Drawing.Size(36, 35);
-            this.LinkedinShiv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.LinkedinShiv.TabIndex = 23;
-            this.LinkedinShiv.TabStop = false;
-            this.LinkedinShiv.Click += new System.EventHandler(this.LinkedinShiv_Click);
-            // 
-            // InstagramShiv
-            // 
-            this.InstagramShiv.BackColor = System.Drawing.Color.Transparent;
-            this.InstagramShiv.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.InstagramShiv.Image = ((System.Drawing.Image)(resources.GetObject("InstagramShiv.Image")));
-            this.InstagramShiv.Location = new System.Drawing.Point(126, 350);
-            this.InstagramShiv.Name = "InstagramShiv";
-            this.InstagramShiv.Size = new System.Drawing.Size(36, 35);
-            this.InstagramShiv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.InstagramShiv.TabIndex = 22;
-            this.InstagramShiv.TabStop = false;
-            this.InstagramShiv.Click += new System.EventHandler(this.InstagramShiv_Click);
-            // 
-            // GithubShiv
-            // 
-            this.GithubShiv.BackColor = System.Drawing.Color.Transparent;
-            this.GithubShiv.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.GithubShiv.Image = ((System.Drawing.Image)(resources.GetObject("GithubShiv.Image")));
-            this.GithubShiv.Location = new System.Drawing.Point(38, 350);
-            this.GithubShiv.Name = "GithubShiv";
-            this.GithubShiv.Size = new System.Drawing.Size(36, 35);
-            this.GithubShiv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.GithubShiv.TabIndex = 21;
-            this.GithubShiv.TabStop = false;
-            this.GithubShiv.Click += new System.EventHandler(this.GithubShiv_Click);
-            // 
             // AboutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -247,8 +247,12 @@
             this.Name = "AboutForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AboutForm";
+            this.Load += new System.EventHandler(this.AboutForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LinkedinShiv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InstagramShiv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GithubShiv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -256,9 +260,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LinkedinShiv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.InstagramShiv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GithubShiv)).EndInit();
             this.ResumeLayout(false);
 
         }

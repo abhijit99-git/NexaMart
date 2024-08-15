@@ -15,8 +15,9 @@ namespace NexaMart
 {
     public partial class Signup : Form
     {
-
-        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\C# programs\VS PROGRAMS\\NexaMart\NexaMart\NexaMartDB.accdb");
+        Form1 formcon = new Form1();
+        OleDbConnection con;
+        //OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\C# programs\VS PROGRAMS\\NexaMart\NexaMart\NexaMartDB.accdb");
         public Signup()
         {
             InitializeComponent();
@@ -49,7 +50,7 @@ namespace NexaMart
 
         private void Signup_Load(object sender, EventArgs e)
         {
-        
+            con = formcon.con;
         }
   
         private void pictureBox1_Click(object sender, EventArgs e)

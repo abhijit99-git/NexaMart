@@ -10,14 +10,16 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Security.Cryptography;
 
-namespace NexaMart
+namespace NexaMart 
 {
     public partial class Orders : Form
     {
 
         Dashboard CurrD;
 
-        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\C# programs\VS PROGRAMS\\NexaMart\NexaMart\NexaMartDB.accdb");
+        Form1 formcon= new Form1();
+        OleDbConnection con;
+        //OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\C# programs\VS PROGRAMS\\NexaMart\NexaMart\NexaMartDB.accdb");
         public Orders()
         {
             InitializeComponent();
@@ -113,6 +115,7 @@ namespace NexaMart
 
         private void Orders_Load(object sender, EventArgs e)
         {
+            con = formcon.con;
             fill();
         }
     }

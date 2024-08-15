@@ -16,8 +16,10 @@ namespace NexaMart
     public partial class Employees : Form
     {
         Dashboard CurrD;
+        Form1 formcon = new Form1();
 
-        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\C# programs\VS PROGRAMS\\NexaMart\NexaMart\NexaMartDB.accdb");
+        OleDbConnection con;
+        //OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\C# programs\VS PROGRAMS\\NexaMart\NexaMart\NexaMartDB.accdb");
         public Employees()
         {
             InitializeComponent();
@@ -60,6 +62,7 @@ namespace NexaMart
 
         private void Employees_Load(object sender, EventArgs e)
         {
+            con = formcon.con;
             fill();
         }
 
