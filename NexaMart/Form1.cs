@@ -98,7 +98,7 @@ namespace NexaMart
                         this.Hide();
                         username.ResetText();
                         password.ResetText();
-                      
+                     
                     }
                     else
                     {
