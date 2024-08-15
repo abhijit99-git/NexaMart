@@ -112,10 +112,12 @@ namespace NexaMart
                     }
 
                     BarExpand = false;
+                    FIllDashPanel.Padding = new Padding(80, 0, 0, 0);
                     SidebarTimer.Stop();
 
                 }
-                FIllDashPanel.Padding = new Padding(80, 0, 0, 0);
+                
+               
             }
             else
             {
