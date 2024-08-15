@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>NexaMartIconLogo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -335,6 +338,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BillingBanner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NexaMartIconLogo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

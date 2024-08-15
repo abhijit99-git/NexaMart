@@ -20,7 +20,9 @@ namespace NexaMart
     {
 
         //main connection 
-        public OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\C# programs\VS PROGRAMS\\NexaMart\NexaMart\NexaMartDB.accdb");
+        static string databasePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"NexaMartDB.accdb");
+       // public OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\C# programs\VS PROGRAMS\\NexaMart\NexaMart\NexaMartDB.accdb");
+        public OleDbConnection con = new OleDbConnection($@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={databasePath}");
         public Form1()
         {
             InitializeComponent();
@@ -96,6 +98,7 @@ namespace NexaMart
                         this.Hide();
                         username.ResetText();
                         password.ResetText();
+                        MessageBox.Show(databasePath);
                     }
                     else
                     {
