@@ -279,7 +279,7 @@ namespace NexaMart
             {
                 conInsert.Open();
 
-                OleDbCommand cmd = new OleDbCommand("Update Orders set custmer_id= " + Convert.ToInt32(orderCustID.Text) + ", p_name='" + ProductSelect.Text + "', order_date='" + OrderDate.Value.ToString("d-M-yyyy") + "', qty=" + Convert.ToInt32(orderQTY.Text) + ", total_amt=" + Convert.ToInt32(orderTot.Text) + ", status='" + StatusSelect.Text + "' where order_id=" + Convert.ToInt32(OrdID.Text) + " ", conInsert);
+                OleDbCommand cmd = new OleDbCommand("Update Orders set custmer_id= " + Convert.ToInt32(orderCustID.Text) + ", order_date='" + OrderDate.Value.ToString("d-M-yyyy") + "', status='" + StatusSelect.Text + "' where order_id=" + Convert.ToInt32(OrdID.Text) + " ", conInsert);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Updated Successfully");
             }
@@ -315,6 +315,25 @@ namespace NexaMart
                 con.Close();
             }
             fill();
+        }
+
+        private void OrderGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.OrderGrid.Rows[e.RowIndex];
+
+                OrdID.Text = row.Cells["order_id"].Value.ToString();
+                orderCustID.Text = row.Cells["custmer_id"].Value.ToString();
+               
+                ProductSelect.Text = row.Cells["p_name"].Value.ToString();
+                //ProductSelect.Items.Clear();
+                //ProductSelect.Items.Add(row.Cells["p_name"].Value.ToString());
+                OrderDate.Text = row.Cells["order_date"].Value.ToString();
+                //orderQTY.Text = row.Cells["qty"].Value.ToString();
+                StatusSelect.Text = row.Cells["status"].Value.ToString();
+            }
         }
     }
 }

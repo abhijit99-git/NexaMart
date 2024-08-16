@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Security.Cryptography;
 
 namespace NexaMart
 {
@@ -154,6 +155,21 @@ namespace NexaMart
                 con.Close();
             }
             fill();
+        }
+
+        private void EmployeesGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.EmployeesGrid.Rows[e.RowIndex];
+
+                empID.Text = row.Cells["ID"].Value.ToString();
+                empName.Text = row.Cells["Ename"].Value.ToString();
+                empContact.Text = row.Cells["Ephone"].Value.ToString();
+                empHireDate.Text = row.Cells["hire_date"].Value.ToString();
+                empSalary.Text = row.Cells["Esalary"].Value.ToString();
+                empRole.Text = row.Cells["Role"].Value.ToString();
+            }
         }
     }
 }

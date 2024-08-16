@@ -102,6 +102,7 @@
             this.OrderGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.OrderGrid.ColumnHeadersHeight = 40;
             this.OrderGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.OrderGrid.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(201)))), ((int)(((byte)(248)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -124,6 +125,7 @@
             this.OrderGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.OrderGrid.Size = new System.Drawing.Size(685, 728);
             this.OrderGrid.TabIndex = 14;
+            this.OrderGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OrderGrid_CellContentClick);
             // 
             // panel2
             // 
