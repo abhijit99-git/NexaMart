@@ -221,32 +221,55 @@ namespace NexaMart
 
         private void ordADD_Click(object sender, EventArgs e)
         {
-            OleDbConnection conInsert = formcon.con;
+            OleDbConnection cn = formcon.con;
+            //OleDbDataAdapter daInv = new OleDbDataAdapter("select stock from Inventory ", cn);
 
-            try
+            cn.Open();
+            OleDbCommand cm = new OleDbCommand($"select *from Inventory where pro_name='{ProductSelect.Text}' and stock>{Convert.ToInt32(orderQTY.Text)}",cn);
+            
+            OleDbDataReader read= cm.ExecuteReader();
+            if (read.HasRows)
             {
-                conInsert.Open();
-                OleDbCommand cmd = new OleDbCommand("Insert into Orders values(" + Convert.ToInt32(OrdID.Text) + ", " + Convert.ToInt32(orderCustID.Text) + ", '" + ProductSelect.Text + "', '" + OrderDate.Value.ToString("d-M-yyyy") + "'," + Convert.ToInt32(orderQTY.Text) + "," + Convert.ToInt32(orderTot.Text) + ",'" + StatusSelect.Text + "')", conInsert);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Record Added", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cn.Close();
+                OleDbConnection conInsert = formcon.con;
+
+                try
+                {
+                    conInsert.Open();
+                    OleDbCommand cmd = new OleDbCommand("Insert into Orders values(" + Convert.ToInt32(OrdID.Text) + ", " + Convert.ToInt32(orderCustID.Text) + ", '" + ProductSelect.Text + "', '" + OrderDate.Value.ToString("d-M-yyyy") + "'," + Convert.ToInt32(orderQTY.Text) + "," + Convert.ToInt32(orderTot.Text) + ",'" + StatusSelect.Text + "')", conInsert);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Record Added", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                    //stock updation
+                    cmd = new OleDbCommand($"Update Inventory set stock=(stock-{Convert.ToInt32(orderQTY.Text)}) where pro_name='{ProductSelect.Text}'", conInsert);
+                    cmd.ExecuteNonQuery();
+                   
+                    //
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Record already present or value mismatch", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    conInsert.Close();
+                    OrdID.Text = "";
+                    orderCustID.Text = "";
+                    OrderDate.Text = "";
+                    orderQTY.Text = "";
+                    orderTot.Text = "";
+                    categorySelect.Text = "Select Category";
+                    ProductSelect.Text = "Select Product";
+                    ProductSelect.Items.Clear();
+                }
+                fill();
             }
-            catch(Exception ex)
+            else
             {
-                MessageBox.Show("Record already present or value mismatch", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("INSUFFICENT STOCK", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cn.Close();
             }
-            finally
-            {
-                conInsert.Close();
-                OrdID.Text = "";
-                orderCustID.Text = "";
-                OrderDate.Text = "";
-                orderQTY.Text = "";
-                orderTot.Text = "";
-                categorySelect.Text = "Select Category";
-                ProductSelect.Text = "Select Product";
-                ProductSelect.Items.Clear();
-            }
-            fill();
         }
 
         private void ordUPDATE_Click(object sender, EventArgs e)
