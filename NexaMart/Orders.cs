@@ -328,10 +328,9 @@ namespace NexaMart
                 orderCustID.Text = row.Cells["custmer_id"].Value.ToString();
                
                 ProductSelect.Text = row.Cells["p_name"].Value.ToString();
-                //ProductSelect.Items.Clear();
-                //ProductSelect.Items.Add(row.Cells["p_name"].Value.ToString());
+ 
                 OrderDate.Text = row.Cells["order_date"].Value.ToString();
-                //orderQTY.Text = row.Cells["qty"].Value.ToString();
+ 
                 StatusSelect.Text = row.Cells["status"].Value.ToString();
             }
         }

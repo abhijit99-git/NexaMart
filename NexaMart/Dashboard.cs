@@ -40,6 +40,7 @@ namespace NexaMart
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             emp.setDash(this);
             order.SetDashInOrder(this);
+            prod.SetDashInProduct(this);
            
         }
 
