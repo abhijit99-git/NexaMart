@@ -41,7 +41,9 @@ namespace NexaMart
             emp.setDash(this);
             order.SetDashInOrder(this);
             prod.SetDashInProduct(this);
-           
+            sup.SetDashInSupplier(this);
+
+
         }
 
         public void sethome(HomeForm h)
