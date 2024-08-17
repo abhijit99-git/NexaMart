@@ -42,6 +42,7 @@ namespace NexaMart
             order.SetDashInOrder(this);
             prod.SetDashInProduct(this);
             sup.SetDashInSupplier(this);
+            cust.SetDashInCustomer(this);
 
 
         }
