@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,8 @@ namespace NexaMart
 {
     public partial class Suppliers : Form
     {
-
+        Form1 f = new Form1();
+        OleDbConnection con;
         Dashboard CurrD;
         public Suppliers()
         {
@@ -23,6 +25,24 @@ namespace NexaMart
         public void SetDashInSupplier(Dashboard d)
         {
             CurrD = d;
+        }
+
+        void fill()
+        {
+            SupplierGrid.ClearSelection();
+            con.Open();
+            OleDbDataAdapter da = new OleDbDataAdapter("Select *from SUPPLIERS order by supp_id", con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            SupplierGrid.DataSource = dt;
+            con.Close();
+            SupplierGrid.Columns[0].HeaderText = "ID";
+            SupplierGrid.Columns[1].HeaderText = "Name";
+            SupplierGrid.Columns[2].HeaderText = "Address";
+            SupplierGrid.Columns[3].HeaderText = "City";
+            SupplierGrid.Columns[4].HeaderText = "Country";
+            SupplierGrid.Columns[5].HeaderText = "Contact";
+
         }
 
         private void supEXIT_Click(object sender, EventArgs e)
@@ -36,6 +56,88 @@ namespace NexaMart
             SupCountry.Text = "";
             SupAddress.Text = "";
             this.Hide();
+        }
+
+        private void Suppliers_Load(object sender, EventArgs e)
+        {
+            con=f.con;
+            fill();
+        }
+
+        private void supADD_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                OleDbCommand cmd= new OleDbCommand($"Insert into SUPPLIERS values({Convert.ToInt32(SupID.Text)},'{SupName.Text}','{SupAddress.Text}','{SupCity.Text}','{SupCountry.Text}','{SupContact.Text}')",con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Record Added !","",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Value Mismatch or Record already present", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                con.Close();
+            }
+            fill();
+        }
+
+        private void supUPDATE_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                OleDbCommand cmd = new OleDbCommand($"Update SUPPLIERS set supp_name='{SupName.Text}',supp_address='{SupAddress.Text}',supp_city='{SupCity.Text}',supp_country='{SupCountry.Text}',supp_phone='{SupContact.Text}' where supp_id={Convert.ToInt32(SupID.Text)}", con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Record Updated !", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Value Mismatch or Record already present", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                con.Close();
+            }
+            fill();
+        }
+
+        private void supDELETE_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                OleDbCommand cmd = new OleDbCommand($"Delete from SUPPLIERS where supp_id={Convert.ToInt32(SupID.Text)}", con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Record Deleted !", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Value Mismatch or Record already present", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                con.Close();
+            }
+            fill();
+        }
+
+        private void SupplierGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.SupplierGrid.Rows[e.RowIndex];
+
+                SupID.Text = row.Cells["supp_id"].Value.ToString();
+                SupName.Text = row.Cells["supp_name"].Value.ToString();
+                SupAddress.Text = row.Cells["supp_address"].Value.ToString();
+                SupCity.Text = row.Cells["supp_city"].Value.ToString();
+                SupCountry.Text = row.Cells["supp_country"].Value.ToString();
+                SupContact.Text = row.Cells["supp_phone"].Value.ToString();
+            }
         }
     }
 }
