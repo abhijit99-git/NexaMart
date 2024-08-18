@@ -66,7 +66,7 @@ namespace NexaMart
             CatName.Text = "";
             CatDescription.Text = "";
             StatusSelect.Text = "Select Status";
-        this.Close();
+             this.Close();
         }
 
         private void ManageCategory_Load(object sender, EventArgs e)

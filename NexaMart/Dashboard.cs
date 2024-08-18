@@ -118,11 +118,11 @@ namespace NexaMart
                     }
                     else if (inventorypanelclicked == true)
                     {
-                        //loadform(new ());
+                        loadform(new Inventory());
                     }
                     else if (Dashboardpanelclicked == true)
                     {
-                        //loadform(new ());
+                        loadform(new Inventory());
                     }
 
                     BarExpand = false;
@@ -161,11 +161,11 @@ namespace NexaMart
                     }
                     else if (inventorypanelclicked == true)
                     {
-                        
+                        loadform(new Inventory());
                     }
                     else if (Dashboardpanelclicked == true)
                     {
-                        
+                        loadform(new Inventory());
                     }
 
                     BarExpand = true;
@@ -643,38 +643,38 @@ namespace NexaMart
         private void Inventory_Click(object sender, EventArgs e)
         {
             selectpanel("inventory");
-            loadform(new AboutForm());
+            loadform(new Inventory());
         }
 
         private void Dashboardlabel_Click(object sender, EventArgs e)
         {
             selectpanel("dashboard");
-            loadform(new AboutForm());
+            loadform(new Inventory());
         }
 
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
             selectpanel("inventory");
-            loadform(new AboutForm());
+            loadform(new Inventory());
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
             selectpanel("dashboard");
-            loadform(new AboutForm());
+            loadform(new Inventory());
         }
 
         private void InventoryPanel_MouseClick(object sender, MouseEventArgs e)
         {
             selectpanel("inventory");
-            loadform(new AboutForm());
+            loadform(new Inventory());
         }
 
         private void DashboardPanel_MouseClick(object sender, MouseEventArgs e)
         {
             selectpanel("dashboard");
-            loadform(new AboutForm());
+            loadform(new Inventory());
         }
     }
 }
