@@ -151,5 +151,13 @@ namespace NexaMart
         {
 
         }
+
+        private void username_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                password.Focus();
+            }
+        }
     }
 }

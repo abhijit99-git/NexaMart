@@ -43,14 +43,12 @@ namespace NexaMart
             OrderGrid.DataSource = dtt;
             con.Close();
             OrderGrid.Columns[0].HeaderText = "ID";
-            OrderGrid.Columns[1].HeaderText = "CustmerID";
+            OrderGrid.Columns[1].HeaderText = "CustomerID";
             OrderGrid.Columns[2].HeaderText = "Product Name";
             OrderGrid.Columns[3].HeaderText = "Date";
             OrderGrid.Columns[4].HeaderText = "QTY";
             OrderGrid.Columns[5].HeaderText = "Total";
             OrderGrid.Columns[6].HeaderText = "Status";
-          
-
         }
 
 

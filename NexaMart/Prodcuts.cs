@@ -168,7 +168,7 @@ namespace NexaMart
         private void prodEXIT_Click(object sender, EventArgs e)
         {
             CurrD.loadform(CurrD.home);
-            CurrD.isorders = false;
+            CurrD.isproduct = false;
             ProdID.Text = "";
             ProdNAME.Text = "";
             ProdPRICE.Text = "";

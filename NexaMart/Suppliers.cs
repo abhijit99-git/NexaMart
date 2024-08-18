@@ -48,7 +48,7 @@ namespace NexaMart
         private void supEXIT_Click(object sender, EventArgs e)
         {
             CurrD.loadform(CurrD.home);
-            CurrD.isorders = false;
+            CurrD.issuupliers = false;
             SupID.Text = "";
             SupName.Text = "";
             SupCity.Text = "";

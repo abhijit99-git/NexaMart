@@ -80,6 +80,7 @@
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(197, 24);
             this.username.TabIndex = 2;
+            this.username.KeyDown += new System.Windows.Forms.KeyEventHandler(this.username_KeyDown);
             // 
             // Loginbtn
             // 
