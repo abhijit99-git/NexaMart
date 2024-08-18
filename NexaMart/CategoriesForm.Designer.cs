@@ -70,7 +70,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1086, 273);
             this.panel4.TabIndex = 4;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // label1
             // 
@@ -100,8 +99,7 @@
             this.Managebtn.TabIndex = 1;
             this.Managebtn.Text = "Manage";
             this.Managebtn.UseVisualStyleBackColor = false;
-            this.Managebtn.MouseLeave += new System.EventHandler(this.Managebtn_MouseLeave);
-            this.Managebtn.MouseHover += new System.EventHandler(this.Managebtn_MouseHover);
+            this.Managebtn.Click += new System.EventHandler(this.Managebtn_Click);
             // 
             // panel1
             // 

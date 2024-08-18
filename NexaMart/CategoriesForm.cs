@@ -12,27 +12,34 @@ namespace NexaMart
 {
     public partial class CategoriesForm : Form
     {
+        Dashboard CurrD;
+        
         public CategoriesForm()
         {
             InitializeComponent();
         }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
+        public CategoriesForm(Dashboard d)
         {
-   
-           
+            InitializeComponent();
+            CurrD = d;
         }
 
-        private void Managebtn_MouseHover(object sender, EventArgs e)
+        public void setdashcategory(Dashboard d)
         {
-            //Managebtn.BackColor = Color.FromArgb(136, 164, 41);
-            //Managebtn.ForeColor = Color.White;
+            CurrD = d;
         }
 
-        private void Managebtn_MouseLeave(object sender, EventArgs e)
+        private void Managebtn_Click(object sender, EventArgs e)
         {
-            //Managebtn.BackColor = Color.Transparent;
-            //Managebtn.ForeColor = Color.FromArgb(136, 164, 41);
+            try
+            {
+                CurrD.loadform(new ManageCategory(CurrD));
+            }
+            catch(Exception ex)
+            {
+                CurrD.loadform(new CategoriesForm(CurrD));
+                CurrD.loadform(new ManageCategory(CurrD));
+            }
         }
     }
 }

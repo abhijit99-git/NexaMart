@@ -44,6 +44,7 @@ namespace NexaMart
             sup.SetDashInSupplier(this);
             cust.SetDashInCustomer(this);
             bill.SetDashInBilling(this);
+            
 
 
         }
@@ -105,7 +106,7 @@ namespace NexaMart
                     }
                     else if (categoripanelclicked == true)
                     {
-                        loadform(new CategoriesForm());
+                        loadform(new CategoriesForm(this));
                     }
                     else if (profilepanelclicked == true)
                     {
@@ -140,7 +141,7 @@ namespace NexaMart
                     }
                     else if (categoripanelclicked == true)
                     {
-                        loadform(new CategoriesForm());
+                        loadform(new CategoriesForm(this));
                     }
                     else if (profilepanelclicked == true)
                     {
@@ -440,7 +441,7 @@ namespace NexaMart
         private void CategoryPanel_MouseClick(object sender, MouseEventArgs e)
         {
             selectpanel("Category");
-            loadform(new CategoriesForm());
+            loadform(new CategoriesForm(this));
         }
 
         private void ProfilePanel_MouseClick(object sender, MouseEventArgs e)
@@ -466,7 +467,7 @@ namespace NexaMart
         private void Categories_Click(object sender, EventArgs e)
         {
             selectpanel("Category");
-            loadform(new CategoriesForm());
+            loadform(new CategoriesForm(this));
         }
 
         private void Profile_Click(object sender, EventArgs e)
@@ -492,7 +493,7 @@ namespace NexaMart
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             selectpanel("Category");
-            loadform(new CategoriesForm());
+            loadform(new CategoriesForm(this));
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

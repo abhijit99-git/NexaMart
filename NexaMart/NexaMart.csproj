@@ -68,6 +68,12 @@
     <Compile Include="CategoriesForm.Designer.cs">
       <DependentUpon>CategoriesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CategoryMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryMain.Designer.cs">
+      <DependentUpon>CategoryMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\PROD.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CategoriesForm.resx">
       <DependentUpon>CategoriesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoryMain.resx">
+      <DependentUpon>CategoryMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\PROD.resx">
       <DependentUpon>PROD.cs</DependentUpon>
