@@ -19,8 +19,6 @@ namespace NexaMart
         OleDbConnection con;
         Dashboard CurrD;
 
-        //OleDbDataAdapter da;
-        //DataTable dt;
         public Billing()
         {
             InitializeComponent();
@@ -73,6 +71,11 @@ namespace NexaMart
         {
             con = f.con;
             fill();
+
+            con.Open();
+            OleDbCommand cmd = new OleDbCommand("Delete from Billing", con);
+            cmd.ExecuteNonQuery();
+            con.Close();
             fillBill();
         }
 
@@ -164,6 +167,47 @@ namespace NexaMart
                 ODATE = row.Cells["order_date"].Value.ToString();
                 Quantity = row.Cells["qty"].Value.ToString();
                 Amt = row.Cells["total_amt"].Value.ToString();
+            }
+        }
+
+        private void RemoveRecord_Click(object sender, EventArgs e)
+        {
+            if (deleteid == 0)
+            {
+                MessageBox.Show("Please Select Record", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+
+                try
+                {
+                    con.Open();
+                    OleDbCommand cmd = new OleDbCommand($"Delete from Billing where order_id={deleteid}", con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    fillBill();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Please Select Record", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    con.Close();
+                    deleteid = 0;
+                }
+            }
+        }
+
+        int deleteid=0;
+        private void BillingSelectPrint_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.BillingSelectPrint.Rows[e.RowIndex];
+
+                deleteid =Convert.ToInt32(row.Cells["order_id"].Value.ToString());
             }
         }
     }

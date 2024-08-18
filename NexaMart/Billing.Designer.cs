@@ -131,7 +131,7 @@
             this.panel2.Controls.Add(this.BillADD);
             this.panel2.Location = new System.Drawing.Point(10, 476);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(500, 227);
+            this.panel2.Size = new System.Drawing.Size(500, 249);
             this.panel2.TabIndex = 33;
             // 
             // BillEXIT
@@ -145,7 +145,7 @@
             this.BillEXIT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BillEXIT.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BillEXIT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(115)))), ((int)(((byte)(141)))));
-            this.BillEXIT.Location = new System.Drawing.Point(24, 157);
+            this.BillEXIT.Location = new System.Drawing.Point(25, 168);
             this.BillEXIT.Name = "BillEXIT";
             this.BillEXIT.Size = new System.Drawing.Size(453, 41);
             this.BillEXIT.TabIndex = 9;
@@ -164,7 +164,7 @@
             this.BillPRINT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BillPRINT.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BillPRINT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(115)))), ((int)(((byte)(141)))));
-            this.BillPRINT.Location = new System.Drawing.Point(179, 94);
+            this.BillPRINT.Location = new System.Drawing.Point(180, 105);
             this.BillPRINT.Name = "BillPRINT";
             this.BillPRINT.Size = new System.Drawing.Size(146, 46);
             this.BillPRINT.TabIndex = 6;
@@ -182,7 +182,7 @@
             this.BillADD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BillADD.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BillADD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(115)))), ((int)(((byte)(141)))));
-            this.BillADD.Location = new System.Drawing.Point(24, 94);
+            this.BillADD.Location = new System.Drawing.Point(25, 105);
             this.BillADD.Name = "BillADD";
             this.BillADD.Size = new System.Drawing.Size(146, 46);
             this.BillADD.TabIndex = 5;
@@ -216,7 +216,7 @@
             this.BillingSelectPrint.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.BillingSelectPrint.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.BillingSelectPrint.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(221)))), ((int)(((byte)(232)))));
-            this.BillingSelectPrint.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BillingSelectPrint.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.BillingSelectPrint.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.BillingSelectPrint.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -251,15 +251,16 @@
             this.BillingSelectPrint.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.BillingSelectPrint.RowTemplate.Height = 40;
             this.BillingSelectPrint.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.BillingSelectPrint.Size = new System.Drawing.Size(623, 267);
+            this.BillingSelectPrint.Size = new System.Drawing.Size(623, 249);
             this.BillingSelectPrint.TabIndex = 35;
+            this.BillingSelectPrint.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BillingSelectPrint_CellContentClick);
             // 
             // SearchCustomerID
             // 
             this.SearchCustomerID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SearchCustomerID.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchCustomerID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SearchCustomerID.Location = new System.Drawing.Point(179, 27);
+            this.SearchCustomerID.Location = new System.Drawing.Point(180, 38);
             this.SearchCustomerID.Name = "SearchCustomerID";
             this.SearchCustomerID.Size = new System.Drawing.Size(258, 27);
             this.SearchCustomerID.TabIndex = 38;
@@ -271,7 +272,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(115)))), ((int)(((byte)(141)))));
-            this.label6.Location = new System.Drawing.Point(175, 45);
+            this.label6.Location = new System.Drawing.Point(176, 56);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(255, 20);
             this.label6.TabIndex = 37;
@@ -283,7 +284,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(64, 29);
+            this.label2.Location = new System.Drawing.Point(65, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 20);
             this.label2.TabIndex = 36;
@@ -300,17 +301,18 @@
             this.RemoveRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RemoveRecord.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RemoveRecord.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(115)))), ((int)(((byte)(141)))));
-            this.RemoveRecord.Location = new System.Drawing.Point(331, 94);
+            this.RemoveRecord.Location = new System.Drawing.Point(332, 105);
             this.RemoveRecord.Name = "RemoveRecord";
             this.RemoveRecord.Size = new System.Drawing.Size(146, 46);
             this.RemoveRecord.TabIndex = 42;
             this.RemoveRecord.Text = "REMOVE";
             this.RemoveRecord.UseVisualStyleBackColor = false;
+            this.RemoveRecord.Click += new System.EventHandler(this.RemoveRecord_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(443, 27);
+            this.pictureBox2.Location = new System.Drawing.Point(444, 38);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(29, 27);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
