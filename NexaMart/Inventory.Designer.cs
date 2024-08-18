@@ -88,7 +88,7 @@
             this.InventoryGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.InventoryGrid.EnableHeadersVisualStyles = false;
             this.InventoryGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(199)))), ((int)(((byte)(218)))));
-            this.InventoryGrid.Location = new System.Drawing.Point(8, 65);
+            this.InventoryGrid.Location = new System.Drawing.Point(12, 82);
             this.InventoryGrid.MultiSelect = false;
             this.InventoryGrid.Name = "InventoryGrid";
             this.InventoryGrid.ReadOnly = true;
@@ -97,7 +97,7 @@
             this.InventoryGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.InventoryGrid.RowTemplate.Height = 40;
             this.InventoryGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.InventoryGrid.Size = new System.Drawing.Size(1131, 380);
+            this.InventoryGrid.Size = new System.Drawing.Size(1127, 380);
             this.InventoryGrid.TabIndex = 34;
             this.InventoryGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.InventoryGrid_CellContentClick);
             // 
@@ -111,9 +111,9 @@
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.prodStock);
             this.panel2.Controls.Add(this.inventoryUPDATE);
-            this.panel2.Location = new System.Drawing.Point(10, 466);
+            this.panel2.Location = new System.Drawing.Point(12, 482);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1129, 267);
+            this.panel2.Size = new System.Drawing.Size(1127, 251);
             this.panel2.TabIndex = 33;
             // 
             // inventoryUPDATE
