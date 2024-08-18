@@ -47,6 +47,12 @@
             this.ProfilePanel = new System.Windows.Forms.Panel();
             this.Profile = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.InventoryPanel = new System.Windows.Forms.Panel();
+            this.Inventory = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.DashboardPanel = new System.Windows.Forms.Panel();
+            this.Dashboardlabel = new System.Windows.Forms.Label();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -73,6 +79,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.ProfilePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.InventoryPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            this.DashboardPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -92,6 +102,8 @@
             this.sidebar.Controls.Add(this.HomePanel);
             this.sidebar.Controls.Add(this.CategoryPanel);
             this.sidebar.Controls.Add(this.ProfilePanel);
+            this.sidebar.Controls.Add(this.InventoryPanel);
+            this.sidebar.Controls.Add(this.DashboardPanel);
             this.sidebar.Controls.Add(this.panel7);
             this.sidebar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.sidebar.Location = new System.Drawing.Point(0, -2);
@@ -304,15 +316,93 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // InventoryPanel
+            // 
+            this.InventoryPanel.Controls.Add(this.Inventory);
+            this.InventoryPanel.Controls.Add(this.pictureBox11);
+            this.InventoryPanel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.InventoryPanel.Location = new System.Drawing.Point(3, 289);
+            this.InventoryPanel.Name = "InventoryPanel";
+            this.InventoryPanel.Size = new System.Drawing.Size(209, 45);
+            this.InventoryPanel.TabIndex = 7;
+            this.InventoryPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.InventoryPanel_MouseClick);
+            // 
+            // Inventory
+            // 
+            this.Inventory.AutoSize = true;
+            this.Inventory.BackColor = System.Drawing.Color.Transparent;
+            this.Inventory.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Inventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Inventory.Location = new System.Drawing.Point(65, 9);
+            this.Inventory.Name = "Inventory";
+            this.Inventory.Size = new System.Drawing.Size(100, 28);
+            this.Inventory.TabIndex = 5;
+            this.Inventory.Text = "Inventory";
+            this.Inventory.Click += new System.EventHandler(this.Inventory_Click);
+            this.Inventory.MouseLeave += new System.EventHandler(this.Inventory_MouseLeave);
+            this.Inventory.MouseHover += new System.EventHandler(this.Inventory_MouseHover);
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox11.Image = global::NexaMart.Properties.Resources.user;
+            this.pictureBox11.Location = new System.Drawing.Point(8, 9);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(37, 31);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 4;
+            this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
+            // 
+            // DashboardPanel
+            // 
+            this.DashboardPanel.Controls.Add(this.Dashboardlabel);
+            this.DashboardPanel.Controls.Add(this.pictureBox12);
+            this.DashboardPanel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DashboardPanel.Location = new System.Drawing.Point(3, 340);
+            this.DashboardPanel.Name = "DashboardPanel";
+            this.DashboardPanel.Size = new System.Drawing.Size(209, 45);
+            this.DashboardPanel.TabIndex = 8;
+            this.DashboardPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DashboardPanel_MouseClick);
+            // 
+            // Dashboardlabel
+            // 
+            this.Dashboardlabel.AutoSize = true;
+            this.Dashboardlabel.BackColor = System.Drawing.Color.Transparent;
+            this.Dashboardlabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dashboardlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Dashboardlabel.Location = new System.Drawing.Point(65, 9);
+            this.Dashboardlabel.Name = "Dashboardlabel";
+            this.Dashboardlabel.Size = new System.Drawing.Size(110, 28);
+            this.Dashboardlabel.TabIndex = 5;
+            this.Dashboardlabel.Text = "Dashboard";
+            this.Dashboardlabel.Click += new System.EventHandler(this.Dashboardlabel_Click);
+            this.Dashboardlabel.MouseLeave += new System.EventHandler(this.Dashboardlabel_MouseLeave);
+            this.Dashboardlabel.MouseHover += new System.EventHandler(this.Dashboardlabel_MouseHover);
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox12.Image = global::NexaMart.Properties.Resources.user;
+            this.pictureBox12.Location = new System.Drawing.Point(8, 9);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(37, 31);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 4;
+            this.pictureBox12.TabStop = false;
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
+            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.pictureBox9);
             this.panel7.Controls.Add(this.pictureBox7);
             this.panel7.Controls.Add(this.AboutPanel);
             this.panel7.Controls.Add(this.LogoutPanel);
-            this.panel7.Location = new System.Drawing.Point(3, 289);
+            this.panel7.Location = new System.Drawing.Point(3, 391);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(209, 512);
+            this.panel7.Size = new System.Drawing.Size(209, 404);
             this.panel7.TabIndex = 7;
             // 
             // pictureBox9
@@ -320,7 +410,7 @@
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(11, 346);
+            this.pictureBox9.Location = new System.Drawing.Point(11, 246);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(50, 48);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -331,7 +421,7 @@
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(56, 370);
+            this.pictureBox7.Location = new System.Drawing.Point(56, 270);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(139, 24);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -343,7 +433,7 @@
             this.AboutPanel.Controls.Add(this.Aboutus);
             this.AboutPanel.Controls.Add(this.pictureBox4);
             this.AboutPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AboutPanel.Location = new System.Drawing.Point(0, 400);
+            this.AboutPanel.Location = new System.Drawing.Point(0, 300);
             this.AboutPanel.Name = "AboutPanel";
             this.AboutPanel.Size = new System.Drawing.Size(209, 45);
             this.AboutPanel.TabIndex = 5;
@@ -382,7 +472,7 @@
             this.LogoutPanel.Controls.Add(this.label4);
             this.LogoutPanel.Controls.Add(this.pictureBox5);
             this.LogoutPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LogoutPanel.Location = new System.Drawing.Point(3, 448);
+            this.LogoutPanel.Location = new System.Drawing.Point(3, 348);
             this.LogoutPanel.Name = "LogoutPanel";
             this.LogoutPanel.Size = new System.Drawing.Size(209, 45);
             this.LogoutPanel.TabIndex = 6;
@@ -501,6 +591,12 @@
             this.ProfilePanel.ResumeLayout(false);
             this.ProfilePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.InventoryPanel.ResumeLayout(false);
+            this.InventoryPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            this.DashboardPanel.ResumeLayout(false);
+            this.DashboardPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -550,5 +646,11 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Panel InventoryPanel;
+        private System.Windows.Forms.Label Inventory;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.Panel DashboardPanel;
+        private System.Windows.Forms.Label Dashboardlabel;
+        private System.Windows.Forms.PictureBox pictureBox12;
     }
 }
