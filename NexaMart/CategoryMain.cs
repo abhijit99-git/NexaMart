@@ -36,6 +36,7 @@ namespace NexaMart
         {
             //Loading Categories 
             CurrD.order.categorySelect.Items.Clear();
+            CurrD.prod.ProdCategory.Items.Clear();
             Form1 form1 = new Form1();
             OleDbConnection conCat = form1.con;
             OleDbDataAdapter da = new OleDbDataAdapter("Select *from Categories order by cate_id", conCat);
@@ -48,6 +49,7 @@ namespace NexaMart
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
                     CurrD.order.categorySelect.Items.Add(dt.Rows[i]["cate_name"].ToString());
+                    CurrD.prod.ProdCategory.Items.Add(dt.Rows[i]["cate_name"].ToString());
                 }
             }
             catch (Exception ex)

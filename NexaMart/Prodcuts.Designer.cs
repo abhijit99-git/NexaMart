@@ -40,6 +40,14 @@
             this.prodUPDATE = new System.Windows.Forms.Button();
             this.prodADD = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.SelectStatus = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.StockProd = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.prodStock = new System.Windows.Forms.Label();
+            this.ProdPRICE = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.ProdCategory = new System.Windows.Forms.ComboBox();
             this.ProdNAME = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -48,14 +56,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.usernameProfile = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.ProdPRICE = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.StockProd = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.prodStock = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.SelectStatus = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductGrid)).BeginInit();
             this.panel2.SuspendLayout();
@@ -236,6 +236,102 @@
             this.panel1.Size = new System.Drawing.Size(431, 382);
             this.panel1.TabIndex = 17;
             // 
+            // SelectStatus
+            // 
+            this.SelectStatus.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(166)))), ((int)(((byte)(135)))));
+            this.SelectStatus.FormattingEnabled = true;
+            this.SelectStatus.Items.AddRange(new object[] {
+            "ACTIVE",
+            "INACTIVE"});
+            this.SelectStatus.Location = new System.Drawing.Point(150, 268);
+            this.SelectStatus.Name = "SelectStatus";
+            this.SelectStatus.Size = new System.Drawing.Size(245, 28);
+            this.SelectStatus.TabIndex = 26;
+            this.SelectStatus.Text = "Select Status";
+            this.SelectStatus.DropDownClosed += new System.EventHandler(this.comboBox1_DropDownClosed);
+            this.SelectStatus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label9.Location = new System.Drawing.Point(36, 268);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(50, 20);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "Status";
+            // 
+            // StockProd
+            // 
+            this.StockProd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.StockProd.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StockProd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.StockProd.Location = new System.Drawing.Point(150, 218);
+            this.StockProd.Name = "StockProd";
+            this.StockProd.Size = new System.Drawing.Size(258, 20);
+            this.StockProd.TabIndex = 24;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(166)))), ((int)(((byte)(135)))));
+            this.label5.Location = new System.Drawing.Point(146, 228);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(249, 20);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "________________________________________";
+            // 
+            // prodStock
+            // 
+            this.prodStock.AutoSize = true;
+            this.prodStock.BackColor = System.Drawing.Color.Transparent;
+            this.prodStock.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prodStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.prodStock.Location = new System.Drawing.Point(36, 218);
+            this.prodStock.Name = "prodStock";
+            this.prodStock.Size = new System.Drawing.Size(46, 20);
+            this.prodStock.TabIndex = 22;
+            this.prodStock.Text = "Stock";
+            // 
+            // ProdPRICE
+            // 
+            this.ProdPRICE.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ProdPRICE.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProdPRICE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ProdPRICE.Location = new System.Drawing.Point(150, 161);
+            this.ProdPRICE.Name = "ProdPRICE";
+            this.ProdPRICE.Size = new System.Drawing.Size(258, 20);
+            this.ProdPRICE.TabIndex = 21;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(166)))), ((int)(((byte)(135)))));
+            this.label3.Location = new System.Drawing.Point(146, 171);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(249, 20);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "________________________________________";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label4.Location = new System.Drawing.Point(36, 161);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 20);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Price";
+            // 
             // ProdCategory
             // 
             this.ProdCategory.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -329,102 +425,6 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "MANAGE PRODUCTS";
             // 
-            // ProdPRICE
-            // 
-            this.ProdPRICE.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ProdPRICE.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProdPRICE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ProdPRICE.Location = new System.Drawing.Point(150, 161);
-            this.ProdPRICE.Name = "ProdPRICE";
-            this.ProdPRICE.Size = new System.Drawing.Size(258, 20);
-            this.ProdPRICE.TabIndex = 21;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(166)))), ((int)(((byte)(135)))));
-            this.label3.Location = new System.Drawing.Point(146, 171);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(249, 20);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "________________________________________";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(36, 161);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 20);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Price";
-            // 
-            // StockProd
-            // 
-            this.StockProd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.StockProd.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StockProd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.StockProd.Location = new System.Drawing.Point(150, 218);
-            this.StockProd.Name = "StockProd";
-            this.StockProd.Size = new System.Drawing.Size(258, 20);
-            this.StockProd.TabIndex = 24;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(166)))), ((int)(((byte)(135)))));
-            this.label5.Location = new System.Drawing.Point(146, 228);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(249, 20);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "________________________________________";
-            // 
-            // prodStock
-            // 
-            this.prodStock.AutoSize = true;
-            this.prodStock.BackColor = System.Drawing.Color.Transparent;
-            this.prodStock.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prodStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.prodStock.Location = new System.Drawing.Point(36, 218);
-            this.prodStock.Name = "prodStock";
-            this.prodStock.Size = new System.Drawing.Size(46, 20);
-            this.prodStock.TabIndex = 22;
-            this.prodStock.Text = "Stock";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(36, 268);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 20);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "Status";
-            // 
-            // SelectStatus
-            // 
-            this.SelectStatus.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SelectStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(166)))), ((int)(((byte)(135)))));
-            this.SelectStatus.FormattingEnabled = true;
-            this.SelectStatus.Items.AddRange(new object[] {
-            "ACTIVE",
-            "INACTIVE"});
-            this.SelectStatus.Location = new System.Drawing.Point(150, 268);
-            this.SelectStatus.Name = "SelectStatus";
-            this.SelectStatus.Size = new System.Drawing.Size(245, 28);
-            this.SelectStatus.TabIndex = 26;
-            this.SelectStatus.Text = "Select Status";
-            this.SelectStatus.DropDownClosed += new System.EventHandler(this.comboBox1_DropDownClosed);
-            this.SelectStatus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
-            // 
             // Prodcuts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -461,7 +461,6 @@
         private System.Windows.Forms.Button prodUPDATE;
         private System.Windows.Forms.Button prodADD;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox ProdCategory;
         private System.Windows.Forms.TextBox ProdNAME;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox ProdID;
@@ -477,5 +476,6 @@
         private System.Windows.Forms.TextBox StockProd;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label prodStock;
+        public System.Windows.Forms.ComboBox ProdCategory;
     }
 }
