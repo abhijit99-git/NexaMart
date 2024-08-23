@@ -31,6 +31,32 @@ namespace NexaMart
         }
 
 
+
+        void catupdatefill()
+        {
+            //Loading Categories 
+            CurrD.order.categorySelect.Items.Clear();
+            Form1 form1 = new Form1();
+            OleDbConnection conCat = form1.con;
+            OleDbDataAdapter da = new OleDbDataAdapter("Select *from Categories order by cate_id", conCat);
+            DataTable dt = new DataTable();
+
+            try
+            {
+                da.Fill(dt);
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    CurrD.order.categorySelect.Items.Add(dt.Rows[i]["cate_name"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+            // end loading section
+        }
         void fill()
         {
             CategoryGrid.ClearSelection();
@@ -66,6 +92,7 @@ namespace NexaMart
             CatName.Text = "";
             CatDescription.Text = "";
             StatusSelect.Text = "Select Status";
+
              this.Close();
         }
 
@@ -84,6 +111,7 @@ namespace NexaMart
                 OleDbCommand cmd = new OleDbCommand($"Insert into Categories values({Convert.ToInt32(CatID.Text)},'{CatName.Text}','{CatDescription.Text}','{StatusSelect.Text}')", con);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Record Added !", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                catupdatefill();
             }
             catch (Exception ex)
             {
@@ -105,6 +133,7 @@ namespace NexaMart
                 OleDbCommand cmd = new OleDbCommand($"Update Categories set cate_name='{CatName.Text}',description='{CatDescription.Text}',status='{StatusSelect.Text}' where cate_id={Convert.ToInt32(CatID.Text)}", con);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Record Updated !", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                catupdatefill();
             }
             catch (Exception ex)
             {
@@ -127,6 +156,7 @@ namespace NexaMart
                 OleDbCommand cmd = new OleDbCommand($"Delete from Categories where cate_id={Convert.ToInt32(CatID.Text)}", con);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Record Deleted !", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                catupdatefill();
             }
             catch (Exception ex)
             {

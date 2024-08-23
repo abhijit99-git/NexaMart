@@ -488,7 +488,6 @@
         private System.Windows.Forms.DataGridView OrderGrid;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button ordEXIT;
-        private System.Windows.Forms.ComboBox categorySelect;
         private System.Windows.Forms.Button ordDelete;
         private System.Windows.Forms.Button ordUPDATE;
         private System.Windows.Forms.Button ordADD;
@@ -510,5 +509,6 @@
         private System.Windows.Forms.TextBox orderTot;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox StatusSelect;
+        public System.Windows.Forms.ComboBox categorySelect;
     }
 }
