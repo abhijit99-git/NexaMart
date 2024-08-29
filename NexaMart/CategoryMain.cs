@@ -95,6 +95,8 @@ namespace NexaMart
             CatDescription.Text = "";
             StatusSelect.Text = "Select Status";
 
+            CurrD.manageCatBtn = false;
+
              this.Close();
         }
 

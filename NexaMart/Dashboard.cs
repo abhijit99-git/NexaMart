@@ -26,6 +26,8 @@ namespace NexaMart
         public Customers cust= new Customers();
         public Prodcuts prod = new Prodcuts();
 
+        public bool manageCatBtn=false;
+
         //section end
 
         public  string Adminname { get; set; }
@@ -106,7 +108,14 @@ namespace NexaMart
                     }
                     else if (categoripanelclicked == true)
                     {
-                        loadform(new CategoriesForm(this));
+                        if (manageCatBtn == true)
+                        {
+                            loadform(new ManageCategory(this));
+                        }
+                        else
+                        {
+                            loadform(new CategoriesForm(this));
+                        }
                     }
                     else if (profilepanelclicked == true)
                     {
@@ -149,7 +158,14 @@ namespace NexaMart
                     }
                     else if (categoripanelclicked == true)
                     {
-                        loadform(new CategoriesForm(this));
+                        if (manageCatBtn == true)
+                        {
+                            loadform(new ManageCategory(this));
+                        }
+                        else
+                        {
+                            loadform(new CategoriesForm(this));
+                        }
                     }
                     else if (profilepanelclicked == true)
                     {

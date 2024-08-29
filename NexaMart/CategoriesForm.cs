@@ -34,6 +34,7 @@ namespace NexaMart
             try
             {
                 CurrD.loadform(new ManageCategory(CurrD));
+                CurrD.manageCatBtn = true;
             }
             catch(Exception ex)
             {
