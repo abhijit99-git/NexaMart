@@ -79,24 +79,24 @@
             this.OrderGrid.AllowUserToResizeColumns = false;
             this.OrderGrid.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(181)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(223)))), ((int)(((byte)(234)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(194)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.OrderGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.OrderGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.OrderGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(201)))), ((int)(((byte)(248)))));
+            this.OrderGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.OrderGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.OrderGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.OrderGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(170)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(194)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(136)))), ((int)(((byte)(228)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(207)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.OrderGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -104,16 +104,16 @@
             this.OrderGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.OrderGrid.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(201)))), ((int)(((byte)(248)))));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(146)))), ((int)(((byte)(209)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(194)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.OrderGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.OrderGrid.EnableHeadersVisualStyles = false;
-            this.OrderGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(201)))), ((int)(((byte)(248)))));
+            this.OrderGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.OrderGrid.Location = new System.Drawing.Point(457, 13);
             this.OrderGrid.MultiSelect = false;
             this.OrderGrid.Name = "OrderGrid";
@@ -146,12 +146,12 @@
             this.ordEXIT.BackColor = System.Drawing.Color.Transparent;
             this.ordEXIT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ordEXIT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ordEXIT.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.ordEXIT.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(199)))), ((int)(((byte)(213)))));
             this.ordEXIT.FlatAppearance.BorderSize = 2;
-            this.ordEXIT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
+            this.ordEXIT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(199)))), ((int)(((byte)(213)))));
             this.ordEXIT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ordEXIT.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ordEXIT.ForeColor = System.Drawing.Color.SteelBlue;
+            this.ordEXIT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(126)))), ((int)(((byte)(139)))));
             this.ordEXIT.Location = new System.Drawing.Point(12, 169);
             this.ordEXIT.Name = "ordEXIT";
             this.ordEXIT.Size = new System.Drawing.Size(406, 41);
@@ -165,12 +165,12 @@
             this.ordDelete.BackColor = System.Drawing.Color.Transparent;
             this.ordDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ordDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ordDelete.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.ordDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(199)))), ((int)(((byte)(213)))));
             this.ordDelete.FlatAppearance.BorderSize = 2;
-            this.ordDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
+            this.ordDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(199)))), ((int)(((byte)(213)))));
             this.ordDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ordDelete.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ordDelete.ForeColor = System.Drawing.Color.SteelBlue;
+            this.ordDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(126)))), ((int)(((byte)(139)))));
             this.ordDelete.Location = new System.Drawing.Point(318, 98);
             this.ordDelete.Name = "ordDelete";
             this.ordDelete.Size = new System.Drawing.Size(100, 46);
@@ -184,12 +184,12 @@
             this.ordUPDATE.BackColor = System.Drawing.Color.Transparent;
             this.ordUPDATE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ordUPDATE.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ordUPDATE.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.ordUPDATE.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(199)))), ((int)(((byte)(213)))));
             this.ordUPDATE.FlatAppearance.BorderSize = 2;
-            this.ordUPDATE.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
+            this.ordUPDATE.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(199)))), ((int)(((byte)(213)))));
             this.ordUPDATE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ordUPDATE.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ordUPDATE.ForeColor = System.Drawing.Color.SteelBlue;
+            this.ordUPDATE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(126)))), ((int)(((byte)(139)))));
             this.ordUPDATE.Location = new System.Drawing.Point(166, 98);
             this.ordUPDATE.Name = "ordUPDATE";
             this.ordUPDATE.Size = new System.Drawing.Size(105, 46);
@@ -203,12 +203,12 @@
             this.ordADD.BackColor = System.Drawing.Color.Transparent;
             this.ordADD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ordADD.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ordADD.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.ordADD.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(199)))), ((int)(((byte)(213)))));
             this.ordADD.FlatAppearance.BorderSize = 2;
-            this.ordADD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
+            this.ordADD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(199)))), ((int)(((byte)(213)))));
             this.ordADD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ordADD.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ordADD.ForeColor = System.Drawing.Color.SteelBlue;
+            this.ordADD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(126)))), ((int)(((byte)(139)))));
             this.ordADD.Location = new System.Drawing.Point(12, 98);
             this.ordADD.Name = "ordADD";
             this.ordADD.Size = new System.Drawing.Size(107, 46);
@@ -243,7 +243,7 @@
             // categorySelect
             // 
             this.categorySelect.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categorySelect.ForeColor = System.Drawing.Color.SteelBlue;
+            this.categorySelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(173)))), ((int)(((byte)(236)))));
             this.categorySelect.FormattingEnabled = true;
             this.categorySelect.Location = new System.Drawing.Point(42, 134);
             this.categorySelect.Name = "categorySelect";
@@ -280,7 +280,7 @@
             // StatusSelect
             // 
             this.StatusSelect.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StatusSelect.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.StatusSelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(173)))), ((int)(((byte)(236)))));
             this.StatusSelect.FormattingEnabled = true;
             this.StatusSelect.Items.AddRange(new object[] {
             "PAID",
@@ -296,7 +296,7 @@
             // ProductSelect
             // 
             this.ProductSelect.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductSelect.ForeColor = System.Drawing.Color.SteelBlue;
+            this.ProductSelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(173)))), ((int)(((byte)(236)))));
             this.ProductSelect.FormattingEnabled = true;
             this.ProductSelect.Location = new System.Drawing.Point(42, 184);
             this.ProductSelect.Name = "ProductSelect";

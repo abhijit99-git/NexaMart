@@ -76,7 +76,7 @@ namespace NexaMart
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex + "Value Mismatch or Record already present", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please Correct Select Record", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
