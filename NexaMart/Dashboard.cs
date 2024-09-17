@@ -131,7 +131,7 @@ namespace NexaMart
                     }
                     else if (Dashboardpanelclicked == true)
                     {
-                        loadform(new Inventory());
+                        loadform(new DashboardAnalytics());
                     }
 
                     BarExpand = false;
@@ -181,7 +181,7 @@ namespace NexaMart
                     }
                     else if (Dashboardpanelclicked == true)
                     {
-                        loadform(new Inventory());
+                        loadform(new DashboardAnalytics());
                     }
 
                     BarExpand = true;
@@ -665,7 +665,7 @@ namespace NexaMart
         private void Dashboardlabel_Click(object sender, EventArgs e)
         {
             selectpanel("dashboard");
-            loadform(new Inventory());
+            loadform(new DashboardAnalytics());
         }
 
 
@@ -678,7 +678,7 @@ namespace NexaMart
         private void pictureBox12_Click(object sender, EventArgs e)
         {
             selectpanel("dashboard");
-            loadform(new Inventory());
+            loadform(new DashboardAnalytics());
         }
 
         private void InventoryPanel_MouseClick(object sender, MouseEventArgs e)
@@ -690,7 +690,7 @@ namespace NexaMart
         private void DashboardPanel_MouseClick(object sender, MouseEventArgs e)
         {
             selectpanel("dashboard");
-            loadform(new Inventory());
+            loadform(new DashboardAnalytics());
         }
     }
 }
