@@ -369,6 +369,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="NexaMartIconLogo.ico" />
+    <None Include="Resources\white line.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
