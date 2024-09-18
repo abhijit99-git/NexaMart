@@ -16,6 +16,30 @@ namespace NexaMart
         public DashboardAnalytics()
         {
             InitializeComponent();
+
+            Form1 formini = new Form1();
+            OleDbConnection conini = formini.con;
+            OleDbDataAdapter dapp = new OleDbDataAdapter("Select *from Inventory", conini);
+            DataTable dtt = new DataTable();
+
+            try
+            {
+                dapp.Fill(dtt);
+
+                for (int i = 0; i < dtt.Rows.Count; i++)
+                {
+                    string name = dtt.Rows[i]["pro_name"].ToString();
+                    string stock = dtt.Rows[i]["stock"].ToString();
+                    chart1.Series["Stock"].Points.AddXY(name,stock);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        
+          
         }
 
         void OrderAmtFill()
@@ -27,7 +51,15 @@ namespace NexaMart
             try
             {
                 conOrd.Open();
-               OrderAmtText.Text= cmd.ExecuteScalar().ToString();
+                if (cmd.ExecuteScalar().ToString() == "")
+                {
+                    OrderAmtText.Text = "0";
+                }
+                else
+                {
+                    OrderAmtText.Text = cmd.ExecuteScalar().ToString();
+                }
+                
                 
             }
             catch (Exception ex)
@@ -47,7 +79,15 @@ namespace NexaMart
             try
             {
                 conProd.Open();
-                ProductAmtText.Text = cmd.ExecuteScalar().ToString();
+                if (cmd.ExecuteScalar().ToString() == "")
+                {
+                    ProductAmtText.Text = "0";
+                }
+                else
+                {
+                    ProductAmtText.Text = cmd.ExecuteScalar().ToString();
+                }
+                
 
             }
             catch (Exception ex)
@@ -67,7 +107,15 @@ namespace NexaMart
             try
             {
                 contot.Open();
-                TotalEarnText.Text = "₹ "+cmd.ExecuteScalar().ToString();
+                if (cmd.ExecuteScalar().ToString() == "")
+                {
+                   TotalEarnText.Text = "₹ 0.00";
+                }
+                else
+                {
+                    TotalEarnText.Text = "₹ " + cmd.ExecuteScalar().ToString();
+                }
+               
 
             }
             catch (Exception ex)
@@ -86,7 +134,14 @@ namespace NexaMart
             try
             {
                 contod.Open();
-                TodaysEarnText.Text = "₹ " + cmd.ExecuteScalar().ToString();
+                if (cmd.ExecuteScalar().ToString() == "")
+                {
+                    TodaysEarnText.Text = "₹ 0.00";
+                }
+                else
+                {
+                    TodaysEarnText.Text = "₹ " + cmd.ExecuteScalar().ToString();
+                }
 
             }
             catch (Exception ex)
