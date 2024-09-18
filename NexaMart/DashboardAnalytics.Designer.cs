@@ -149,9 +149,9 @@
             this.TotalEarnText.ForeColor = System.Drawing.Color.White;
             this.TotalEarnText.Location = new System.Drawing.Point(12, 105);
             this.TotalEarnText.Name = "TotalEarnText";
-            this.TotalEarnText.Size = new System.Drawing.Size(90, 37);
+            this.TotalEarnText.Size = new System.Drawing.Size(77, 37);
             this.TotalEarnText.TabIndex = 14;
-            this.TotalEarnText.Text = "0.0 Rs";
+            this.TotalEarnText.Text = "₹ 0.0";
             // 
             // label2
             // 
@@ -184,9 +184,9 @@
             this.TodaysEarnText.ForeColor = System.Drawing.Color.White;
             this.TodaysEarnText.Location = new System.Drawing.Point(3, 105);
             this.TodaysEarnText.Name = "TodaysEarnText";
-            this.TodaysEarnText.Size = new System.Drawing.Size(90, 37);
+            this.TodaysEarnText.Size = new System.Drawing.Size(77, 37);
             this.TodaysEarnText.TabIndex = 14;
-            this.TodaysEarnText.Text = "0.0 Rs";
+            this.TodaysEarnText.Text = "₹ 0.0";
             // 
             // label3
             // 

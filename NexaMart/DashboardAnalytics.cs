@@ -58,12 +58,51 @@ namespace NexaMart
             conProd.Close();
         }
 
+
+        void fillTotal()
+        {
+            Form1 formtot = new Form1();
+            OleDbConnection contot = formtot.con;
+            OleDbCommand cmd = new OleDbCommand("Select sum(total_amt) from Orders", contot);
+            try
+            {
+                contot.Open();
+                TotalEarnText.Text = "₹ "+cmd.ExecuteScalar().ToString();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+            contot.Close();
+        }
+
+        void filltoday()
+        {
+            Form1 formtod = new Form1();
+            OleDbConnection contod = formtod.con;
+            OleDbCommand cmd = new OleDbCommand($"Select sum(total_amt) from Orders where status='PAID' and order_date='{DateTime.Now.ToString("d-M-yyyy")}'", contod);
+            try
+            {
+                contod.Open();
+                TodaysEarnText.Text = "₹ " + cmd.ExecuteScalar().ToString();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+            contod.Close();
+        }
     
         private void DashboardAnalytics_Load(object sender, EventArgs e)
         {
             OrderAmtFill();
             ProdFill();
-          
+            fillTotal();
+            filltoday();
         }
     }
 }
