@@ -143,5 +143,27 @@ namespace NexaMart
                 CustEmail.Text = row.Cells["cust_email"].Value.ToString();
             }
         }
+
+        private void SearchCustomerID_TextChanged(object sender, EventArgs e)
+        {
+            if (SearchCustomerName.Text == "")
+            {
+                fill();
+            }
+            else
+            {
+                OleDbDataAdapter daS = new OleDbDataAdapter($"Select *from Customers where cust_name='{SearchCustomerName.Text}' order by cust_id", con);
+                DataTable dtS = new DataTable();
+                daS.Fill(dtS);
+                CustomerGrid.DataSource = dtS;
+                con.Close();
+                CustomerGrid.Columns[0].HeaderText = "ID";
+                CustomerGrid.Columns[1].HeaderText = "Name";
+                CustomerGrid.Columns[2].HeaderText = "Email";
+                CustomerGrid.Columns[3].HeaderText = "Contact";
+                CustomerGrid.Columns[4].HeaderText = "Address";
+            }
+            
+        }
     }
 }

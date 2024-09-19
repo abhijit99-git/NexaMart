@@ -56,10 +56,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.CustAddress = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.SearchCustomerName = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerGrid)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -128,8 +133,12 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.custEXIT);
+            this.panel2.Controls.Add(this.SearchCustomerName);
+            this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.custDELETE);
+            this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.custUPDATE);
             this.panel2.Controls.Add(this.custADD);
             this.panel2.Location = new System.Drawing.Point(10, 476);
@@ -148,7 +157,7 @@
             this.custEXIT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.custEXIT.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.custEXIT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
-            this.custEXIT.Location = new System.Drawing.Point(11, 128);
+            this.custEXIT.Location = new System.Drawing.Point(14, 142);
             this.custEXIT.Name = "custEXIT";
             this.custEXIT.Size = new System.Drawing.Size(406, 41);
             this.custEXIT.TabIndex = 9;
@@ -167,7 +176,7 @@
             this.custDELETE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.custDELETE.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.custDELETE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
-            this.custDELETE.Location = new System.Drawing.Point(317, 57);
+            this.custDELETE.Location = new System.Drawing.Point(320, 71);
             this.custDELETE.Name = "custDELETE";
             this.custDELETE.Size = new System.Drawing.Size(100, 46);
             this.custDELETE.TabIndex = 7;
@@ -186,7 +195,7 @@
             this.custUPDATE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.custUPDATE.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.custUPDATE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
-            this.custUPDATE.Location = new System.Drawing.Point(165, 57);
+            this.custUPDATE.Location = new System.Drawing.Point(168, 71);
             this.custUPDATE.Name = "custUPDATE";
             this.custUPDATE.Size = new System.Drawing.Size(105, 46);
             this.custUPDATE.TabIndex = 6;
@@ -205,7 +214,7 @@
             this.custADD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.custADD.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.custADD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
-            this.custADD.Location = new System.Drawing.Point(11, 57);
+            this.custADD.Location = new System.Drawing.Point(14, 71);
             this.custADD.Name = "custADD";
             this.custADD.Size = new System.Drawing.Size(107, 46);
             this.custADD.TabIndex = 5;
@@ -418,6 +427,51 @@
             this.panel1.Size = new System.Drawing.Size(431, 382);
             this.panel1.TabIndex = 27;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(368, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 47;
+            this.pictureBox2.TabStop = false;
+            // 
+            // SearchCustomerName
+            // 
+            this.SearchCustomerName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SearchCustomerName.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchCustomerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.SearchCustomerName.Location = new System.Drawing.Point(104, 12);
+            this.SearchCustomerName.Name = "SearchCustomerName";
+            this.SearchCustomerName.Size = new System.Drawing.Size(258, 27);
+            this.SearchCustomerName.TabIndex = 46;
+            this.SearchCustomerName.TextChanged += new System.EventHandler(this.SearchCustomerID_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(115)))), ((int)(((byte)(141)))));
+            this.label8.Location = new System.Drawing.Point(100, 30);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(255, 20);
+            this.label8.TabIndex = 45;
+            this.label8.Text = "_________________________________________";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label10.Location = new System.Drawing.Point(41, 14);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(53, 20);
+            this.label10.TabIndex = 44;
+            this.label10.Text = "NAME";
+            // 
             // Customers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -437,8 +491,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerGrid)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -470,5 +526,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox CustAddress;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox SearchCustomerName;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label10;
     }
 }
