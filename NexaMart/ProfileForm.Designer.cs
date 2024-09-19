@@ -237,6 +237,7 @@
             this.ReceiptName.Name = "ReceiptName";
             this.ReceiptName.Size = new System.Drawing.Size(258, 22);
             this.ReceiptName.TabIndex = 12;
+            this.ReceiptName.TextChanged += new System.EventHandler(this.ReceiptName_TextChanged);
             // 
             // label4
             // 

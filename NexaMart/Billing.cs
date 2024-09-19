@@ -210,5 +210,44 @@ namespace NexaMart
                 deleteid =Convert.ToInt32(row.Cells["order_id"].Value.ToString());
             }
         }
+
+        string recname = "";
+        private void BillPRINT_Click(object sender, EventArgs e)
+        {
+           
+            if (SearchCustomerID.Text == "")
+            {
+                MessageBox.Show("Please Enter Customer ID", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+
+
+                try
+                {
+                    con.Open();
+                    string query = "Select ReceiptName from Admin where ad_name='" + CurrD.Adminname + "'";
+                    OleDbCommand cmd = new OleDbCommand(query, con);
+
+                    OleDbDataReader read = cmd.ExecuteReader();
+                    if (read.Read())
+                    {
+                        recname = read["ReceiptName"].ToString();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("error " + ex);
+                }
+                finally
+                {
+                    con.Close();
+                }
+
+                SaveReport billingReport = new SaveReport(Convert.ToInt32(SearchCustomerID.Text),recname);
+                billingReport.Show();
+            }
+
+        }
     }
 }

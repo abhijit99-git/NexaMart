@@ -165,5 +165,10 @@ namespace NexaMart
                 }
             }
         }
+
+        private void ReceiptName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
