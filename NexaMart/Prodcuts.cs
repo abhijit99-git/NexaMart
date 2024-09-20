@@ -205,5 +205,59 @@ namespace NexaMart
                 SelectStatus.Text = "Select Status";
             }
         }
+
+        private void SearchCustomerName_TextChanged(object sender, EventArgs e)
+        {
+            if (SearchCustomerName.Text == "")
+            {
+                fill();
+            }
+            else
+            {
+                OleDbDataAdapter daS = new OleDbDataAdapter($"Select *from Products where product_name='{SearchCustomerName.Text}'", con);
+                DataTable dtS = new DataTable();
+                daS.Fill(dtS);
+                ProductGrid.DataSource = dtS;
+                con.Close();
+                ProductGrid.Columns[0].HeaderText = "ID";
+                ProductGrid.Columns[1].HeaderText = "Product Name";
+                ProductGrid.Columns[2].HeaderText = "Price";
+                ProductGrid.Columns[3].HeaderText = "Category";
+            }
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+           
+            ProdNAME.Text = "";
+            ProdPRICE.Text = "";
+            ProdCategory.Text = "Select Category";
+            SelectStatus.Text = "Select Status";
+            StockProd.Text = "";
+            ProdID.Text = "";
+            SearchCustomerName.Text = "";
+
+        }
+
+        private void ProdNAME_TextChanged(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            if (ProdID.Text == "")
+            {
+                try
+                {
+                    OleDbConnection conforID = f1.con;
+
+                    OleDbCommand cmdforID = new OleDbCommand("SELECT TOP 1  product_id FROM Products ORDER BY product_id DESC", conforID);
+                    conforID.Open();
+                    ProdID.Text = (Convert.ToInt32(cmdforID.ExecuteScalar().ToString()) + 1).ToString();
+                    conforID.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Something Went Wrong , TRY AGAIN");
+                }
+            }
+        }
     }
 }
