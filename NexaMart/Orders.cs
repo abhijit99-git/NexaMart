@@ -221,98 +221,143 @@ namespace NexaMart
         {
             OleDbConnection cn = formcon.con;
             //OleDbDataAdapter daInv = new OleDbDataAdapter("select stock from Inventory ", cn);
-
-            cn.Open();
-            OleDbCommand cm = new OleDbCommand($"select *from Inventory where pro_name='{ProductSelect.Text}' and stock>{Convert.ToInt32(orderQTY.Text)}",cn);
-            
-            OleDbDataReader read= cm.ExecuteReader();
-            if (read.HasRows)
+            int flag = 1;
+            try
             {
-                cn.Close();
-                OleDbConnection conInsert = formcon.con;
-
-                try
-                {
-                    conInsert.Open();
-                    OleDbCommand cmd = new OleDbCommand("Insert into Orders values(" + Convert.ToInt32(OrdID.Text) + ", " + Convert.ToInt32(orderCustID.Text) + ", '" + ProductSelect.Text + "', '" + OrderDate.Value.ToString("d-M-yyyy") + "'," + Convert.ToInt32(orderQTY.Text) + "," + Convert.ToInt32(orderTot.Text) + ",'" + StatusSelect.Text + "')", conInsert);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Record Added", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-                    //stock updation
-                    cmd = new OleDbCommand($"Update Inventory set stock=(stock-{Convert.ToInt32(orderQTY.Text)}) where pro_name='{ProductSelect.Text}'", conInsert);
-                    cmd.ExecuteNonQuery();
-                   
-                    //
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Record already present or value mismatch", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    conInsert.Close();
-                    OrdID.Text = "";
-                    orderCustID.Text = "";
-                    OrderDate.Text = "";
-                    orderQTY.Text = "";
-                    orderTot.Text = "";
-                    categorySelect.Text = "Select Category";
-                    ProductSelect.Text = "Select Product";
-                    ProductSelect.Items.Clear();
-                }
-                fill();
+                Convert.ToInt32(orderCustID.Text);
+                flag = 0;
             }
-            else
+            catch(Exception exx)
             {
-                MessageBox.Show("INSUFFICENT STOCK", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                cn.Close();
+                MessageBox.Show("Insert Correct Customer ID", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            if (flag == 0)
+            {
+                cn.Open();
+
+                OleDbCommand cm = new OleDbCommand($"select *from Inventory where pro_name='{ProductSelect.Text}' and stock>{Convert.ToInt32(orderQTY.Text)}", cn);
+
+                OleDbDataReader read = cm.ExecuteReader();
+                if (read.HasRows)
+                {
+                    cn.Close();
+                    OleDbConnection conInsert = formcon.con;
+
+                    try
+                    {
+                        conInsert.Open();
+                        OleDbCommand cmd = new OleDbCommand("Insert into Orders values(" + Convert.ToInt32(OrdID.Text) + ", " + Convert.ToInt32(orderCustID.Text) + ", '" + ProductSelect.Text + "', '" + OrderDate.Value.ToString("d-M-yyyy") + "'," + Convert.ToInt32(orderQTY.Text) + "," + Convert.ToInt32(orderTot.Text) + ",'" + StatusSelect.Text + "')", conInsert);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Record Added", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                        //stock updation
+                        cmd = new OleDbCommand($"Update Inventory set stock=(stock-{Convert.ToInt32(orderQTY.Text)}) where pro_name='{ProductSelect.Text}'", conInsert);
+                        cmd.ExecuteNonQuery();
+
+                        //
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Record already present or value mismatch", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        conInsert.Close();
+                        OrdID.Text = "";
+                        orderCustID.Text = "";
+                        OrderDate.Text = "";
+                        orderQTY.Text = "";
+                        orderTot.Text = "";
+                        categorySelect.Text = "Select Category";
+                        ProductSelect.Text = "Select Product";
+                        ProductSelect.Items.Clear();
+                    }
+                    fill();
+                    SearchCustomerID.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("INSUFFICENT STOCK", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    cn.Close();
+                }
             }
         }
 
         private void ordUPDATE_Click(object sender, EventArgs e)
         {
+
             OleDbConnection conInsert = formcon.con;
+
+            int flag = 1;
             try
             {
-                conInsert.Open();
+                Convert.ToInt32(orderCustID.Text);
+                flag = 0;
+            }
+            catch (Exception exx)
+            {
+                MessageBox.Show("Insert Correct Customer ID", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            if (flag == 0)
+            {
+                try
+                {
+                    conInsert.Open();
 
-                OleDbCommand cmd = new OleDbCommand("Update Orders set custmer_id= " + Convert.ToInt32(orderCustID.Text) + ", order_date='" + OrderDate.Value.ToString("d-M-yyyy") + "', status='" + StatusSelect.Text + "' where order_id=" + Convert.ToInt32(OrdID.Text) + " ", conInsert);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Updated Successfully");
+                    OleDbCommand cmd = new OleDbCommand("Update Orders set custmer_id= " + Convert.ToInt32(orderCustID.Text) + ", order_date='" + OrderDate.Value.ToString("d-M-yyyy") + "', status='" + StatusSelect.Text + "' where order_id=" + Convert.ToInt32(OrdID.Text) + " ", conInsert);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Updated Successfully");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Record Not Present", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    conInsert.Close();
+                }
+                fill();
+                SearchCustomerID.Clear();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Record Not Present", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                conInsert.Close();
-            }
-            fill();
         }
 
         private void ordDelete_Click(object sender, EventArgs e)
         {
             OleDbConnection con= formcon.con;
-
+            int flag = 1;
             try
             {
-                con.Open();
+                Convert.ToInt32(orderCustID.Text);
+                flag = 0;
+            }
+            catch (Exception exx)
+            {
+                MessageBox.Show("Insert Correct Customer ID", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                flag = 1;
+            }
+            if (flag == 0)
+            {
+                try
+                {
+                    con.Open();
 
-                OleDbCommand cmd = new OleDbCommand("Delete from Orders where order_id=" + Convert.ToInt32(OrdID.Text) + "", con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Deleted Successfully");
+                    OleDbCommand cmd = new OleDbCommand("Delete from Orders where order_id=" + Convert.ToInt32(OrdID.Text) + "", con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Deleted Successfully");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Record Not Present", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    con.Close();
+                }
+                fill();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Record Not Present", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                con.Close();
-            }
-            fill();
         }
 
         private void OrderGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -331,6 +376,67 @@ namespace NexaMart
  
                 StatusSelect.Text = row.Cells["status"].Value.ToString();
             }
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+           
+            orderCustID.Text = "";
+            OrderDate.Text = "";
+            orderQTY.Text = "";
+            orderTot.Text = "";
+            categorySelect.Text = "Select Category";
+            ProductSelect.Text = "Select Product";
+            OrdID.Text = "";
+            ProductSelect.Items.Clear();
+            SearchCustomerID.Text = "";
+        }
+
+        private void orderCustID_TextChanged(object sender, EventArgs e)
+        {
+
+            Form1 f1 = new Form1();
+            if (OrdID.Text == "")
+            {
+                try
+                {
+                    OleDbConnection conforID = f1.con;
+
+                    OleDbCommand cmdforID = new OleDbCommand("SELECT TOP 1  order_id FROM Orders ORDER BY order_id DESC", conforID);
+                    conforID.Open();
+                    OrdID.Text = (Convert.ToInt32(cmdforID.ExecuteScalar().ToString()) + 1).ToString();
+                    conforID.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Something Went Wrong , TRY AGAIN");
+                }
+            }
+        }
+
+        private void SearchCustomerID_TextChanged(object sender, EventArgs e)
+        {
+
+            if (SearchCustomerID.Text == "")
+            {
+                fill();
+            }
+            else
+            {
+                OleDbDataAdapter daS = new OleDbDataAdapter($"Select *from Orders where custmer_id='{SearchCustomerID.Text}' order by order_id", con);
+                DataTable dtS = new DataTable();
+                daS.Fill(dtS);
+                OrderGrid.DataSource = dtS;
+                con.Close();
+                OrderGrid.Columns[0].HeaderText = "ID";
+                OrderGrid.Columns[1].HeaderText = "CustomerID";
+                OrderGrid.Columns[2].HeaderText = "Product Name";
+                OrderGrid.Columns[3].HeaderText = "Date";
+                OrderGrid.Columns[4].HeaderText = "QTY";
+                OrderGrid.Columns[5].HeaderText = "Total";
+                OrderGrid.Columns[6].HeaderText = "Status";
+            }
+          
         }
     }
 }

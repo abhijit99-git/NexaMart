@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Orders));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.OrderGrid = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -58,10 +58,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.usernameProfile = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.SearchCustomerID = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -78,40 +84,40 @@
             // 
             this.OrderGrid.AllowUserToResizeColumns = false;
             this.OrderGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(223)))), ((int)(((byte)(234)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(194)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.OrderGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(223)))), ((int)(((byte)(234)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(194)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.OrderGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.OrderGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.OrderGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.OrderGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.OrderGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.OrderGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(194)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(207)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.OrderGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(194)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(207)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.OrderGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.OrderGrid.ColumnHeadersHeight = 40;
             this.OrderGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.OrderGrid.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(194)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.OrderGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(194)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.OrderGrid.DefaultCellStyle = dataGridViewCellStyle6;
             this.OrderGrid.EnableHeadersVisualStyles = false;
             this.OrderGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.OrderGrid.Location = new System.Drawing.Point(457, 13);
@@ -130,6 +136,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.SearchCustomerID);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.ordEXIT);
             this.panel2.Controls.Add(this.ordDelete);
             this.panel2.Controls.Add(this.ordUPDATE);
@@ -138,7 +148,7 @@
             this.panel2.Controls.Add(this.label10);
             this.panel2.Location = new System.Drawing.Point(10, 476);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(431, 227);
+            this.panel2.Size = new System.Drawing.Size(431, 265);
             this.panel2.TabIndex = 13;
             // 
             // ordEXIT
@@ -152,7 +162,7 @@
             this.ordEXIT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ordEXIT.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ordEXIT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(126)))), ((int)(((byte)(139)))));
-            this.ordEXIT.Location = new System.Drawing.Point(12, 169);
+            this.ordEXIT.Location = new System.Drawing.Point(14, 205);
             this.ordEXIT.Name = "ordEXIT";
             this.ordEXIT.Size = new System.Drawing.Size(406, 41);
             this.ordEXIT.TabIndex = 9;
@@ -171,7 +181,7 @@
             this.ordDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ordDelete.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ordDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(126)))), ((int)(((byte)(139)))));
-            this.ordDelete.Location = new System.Drawing.Point(318, 98);
+            this.ordDelete.Location = new System.Drawing.Point(320, 134);
             this.ordDelete.Name = "ordDelete";
             this.ordDelete.Size = new System.Drawing.Size(100, 46);
             this.ordDelete.TabIndex = 7;
@@ -190,7 +200,7 @@
             this.ordUPDATE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ordUPDATE.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ordUPDATE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(126)))), ((int)(((byte)(139)))));
-            this.ordUPDATE.Location = new System.Drawing.Point(166, 98);
+            this.ordUPDATE.Location = new System.Drawing.Point(168, 134);
             this.ordUPDATE.Name = "ordUPDATE";
             this.ordUPDATE.Size = new System.Drawing.Size(105, 46);
             this.ordUPDATE.TabIndex = 6;
@@ -209,7 +219,7 @@
             this.ordADD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ordADD.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ordADD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(126)))), ((int)(((byte)(139)))));
-            this.ordADD.Location = new System.Drawing.Point(12, 98);
+            this.ordADD.Location = new System.Drawing.Point(14, 134);
             this.ordADD.Name = "ordADD";
             this.ordADD.Size = new System.Drawing.Size(107, 46);
             this.ordADD.TabIndex = 5;
@@ -222,7 +232,7 @@
             this.orderTot.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.orderTot.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderTot.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.orderTot.Location = new System.Drawing.Point(120, 22);
+            this.orderTot.Location = new System.Drawing.Point(126, 81);
             this.orderTot.Name = "orderTot";
             this.orderTot.ReadOnly = true;
             this.orderTot.Size = new System.Drawing.Size(258, 27);
@@ -234,7 +244,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label10.Location = new System.Drawing.Point(58, 24);
+            this.label10.Location = new System.Drawing.Point(64, 83);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(42, 20);
             this.label10.TabIndex = 26;
@@ -245,7 +255,7 @@
             this.categorySelect.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categorySelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(173)))), ((int)(((byte)(236)))));
             this.categorySelect.FormattingEnabled = true;
-            this.categorySelect.Location = new System.Drawing.Point(42, 134);
+            this.categorySelect.Location = new System.Drawing.Point(43, 122);
             this.categorySelect.Name = "categorySelect";
             this.categorySelect.Size = new System.Drawing.Size(349, 28);
             this.categorySelect.TabIndex = 8;
@@ -257,6 +267,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.StatusSelect);
             this.panel1.Controls.Add(this.ProductSelect);
             this.panel1.Controls.Add(this.categorySelect);
@@ -285,7 +296,7 @@
             this.StatusSelect.Items.AddRange(new object[] {
             "PAID",
             "PENDING"});
-            this.StatusSelect.Location = new System.Drawing.Point(146, 323);
+            this.StatusSelect.Location = new System.Drawing.Point(147, 311);
             this.StatusSelect.Name = "StatusSelect";
             this.StatusSelect.Size = new System.Drawing.Size(245, 28);
             this.StatusSelect.TabIndex = 33;
@@ -298,7 +309,7 @@
             this.ProductSelect.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProductSelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(173)))), ((int)(((byte)(236)))));
             this.ProductSelect.FormattingEnabled = true;
-            this.ProductSelect.Location = new System.Drawing.Point(42, 184);
+            this.ProductSelect.Location = new System.Drawing.Point(43, 172);
             this.ProductSelect.Name = "ProductSelect";
             this.ProductSelect.Size = new System.Drawing.Size(349, 28);
             this.ProductSelect.TabIndex = 32;
@@ -313,7 +324,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label12.Location = new System.Drawing.Point(38, 328);
+            this.label12.Location = new System.Drawing.Point(39, 316);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(50, 20);
             this.label12.TabIndex = 29;
@@ -323,7 +334,7 @@
             // 
             this.OrderDate.CalendarFont = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderDate.CalendarForeColor = System.Drawing.Color.DodgerBlue;
-            this.OrderDate.Location = new System.Drawing.Point(146, 239);
+            this.OrderDate.Location = new System.Drawing.Point(147, 227);
             this.OrderDate.Name = "OrderDate";
             this.OrderDate.Size = new System.Drawing.Size(237, 22);
             this.OrderDate.TabIndex = 25;
@@ -333,7 +344,7 @@
             this.orderQTY.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.orderQTY.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderQTY.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.orderQTY.Location = new System.Drawing.Point(146, 279);
+            this.orderQTY.Location = new System.Drawing.Point(147, 267);
             this.orderQTY.Name = "orderQTY";
             this.orderQTY.Size = new System.Drawing.Size(258, 20);
             this.orderQTY.TabIndex = 24;
@@ -345,7 +356,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label9.Location = new System.Drawing.Point(142, 289);
+            this.label9.Location = new System.Drawing.Point(143, 277);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(249, 20);
             this.label9.TabIndex = 23;
@@ -356,10 +367,11 @@
             this.orderCustID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.orderCustID.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderCustID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.orderCustID.Location = new System.Drawing.Point(146, 84);
+            this.orderCustID.Location = new System.Drawing.Point(147, 72);
             this.orderCustID.Name = "orderCustID";
             this.orderCustID.Size = new System.Drawing.Size(258, 20);
             this.orderCustID.TabIndex = 18;
+            this.orderCustID.TextChanged += new System.EventHandler(this.orderCustID_TextChanged);
             // 
             // label6
             // 
@@ -367,7 +379,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label6.Location = new System.Drawing.Point(142, 94);
+            this.label6.Location = new System.Drawing.Point(143, 82);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(249, 20);
             this.label6.TabIndex = 17;
@@ -378,8 +390,9 @@
             this.OrdID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.OrdID.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrdID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.OrdID.Location = new System.Drawing.Point(146, 32);
+            this.OrdID.Location = new System.Drawing.Point(147, 20);
             this.OrdID.Name = "OrdID";
+            this.OrdID.ReadOnly = true;
             this.OrdID.Size = new System.Drawing.Size(258, 20);
             this.OrdID.TabIndex = 16;
             // 
@@ -389,7 +402,7 @@
             this.LineColored.BackColor = System.Drawing.Color.Transparent;
             this.LineColored.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LineColored.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.LineColored.Location = new System.Drawing.Point(142, 41);
+            this.LineColored.Location = new System.Drawing.Point(143, 29);
             this.LineColored.Name = "LineColored";
             this.LineColored.Size = new System.Drawing.Size(249, 20);
             this.LineColored.TabIndex = 11;
@@ -401,7 +414,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(38, 279);
+            this.label5.Location = new System.Drawing.Point(39, 267);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 20);
             this.label5.TabIndex = 9;
@@ -413,7 +426,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(38, 239);
+            this.label4.Location = new System.Drawing.Point(39, 227);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 20);
             this.label4.TabIndex = 8;
@@ -425,7 +438,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(38, 84);
+            this.label2.Location = new System.Drawing.Point(39, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 20);
             this.label2.TabIndex = 6;
@@ -437,7 +450,7 @@
             this.usernameProfile.BackColor = System.Drawing.Color.Transparent;
             this.usernameProfile.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameProfile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.usernameProfile.Location = new System.Drawing.Point(38, 32);
+            this.usernameProfile.Location = new System.Drawing.Point(39, 20);
             this.usernameProfile.Name = "usernameProfile";
             this.usernameProfile.Size = new System.Drawing.Size(24, 20);
             this.usernameProfile.TabIndex = 5;
@@ -454,6 +467,65 @@
             this.label1.Size = new System.Drawing.Size(195, 27);
             this.label1.TabIndex = 11;
             this.label1.Text = "MANAGE ORDERS";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label11.Location = new System.Drawing.Point(368, 352);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(50, 20);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "RESET";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(390, 18);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 47;
+            this.pictureBox2.TabStop = false;
+            // 
+            // SearchCustomerID
+            // 
+            this.SearchCustomerID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SearchCustomerID.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchCustomerID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.SearchCustomerID.Location = new System.Drawing.Point(126, 18);
+            this.SearchCustomerID.Name = "SearchCustomerID";
+            this.SearchCustomerID.Size = new System.Drawing.Size(258, 27);
+            this.SearchCustomerID.TabIndex = 46;
+            this.SearchCustomerID.TextChanged += new System.EventHandler(this.SearchCustomerID_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(115)))), ((int)(((byte)(141)))));
+            this.label3.Location = new System.Drawing.Point(122, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(255, 20);
+            this.label3.TabIndex = 45;
+            this.label3.Text = "_________________________________________";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label7.Location = new System.Drawing.Point(11, 20);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(105, 20);
+            this.label7.TabIndex = 44;
+            this.label7.Text = "CUSTOMER ID";
             // 
             // Orders
             // 
@@ -477,6 +549,7 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -510,5 +583,10 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox StatusSelect;
         public System.Windows.Forms.ComboBox categorySelect;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox SearchCustomerID;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label7;
     }
 }
