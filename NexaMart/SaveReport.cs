@@ -72,7 +72,7 @@ namespace NexaMart
             string datee = DateTime.Now.ToString("d-M-yyyy");
             BillingReport report = new BillingReport();
             report.SetParameterValue(0, rec);
-            report.SetParameterValue(1, total);
+            report.SetParameterValue(1, "₹ "+total);
             report.SetParameterValue(2, name);
             report.SetParameterValue(3, contact);
             report.SetParameterValue(4, address);

@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace NexaMart
 {
@@ -63,49 +64,83 @@ namespace NexaMart
             CustContact.Text = "";
             CustAddress.Text = "";
             CustEmail.Text = "";
+            SearchCustomerName.Text = "";
             this.Hide();
         }
 
+
+        bool checkValid()
+        {
+            if (CustContact.Text.Length != 10)
+            {
+
+                return true;
+            }
+            else if (!CustEmail.Text.ToLower().EndsWith("@gmail.com"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
         private void custADD_Click(object sender, EventArgs e)
         {
 
-            try
+            if (checkValid() == false)
             {
-                con.Open();
-                OleDbCommand cmd = new OleDbCommand($"Insert into Customers values({Convert.ToInt32(CustID.Text)},'{CustName.Text}','{CustEmail.Text}','{CustContact.Text}','{CustAddress.Text}')", con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Record Added !", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                try
+                {
+                    con.Open();
+                    OleDbCommand cmd = new OleDbCommand($"Insert into Customers values({Convert.ToInt32(CustID.Text)},'{CustName.Text}','{CustEmail.Text}','{CustContact.Text}','{CustAddress.Text}')", con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Record Added !", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Value Mismatch or Record already present", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    con.Close();
+                }
+                fill();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Value Mismatch or Record already present", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid Contact Or Email ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally
-            {
-                con.Close();
-            }
-            fill();
         }
 
         private void custUPDATE_Click(object sender, EventArgs e)
         {
-            try
+            if (checkValid() == false)
             {
-                con.Open();
-                OleDbCommand cmd = new OleDbCommand($"Update Customers set cust_name='{CustName.Text}',cust_email='{CustEmail.Text}',cust_number='{CustContact.Text}',cust_add='{CustAddress.Text}' where cust_id={Convert.ToInt32(CustID.Text)}", con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Record Updated !", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try
+                {
+                    con.Open();
+                    OleDbCommand cmd = new OleDbCommand($"Update Customers set cust_name='{CustName.Text}',cust_email='{CustEmail.Text}',cust_number='{CustContact.Text}',cust_add='{CustAddress.Text}' where cust_id={Convert.ToInt32(CustID.Text)}", con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Record Updated !", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex + "Value Mismatch or Record already present", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    con.Close();
+                }
+                fill();
             }
-            catch (Exception ex)
+            else
             {
-              
-                MessageBox.Show(ex+"Value Mismatch or Record already present", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid Contact Or Email ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally
-            {
-                con.Close();
-            }
-            fill();
         }
 
         private void custDELETE_Click(object sender, EventArgs e)
@@ -164,6 +199,42 @@ namespace NexaMart
                 CustomerGrid.Columns[4].HeaderText = "Address";
             }
             
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            CustName.Text = "";
+            CustID.Text = "";
+            CustContact.Text = "";
+            CustAddress.Text = "";
+            CustEmail.Text = "";
+            SearchCustomerName.Text = "";
+        }
+
+        private void CustName_TextChanged(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            if (CustID.Text == "")
+            {
+                try
+                {
+                    OleDbConnection conforID = f1.con;
+
+                    OleDbCommand cmdforID = new OleDbCommand("SELECT TOP 1  cust_id FROM Customers ORDER BY cust_id DESC", conforID);
+                    conforID.Open();
+                    CustID.Text = (Convert.ToInt32(cmdforID.ExecuteScalar().ToString()) + 1).ToString();
+                    conforID.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Something Went Wrong , TRY AGAIN");
+                }
+            }
         }
     }
 }

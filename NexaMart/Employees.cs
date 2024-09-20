@@ -24,7 +24,7 @@ namespace NexaMart
         public Employees()
         {
             InitializeComponent();
-           
+        
         }
 
         public void setDash(Dashboard d)
@@ -83,56 +83,86 @@ namespace NexaMart
             
         }
 
+
+        bool checkValid()
+        {
+            if (empContact.Text.Length !=10)
+            {
+               
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
         private void empAdd_Click(object sender, EventArgs e)
         {
-            try
+            if (checkValid() == false)
             {
-                Convert.ToInt32(empID.Text);
-                Convert.ToInt32(empSalary.Text);
+
+
+                try
+                {
+                    Convert.ToInt32(empID.Text);
+                    Convert.ToInt32(empSalary.Text);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Enter Correct value ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                try
+                {
+                    con.Open();
+                    OleDbCommand cmd = new OleDbCommand("Insert into Employees values(" + Convert.ToInt32(empID.Text) + ",'" + empName.Text + "','" + empContact.Text + "','" + empHireDate.Value.ToString("d-M-yyyy") + "'," + Convert.ToInt32(empSalary.Text) + ",'" + empRole.Text + "')", con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Added Successfully");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Record Already Present", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    con.Close();
+                }
+                fill();
             }
-            catch (Exception ex){
-                MessageBox.Show("Enter Correct value ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-  
-            try
+            else
             {
-                con.Open();
-                OleDbCommand cmd = new OleDbCommand("Insert into Employees values(" + Convert.ToInt32(empID.Text) + ",'" + empName.Text + "','" + empContact.Text + "','" + empHireDate.Value.ToString("d-M-yyyy") + "'," + Convert.ToInt32(empSalary.Text) + ",'" + empRole.Text + "')", con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Added Successfully");
+                MessageBox.Show("Contact Length Incorrect", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Record Already Present","",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
-            finally
-            {
-                con.Close();
-            }
-            fill();
         }
 
         private void empUpdate_Click(object sender, EventArgs e)
         {
+            if (checkValid() == false)
+            {
+                try
+                {
+                    con.Open();
 
-            try
-            {
-                con.Open();
-
-                OleDbCommand cmd = new OleDbCommand("Update Employees set Ename='"+empName.Text+ "', Ephone= '" + empContact.Text + "', hire_date='"+ empHireDate.Value.ToString("d-M-yyyy") + "' ,Esalary="+ Convert.ToInt32(empSalary.Text) + " , Role='"+empRole.Text+"' where ID="+ Convert.ToInt32(empID.Text) + " ", con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Updated Successfully");
+                    OleDbCommand cmd = new OleDbCommand("Update Employees set Ename='" + empName.Text + "', Ephone= '" + empContact.Text + "', hire_date='" + empHireDate.Value.ToString("d-M-yyyy") + "' ,Esalary=" + Convert.ToInt32(empSalary.Text) + " , Role='" + empRole.Text + "' where ID=" + Convert.ToInt32(empID.Text) + " ", con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Updated Successfully");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Record Not Present", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    con.Close();
+                }
+                fill();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Record Not Present", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Contact Length Incorrect", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally
-            {
-                con.Close();
-            }
-            fill();
         }
 
         private void empDelete_Click(object sender, EventArgs e)
@@ -169,6 +199,62 @@ namespace NexaMart
                 empHireDate.Text = row.Cells["hire_date"].Value.ToString();
                 empSalary.Text = row.Cells["Esalary"].Value.ToString();
                 empRole.Text = row.Cells["Role"].Value.ToString();
+            }
+        }
+
+        private void empName_TextChanged(object sender, EventArgs e)
+        {
+            if (empID.Text == "")
+            {
+                try
+                {
+                    OleDbConnection conforID = formcon.con;
+
+                    OleDbCommand cmdforID = new OleDbCommand("SELECT TOP 1 ID FROM Employees ORDER BY ID DESC", conforID);
+                    conforID.Open();
+                    empID.Text = ( Convert.ToInt32(cmdforID.ExecuteScalar().ToString()) +1 ).ToString();
+                    conforID.Close();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Something Went Wrong , TRY AGAIN");
+                }
+            }
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            
+            empName.Clear();
+            empID.Clear();
+            empContact.Clear();
+            empSalary.Clear();
+            empHireDate.ResetText();
+            empRole.Text = "Select Role";
+            SearchCustomerName.Text = "";
+
+            
+        }
+
+        private void SearchCustomerName_TextChanged(object sender, EventArgs e)
+        {
+            if (SearchCustomerName.Text == "")
+            {
+                fill();
+            }
+            else
+            {
+                OleDbDataAdapter daS = new OleDbDataAdapter($"Select *from Employees where Ename='{SearchCustomerName.Text}' ", con);
+                DataTable dtS = new DataTable();
+                daS.Fill(dtS);
+                EmployeesGrid.DataSource = dtS;
+                con.Close();
+                EmployeesGrid.Columns[0].HeaderText = "ID";
+                EmployeesGrid.Columns[1].HeaderText = "Name";
+                EmployeesGrid.Columns[2].HeaderText = "Contact";
+                EmployeesGrid.Columns[3].HeaderText = "Hire Date";
+                EmployeesGrid.Columns[4].HeaderText = "Salary";
+                EmployeesGrid.Columns[5].HeaderText = "Role";
             }
         }
     }
