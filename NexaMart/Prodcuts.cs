@@ -115,6 +115,7 @@ namespace NexaMart
                 StockProd.Text = "";
             }
             fill();
+            SearchCustomerName.Text = "";
         }
 
         private void prodUPDATE_Click(object sender, EventArgs e)
@@ -136,6 +137,7 @@ namespace NexaMart
                 con.Close();
             }
             fill();
+            SearchCustomerName.Text = "";
         }
 
         private void prodDELETE_Click(object sender, EventArgs e)
@@ -169,12 +171,14 @@ namespace NexaMart
         {
             CurrD.loadform(CurrD.home);
             CurrD.isproduct = false;
-            ProdID.Text = "";
+           
             ProdNAME.Text = "";
+            ProdID.Text = "";
             ProdPRICE.Text = "";
             ProdCategory.Text = "Select Category";
             SelectStatus.Text = "Select Status";
             StockProd.Text = "";
+            SearchCustomerName.Text = "";
             this.Hide();
         }
 

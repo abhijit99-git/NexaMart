@@ -78,14 +78,16 @@ namespace NexaMart
         {
             CurrD.loadform(CurrD.home);
             CurrD.isorders = false;
-            OrdID.Text = "";
+           
             orderCustID.Text = "";
             OrderDate.Text = "";
+            OrdID.Text = "";
             orderQTY.Text = "";
             orderTot.Text = "";
             categorySelect.Text = "Select Category";
             ProductSelect.Text = "Select Product";
             ProductSelect.Items.Clear();
+            SearchCustomerID.Text = "";
 
             this.Hide();
         }

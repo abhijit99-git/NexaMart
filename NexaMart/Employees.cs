@@ -72,13 +72,15 @@ namespace NexaMart
         {
             CurrD.loadform(CurrD.home);
             CurrD.isemployees = false;
-            empID.Clear();
+            
             empName.Clear();
+            empID.Clear();
             empContact.Clear();
             empSalary.Clear();
             empHireDate.ResetText();
             empRole.Text = "Select Role";
-            
+            SearchCustomerName.Text = "";
+
             this.Hide();
             
         }
@@ -130,6 +132,7 @@ namespace NexaMart
                     con.Close();
                 }
                 fill();
+                SearchCustomerName.Text = "";
             }
             else
             {
@@ -158,6 +161,7 @@ namespace NexaMart
                     con.Close();
                 }
                 fill();
+                SearchCustomerName.Text = "";
             }
             else
             {

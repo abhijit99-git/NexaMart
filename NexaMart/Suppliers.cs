@@ -49,12 +49,14 @@ namespace NexaMart
         {
             CurrD.loadform(CurrD.home);
             CurrD.issuupliers = false;
-            SupID.Text = "";
+           
             SupName.Text = "";
+            SupID.Text = "";
             SupCity.Text = "";
             SupContact.Text = "";
             SupCountry.Text = "";
             SupAddress.Text = "";
+            SearchCustomerName.Text = "";
             this.Hide();
         }
 
@@ -99,6 +101,7 @@ namespace NexaMart
                     con.Close();
                 }
                 fill();
+                SearchCustomerName.Text = "";
             }
             else
             {
@@ -126,6 +129,7 @@ namespace NexaMart
                     con.Close();
                 }
                 fill();
+                SearchCustomerName.Text = "";
             }
             else
             {

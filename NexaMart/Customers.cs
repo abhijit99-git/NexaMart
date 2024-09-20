@@ -59,8 +59,9 @@ namespace NexaMart
 
             CurrD.loadform(CurrD.home);
             CurrD.iscustomers = false;
-            CustID.Text = "";
+           
             CustName.Text = "";
+            CustID.Text = "";
             CustContact.Text = "";
             CustAddress.Text = "";
             CustEmail.Text = "";
