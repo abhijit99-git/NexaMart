@@ -76,6 +76,37 @@ namespace NexaMart
 
         }
 
+        bool zeroRecords = false;
+      
+        void iszeroRecords()
+        {
+
+            Form1 f2 = new Form1();
+
+            try
+            {
+                OleDbConnection conforZero = f2.con;
+
+                OleDbCommand cmdforZero = new OleDbCommand("SELECT COUNT(*) FROM Categories", conforZero);
+                conforZero.Open();
+                if (Convert.ToInt32(cmdforZero.ExecuteScalar().ToString()) == 0)
+                {
+                    zeroRecords = true;
+                    CatID.Text = "1";
+                }
+                else
+                {
+                    zeroRecords = false;
+
+                }
+
+                conforZero.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong , TRY AGAIN");
+            }
+        }
 
 
         private void StatusSelect_DropDownClosed(object sender, EventArgs e)
@@ -129,6 +160,7 @@ namespace NexaMart
             }
             fill();
             SearchCustomerName.Text = "";
+            iszeroRecords();
         }
 
         private void CatUPDATE_Click(object sender, EventArgs e)
@@ -152,6 +184,7 @@ namespace NexaMart
                 con.Close();
             }
             fill();
+            iszeroRecords();
         }
 
         private void CatDELETE_Click(object sender, EventArgs e)
@@ -174,6 +207,7 @@ namespace NexaMart
                 con.Close();
             }
             fill();
+            iszeroRecords();
         }
 
         private void CategoryGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -203,21 +237,25 @@ namespace NexaMart
         private void CatName_TextChanged(object sender, EventArgs e)
         {
             Form1 f1 = new Form1();
-            if (CatID.Text == "")
+            if (zeroRecords == false)
             {
-                try
+                if (CatID.Text == "")
                 {
-                    OleDbConnection conforID = f1.con;
+                    try
+                    {
+                        OleDbConnection conforID = f1.con;
 
-                    OleDbCommand cmdforID = new OleDbCommand("SELECT TOP 1  cate_id FROM Categories ORDER BY cate_id DESC", conforID);
-                    conforID.Open();
-                    CatID.Text = (Convert.ToInt32(cmdforID.ExecuteScalar().ToString()) + 1).ToString();
-                    conforID.Close();
+                        OleDbCommand cmdforID = new OleDbCommand("SELECT TOP 1  cate_id FROM Categories ORDER BY cate_id DESC", conforID);
+                        conforID.Open();
+                        CatID.Text = (Convert.ToInt32(cmdforID.ExecuteScalar().ToString()) + 1).ToString();
+                        conforID.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Something Went Wrong , TRY AGAIN");
+                    }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Something Went Wrong , TRY AGAIN");
-                }
+
             }
         }
 

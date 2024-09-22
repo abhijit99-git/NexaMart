@@ -27,6 +27,39 @@ namespace NexaMart
             CurrD = d;
         }
 
+
+        bool zeroRecords = false;
+
+        void iszeroRecords()
+        {
+
+            Form1 f2 = new Form1();
+
+            try
+            {
+                OleDbConnection conforZero = f2.con;
+
+                OleDbCommand cmdforZero = new OleDbCommand("SELECT COUNT(*) FROM Suppliers", conforZero);
+                conforZero.Open();
+                if (Convert.ToInt32(cmdforZero.ExecuteScalar().ToString()) == 0)
+                {
+                    zeroRecords = true;
+                    SupID.Text = "1";
+                }
+                else
+                {
+                    zeroRecords = false;
+
+                }
+
+                conforZero.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong , TRY AGAIN");
+            }
+        }
+
         void fill()
         {
             SupplierGrid.ClearSelection();
@@ -102,6 +135,7 @@ namespace NexaMart
                 }
                 fill();
                 SearchCustomerName.Text = "";
+                iszeroRecords();
             }
             else
             {
@@ -130,6 +164,7 @@ namespace NexaMart
                 }
                 fill();
                 SearchCustomerName.Text = "";
+                iszeroRecords();
             }
             else
             {
@@ -155,6 +190,7 @@ namespace NexaMart
                 con.Close();
             }
             fill();
+            iszeroRecords();
         }
 
         private void SupplierGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -187,20 +223,23 @@ namespace NexaMart
         private void SupName_TextChanged(object sender, EventArgs e)
         {
             Form1 f1 = new Form1();
-            if (SupID.Text == "")
+            if (zeroRecords == false)
             {
-                try
+                if (SupID.Text == "")
                 {
-                    OleDbConnection conforID = f1.con;
+                    try
+                    {
+                        OleDbConnection conforID = f1.con;
 
-                    OleDbCommand cmdforID = new OleDbCommand("SELECT TOP 1  supp_id FROM SUPPLIERS ORDER BY supp_id DESC", conforID);
-                    conforID.Open();
-                    SupID.Text = (Convert.ToInt32(cmdforID.ExecuteScalar().ToString()) + 1).ToString();
-                    conforID.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Something Went Wrong , TRY AGAIN");
+                        OleDbCommand cmdforID = new OleDbCommand("SELECT TOP 1  supp_id FROM SUPPLIERS ORDER BY supp_id DESC", conforID);
+                        conforID.Open();
+                        SupID.Text = (Convert.ToInt32(cmdforID.ExecuteScalar().ToString()) + 1).ToString();
+                        conforID.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Something Went Wrong , TRY AGAIN");
+                    }
                 }
             }
         }

@@ -29,6 +29,37 @@ namespace NexaMart
             CurrD = d;
         }
 
+        bool zeroRecords = false;
+
+        void iszeroRecords()
+        {
+
+            Form1 f2 = new Form1();
+
+            try
+            {
+                OleDbConnection conforZero = f2.con;
+
+                OleDbCommand cmdforZero = new OleDbCommand("SELECT COUNT(*) FROM Products", conforZero);
+                conforZero.Open();
+                if (Convert.ToInt32(cmdforZero.ExecuteScalar().ToString()) == 0)
+                {
+                    zeroRecords = true;
+                    ProdID.Text = "1";
+                }
+                else
+                {
+                    zeroRecords = false;
+
+                }
+
+                conforZero.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong , TRY AGAIN");
+            }
+        }
 
         void fill()
         {
@@ -116,6 +147,7 @@ namespace NexaMart
             }
             fill();
             SearchCustomerName.Text = "";
+            iszeroRecords();
         }
 
         private void prodUPDATE_Click(object sender, EventArgs e)
@@ -138,6 +170,7 @@ namespace NexaMart
             }
             fill();
             SearchCustomerName.Text = "";
+            iszeroRecords();
         }
 
         private void prodDELETE_Click(object sender, EventArgs e)
@@ -165,6 +198,7 @@ namespace NexaMart
                 con.Close();
             }
             fill();
+            iszeroRecords();
         }
 
         private void prodEXIT_Click(object sender, EventArgs e)
@@ -246,20 +280,24 @@ namespace NexaMart
         private void ProdNAME_TextChanged(object sender, EventArgs e)
         {
             Form1 f1 = new Form1();
-            if (ProdID.Text == "")
-            {
-                try
-                {
-                    OleDbConnection conforID = f1.con;
 
-                    OleDbCommand cmdforID = new OleDbCommand("SELECT TOP 1  product_id FROM Products ORDER BY product_id DESC", conforID);
-                    conforID.Open();
-                    ProdID.Text = (Convert.ToInt32(cmdforID.ExecuteScalar().ToString()) + 1).ToString();
-                    conforID.Close();
-                }
-                catch (Exception ex)
+            if (zeroRecords == false)
+            {
+                if (ProdID.Text == "")
                 {
-                    MessageBox.Show("Something Went Wrong , TRY AGAIN");
+                    try
+                    {
+                        OleDbConnection conforID = f1.con;
+
+                        OleDbCommand cmdforID = new OleDbCommand("SELECT TOP 1  product_id FROM Products ORDER BY product_id DESC", conforID);
+                        conforID.Open();
+                        ProdID.Text = (Convert.ToInt32(cmdforID.ExecuteScalar().ToString()) + 1).ToString();
+                        conforID.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Something Went Wrong , TRY AGAIN");
+                    }
                 }
             }
         }

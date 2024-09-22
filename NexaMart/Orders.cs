@@ -33,6 +33,40 @@ namespace NexaMart
             CurrD = d;
         }
 
+
+        bool zeroRecords = false;
+
+        void iszeroRecords()
+        {
+
+            Form1 f2 = new Form1();
+
+            try
+            {
+                OleDbConnection conforZero = f2.con;
+
+                OleDbCommand cmdforZero = new OleDbCommand("SELECT COUNT(*) FROM Orders", conforZero);
+                conforZero.Open();
+                if (Convert.ToInt32(cmdforZero.ExecuteScalar().ToString()) == 0)
+                {
+                    zeroRecords = true;
+                    OrdID.Text = "1";
+                }
+                else
+                {
+                    zeroRecords = false;
+
+                }
+
+                conforZero.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong , TRY AGAIN");
+            }
+        }
+
+
         void fill()
         {
             OrderGrid.ClearSelection();
@@ -285,6 +319,8 @@ namespace NexaMart
                     cn.Close();
                 }
             }
+
+            iszeroRecords();
         }
 
         private void ordUPDATE_Click(object sender, EventArgs e)
@@ -324,6 +360,7 @@ namespace NexaMart
                 fill();
                 SearchCustomerID.Clear();
             }
+            iszeroRecords();
         }
 
         private void ordDelete_Click(object sender, EventArgs e)
@@ -360,6 +397,7 @@ namespace NexaMart
                 }
                 fill();
             }
+            iszeroRecords();
         }
 
         private void OrderGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -398,20 +436,23 @@ namespace NexaMart
         {
 
             Form1 f1 = new Form1();
-            if (OrdID.Text == "")
+            if (zeroRecords == false)
             {
-                try
+                if (OrdID.Text == "")
                 {
-                    OleDbConnection conforID = f1.con;
+                    try
+                    {
+                        OleDbConnection conforID = f1.con;
 
-                    OleDbCommand cmdforID = new OleDbCommand("SELECT TOP 1  order_id FROM Orders ORDER BY order_id DESC", conforID);
-                    conforID.Open();
-                    OrdID.Text = (Convert.ToInt32(cmdforID.ExecuteScalar().ToString()) + 1).ToString();
-                    conforID.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Something Went Wrong , TRY AGAIN");
+                        OleDbCommand cmdforID = new OleDbCommand("SELECT TOP 1  order_id FROM Orders ORDER BY order_id DESC", conforID);
+                        conforID.Open();
+                        OrdID.Text = (Convert.ToInt32(cmdforID.ExecuteScalar().ToString()) + 1).ToString();
+                        conforID.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Something Went Wrong , TRY AGAIN");
+                    }
                 }
             }
         }
@@ -439,6 +480,11 @@ namespace NexaMart
                 OrderGrid.Columns[6].HeaderText = "Status";
             }
           
+        }
+
+        private void StatusSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

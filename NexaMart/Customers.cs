@@ -31,6 +31,40 @@ namespace NexaMart
             CurrD = d;
         }
 
+
+        bool zeroRecords = false;
+
+        void iszeroRecords()
+        {
+
+            Form1 f2 = new Form1();
+
+            try
+            {
+                OleDbConnection conforZero = f2.con;
+
+                OleDbCommand cmdforZero = new OleDbCommand("SELECT COUNT(*) FROM Customers", conforZero);
+                conforZero.Open();
+                if (Convert.ToInt32(cmdforZero.ExecuteScalar().ToString()) == 0)
+                {
+                    zeroRecords = true;
+                    CustID.Text = "1";
+                }
+                else
+                {
+                    zeroRecords = false;
+
+                }
+
+                conforZero.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong , TRY AGAIN");
+            }
+        }
+
+
         void fill()
         {
             CustomerGrid.ClearSelection();
@@ -52,6 +86,7 @@ namespace NexaMart
         {
             con = f.con;
             fill();
+            iszeroRecords();
         }
 
         private void custEXIT_Click(object sender, EventArgs e)
@@ -109,6 +144,7 @@ namespace NexaMart
                     con.Close();
                 }
                 fill();
+                iszeroRecords();
             }
             else
             {
@@ -137,6 +173,7 @@ namespace NexaMart
                     con.Close();
                 }
                 fill();
+                iszeroRecords();
             }
             else
             {
@@ -163,6 +200,7 @@ namespace NexaMart
                 con.Close();
             }
             fill();
+            iszeroRecords();
         }
 
         private void CustomerGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -220,20 +258,24 @@ namespace NexaMart
         private void CustName_TextChanged(object sender, EventArgs e)
         {
             Form1 f1 = new Form1();
-            if (CustID.Text == "")
-            {
-                try
-                {
-                    OleDbConnection conforID = f1.con;
 
-                    OleDbCommand cmdforID = new OleDbCommand("SELECT TOP 1  cust_id FROM Customers ORDER BY cust_id DESC", conforID);
-                    conforID.Open();
-                    CustID.Text = (Convert.ToInt32(cmdforID.ExecuteScalar().ToString()) + 1).ToString();
-                    conforID.Close();
-                }
-                catch (Exception ex)
+            if (zeroRecords == false)
+            {
+                if (CustID.Text == "")
                 {
-                    MessageBox.Show("Something Went Wrong , TRY AGAIN");
+                    try
+                    {
+                        OleDbConnection conforID = f1.con;
+
+                        OleDbCommand cmdforID = new OleDbCommand("SELECT TOP 1  cust_id FROM Customers ORDER BY cust_id DESC", conforID);
+                        conforID.Open();
+                        CustID.Text = (Convert.ToInt32(cmdforID.ExecuteScalar().ToString()) + 1).ToString();
+                        conforID.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Something Went Wrong , TRY AGAIN");
+                    }
                 }
             }
         }

@@ -32,6 +32,39 @@ namespace NexaMart
             CurrD = d;
         }
 
+
+        bool zeroRecords = false;
+
+        void iszeroRecords()
+        {
+
+            Form1 f2 = new Form1();
+
+            try
+            {
+                OleDbConnection conforZero = f2.con;
+
+                OleDbCommand cmdforZero = new OleDbCommand("SELECT COUNT(*) FROM Employees", conforZero);
+                conforZero.Open();
+                if (Convert.ToInt32(cmdforZero.ExecuteScalar().ToString()) == 0)
+                {
+                    zeroRecords = true;
+                    empID.Text = "1";
+                }
+                else
+                {
+                    zeroRecords = false;
+
+                }
+
+                conforZero.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong , TRY AGAIN");
+            }
+        }
+
         void fill()
         {
             con.Open();
@@ -133,6 +166,7 @@ namespace NexaMart
                 }
                 fill();
                 SearchCustomerName.Text = "";
+                iszeroRecords();
             }
             else
             {
@@ -162,6 +196,7 @@ namespace NexaMart
                 }
                 fill();
                 SearchCustomerName.Text = "";
+                iszeroRecords();
             }
             else
             {
@@ -189,6 +224,7 @@ namespace NexaMart
                 con.Close();
             }
             fill();
+            iszeroRecords();
         }
 
         private void EmployeesGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -208,20 +244,23 @@ namespace NexaMart
 
         private void empName_TextChanged(object sender, EventArgs e)
         {
-            if (empID.Text == "")
+            if (zeroRecords == false)
             {
-                try
+                if (empID.Text == "")
                 {
-                    OleDbConnection conforID = formcon.con;
+                    try
+                    {
+                        OleDbConnection conforID = formcon.con;
 
-                    OleDbCommand cmdforID = new OleDbCommand("SELECT TOP 1 ID FROM Employees ORDER BY ID DESC", conforID);
-                    conforID.Open();
-                    empID.Text = ( Convert.ToInt32(cmdforID.ExecuteScalar().ToString()) +1 ).ToString();
-                    conforID.Close();
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show("Something Went Wrong , TRY AGAIN");
+                        OleDbCommand cmdforID = new OleDbCommand("SELECT TOP 1 ID FROM Employees ORDER BY ID DESC", conforID);
+                        conforID.Open();
+                        empID.Text = (Convert.ToInt32(cmdforID.ExecuteScalar().ToString()) + 1).ToString();
+                        conforID.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Something Went Wrong , TRY AGAIN");
+                    }
                 }
             }
         }
