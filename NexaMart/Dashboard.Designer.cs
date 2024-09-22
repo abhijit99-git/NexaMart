@@ -32,77 +32,77 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.AdminPanel = new System.Windows.Forms.Panel();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.dashMenu = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.adminTextDes = new System.Windows.Forms.Label();
             this.AdminName = new System.Windows.Forms.Label();
             this.HomePanel = new System.Windows.Forms.Panel();
             this.HomeText = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.CategoryPanel = new System.Windows.Forms.Panel();
             this.Categories = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.ProfilePanel = new System.Windows.Forms.Panel();
             this.Profile = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.InventoryPanel = new System.Windows.Forms.Panel();
             this.Inventory = new System.Windows.Forms.Label();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.DashboardPanel = new System.Windows.Forms.Panel();
             this.Dashboardlabel = new System.Windows.Forms.Label();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.deliveryPanel = new System.Windows.Forms.Panel();
             this.deliverytext = new System.Windows.Forms.Label();
-            this.deliveryIcon = new System.Windows.Forms.PictureBox();
             this.reportPanel = new System.Windows.Forms.Panel();
             this.reportxt = new System.Windows.Forms.Label();
-            this.reporticon = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.AboutPanel = new System.Windows.Forms.Panel();
             this.Aboutus = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.LogoutPanel = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.SidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.FIllDashPanel = new System.Windows.Forms.Panel();
             this.dashMinimize = new System.Windows.Forms.PictureBox();
             this.closeDash = new System.Windows.Forms.PictureBox();
             this.StraigthLine = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.dashMenu = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.deliveryIcon = new System.Windows.Forms.PictureBox();
+            this.reporticon = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.sidebar.SuspendLayout();
             this.AdminPanel.SuspendLayout();
+            this.HomePanel.SuspendLayout();
+            this.CategoryPanel.SuspendLayout();
+            this.ProfilePanel.SuspendLayout();
+            this.InventoryPanel.SuspendLayout();
+            this.DashboardPanel.SuspendLayout();
+            this.deliveryPanel.SuspendLayout();
+            this.reportPanel.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.AboutPanel.SuspendLayout();
+            this.LogoutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dashMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeDash)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StraigthLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.HomePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.CategoryPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.ProfilePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.InventoryPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            this.DashboardPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            this.deliveryPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deliveryIcon)).BeginInit();
-            this.reportPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reporticon)).BeginInit();
-            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.AboutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.LogoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dashMinimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closeDash)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StraigthLine)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebar
@@ -137,54 +137,6 @@
             this.AdminPanel.Name = "AdminPanel";
             this.AdminPanel.Size = new System.Drawing.Size(209, 127);
             this.AdminPanel.TabIndex = 0;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(3, 76);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(50, 48);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 9;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox8.Image = global::NexaMart.Properties.Resources.user1;
-            this.pictureBox8.Location = new System.Drawing.Point(106, 13);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(42, 35);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 2;
-            this.pictureBox8.TabStop = false;
-            // 
-            // dashMenu
-            // 
-            this.dashMenu.BackColor = System.Drawing.Color.Transparent;
-            this.dashMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dashMenu.Image = ((System.Drawing.Image)(resources.GetObject("dashMenu.Image")));
-            this.dashMenu.Location = new System.Drawing.Point(12, 20);
-            this.dashMenu.Name = "dashMenu";
-            this.dashMenu.Size = new System.Drawing.Size(33, 28);
-            this.dashMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.dashMenu.TabIndex = 1;
-            this.dashMenu.TabStop = false;
-            this.dashMenu.Click += new System.EventHandler(this.dashMenu_Click);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(56, 100);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(139, 24);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 5;
-            this.pictureBox6.TabStop = false;
             // 
             // adminTextDes
             // 
@@ -237,19 +189,6 @@
             this.HomeText.MouseLeave += new System.EventHandler(this.HomeText_MouseLeave);
             this.HomeText.MouseHover += new System.EventHandler(this.HomeText_MouseHover);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::NexaMart.Properties.Resources.house;
-            this.pictureBox1.Location = new System.Drawing.Point(8, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(37, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
-            // 
             // CategoryPanel
             // 
             this.CategoryPanel.Controls.Add(this.Categories);
@@ -275,19 +214,6 @@
             this.Categories.Click += new System.EventHandler(this.Categories_Click);
             this.Categories.MouseLeave += new System.EventHandler(this.Categories_MouseLeave);
             this.Categories.MouseHover += new System.EventHandler(this.Categories_MouseHover);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::NexaMart.Properties.Resources.inventory;
-            this.pictureBox2.Location = new System.Drawing.Point(8, 9);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(37, 31);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // ProfilePanel
             // 
@@ -315,19 +241,6 @@
             this.Profile.MouseLeave += new System.EventHandler(this.Profile_MouseLeave);
             this.Profile.MouseHover += new System.EventHandler(this.Profile_MouseHover);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::NexaMart.Properties.Resources.user;
-            this.pictureBox3.Location = new System.Drawing.Point(8, 9);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(37, 31);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
             // InventoryPanel
             // 
             this.InventoryPanel.Controls.Add(this.Inventory);
@@ -353,19 +266,6 @@
             this.Inventory.Click += new System.EventHandler(this.Inventory_Click);
             this.Inventory.MouseLeave += new System.EventHandler(this.Inventory_MouseLeave);
             this.Inventory.MouseHover += new System.EventHandler(this.Inventory_MouseHover);
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(8, 9);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(37, 31);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 4;
-            this.pictureBox11.TabStop = false;
-            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
             // 
             // DashboardPanel
             // 
@@ -393,19 +293,6 @@
             this.Dashboardlabel.MouseLeave += new System.EventHandler(this.Dashboardlabel_MouseLeave);
             this.Dashboardlabel.MouseHover += new System.EventHandler(this.Dashboardlabel_MouseHover);
             // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(8, 9);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(37, 31);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 4;
-            this.pictureBox12.TabStop = false;
-            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
-            // 
             // deliveryPanel
             // 
             this.deliveryPanel.Controls.Add(this.deliverytext);
@@ -431,19 +318,6 @@
             this.deliverytext.Click += new System.EventHandler(this.deliverytext_Click);
             this.deliverytext.MouseLeave += new System.EventHandler(this.deliverytext_MouseLeave);
             this.deliverytext.MouseHover += new System.EventHandler(this.deliverytext_MouseHover);
-            // 
-            // deliveryIcon
-            // 
-            this.deliveryIcon.BackColor = System.Drawing.Color.Transparent;
-            this.deliveryIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.deliveryIcon.Image = ((System.Drawing.Image)(resources.GetObject("deliveryIcon.Image")));
-            this.deliveryIcon.Location = new System.Drawing.Point(8, 9);
-            this.deliveryIcon.Name = "deliveryIcon";
-            this.deliveryIcon.Size = new System.Drawing.Size(37, 31);
-            this.deliveryIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.deliveryIcon.TabIndex = 4;
-            this.deliveryIcon.TabStop = false;
-            this.deliveryIcon.Click += new System.EventHandler(this.deliveryIcon_Click);
             // 
             // reportPanel
             // 
@@ -471,19 +345,6 @@
             this.reportxt.MouseLeave += new System.EventHandler(this.reportxt_MouseLeave);
             this.reportxt.MouseHover += new System.EventHandler(this.reportxt_MouseHover);
             // 
-            // reporticon
-            // 
-            this.reporticon.BackColor = System.Drawing.Color.Transparent;
-            this.reporticon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.reporticon.Image = ((System.Drawing.Image)(resources.GetObject("reporticon.Image")));
-            this.reporticon.Location = new System.Drawing.Point(8, 9);
-            this.reporticon.Name = "reporticon";
-            this.reporticon.Size = new System.Drawing.Size(37, 31);
-            this.reporticon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.reporticon.TabIndex = 4;
-            this.reporticon.TabStop = false;
-            this.reporticon.Click += new System.EventHandler(this.reporticon_Click);
-            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.pictureBox9);
@@ -494,29 +355,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(209, 294);
             this.panel7.TabIndex = 7;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(11, 141);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(50, 48);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 8;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(56, 165);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(139, 24);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 7;
-            this.pictureBox7.TabStop = false;
             // 
             // AboutPanel
             // 
@@ -544,19 +382,6 @@
             this.Aboutus.MouseLeave += new System.EventHandler(this.Aboutus_MouseLeave);
             this.Aboutus.MouseHover += new System.EventHandler(this.Aboutus_MouseHover);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = global::NexaMart.Properties.Resources.information;
-            this.pictureBox4.Location = new System.Drawing.Point(8, 9);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(39, 33);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
             // LogoutPanel
             // 
             this.LogoutPanel.Controls.Add(this.label4);
@@ -582,19 +407,6 @@
             this.label4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label4_MouseClick);
             this.label4.MouseLeave += new System.EventHandler(this.label4_MouseLeave);
             this.label4.MouseHover += new System.EventHandler(this.label4_MouseHover);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Image = global::NexaMart.Properties.Resources.logout;
-            this.pictureBox5.Location = new System.Drawing.Point(8, 9);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(39, 33);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // SidebarTimer
             // 
@@ -648,6 +460,194 @@
             this.StraigthLine.TabStop = false;
             this.StraigthLine.Visible = false;
             // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(3, 76);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(50, 48);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 9;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox8.Image = global::NexaMart.Properties.Resources.user1;
+            this.pictureBox8.Location = new System.Drawing.Point(106, 13);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(42, 35);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 2;
+            this.pictureBox8.TabStop = false;
+            // 
+            // dashMenu
+            // 
+            this.dashMenu.BackColor = System.Drawing.Color.Transparent;
+            this.dashMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dashMenu.Image = ((System.Drawing.Image)(resources.GetObject("dashMenu.Image")));
+            this.dashMenu.Location = new System.Drawing.Point(12, 20);
+            this.dashMenu.Name = "dashMenu";
+            this.dashMenu.Size = new System.Drawing.Size(33, 28);
+            this.dashMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.dashMenu.TabIndex = 1;
+            this.dashMenu.TabStop = false;
+            this.dashMenu.Click += new System.EventHandler(this.dashMenu_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(56, 100);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(139, 24);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 5;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::NexaMart.Properties.Resources.house;
+            this.pictureBox1.Location = new System.Drawing.Point(8, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::NexaMart.Properties.Resources.inventory;
+            this.pictureBox2.Location = new System.Drawing.Point(8, 9);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(37, 31);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::NexaMart.Properties.Resources.user;
+            this.pictureBox3.Location = new System.Drawing.Point(8, 9);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(37, 31);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(8, 9);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(37, 31);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 4;
+            this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(8, 9);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(37, 31);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 4;
+            this.pictureBox12.TabStop = false;
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
+            // 
+            // deliveryIcon
+            // 
+            this.deliveryIcon.BackColor = System.Drawing.Color.Transparent;
+            this.deliveryIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deliveryIcon.Image = ((System.Drawing.Image)(resources.GetObject("deliveryIcon.Image")));
+            this.deliveryIcon.Location = new System.Drawing.Point(8, 9);
+            this.deliveryIcon.Name = "deliveryIcon";
+            this.deliveryIcon.Size = new System.Drawing.Size(37, 31);
+            this.deliveryIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.deliveryIcon.TabIndex = 4;
+            this.deliveryIcon.TabStop = false;
+            this.deliveryIcon.Click += new System.EventHandler(this.deliveryIcon_Click);
+            // 
+            // reporticon
+            // 
+            this.reporticon.BackColor = System.Drawing.Color.Transparent;
+            this.reporticon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.reporticon.Image = ((System.Drawing.Image)(resources.GetObject("reporticon.Image")));
+            this.reporticon.Location = new System.Drawing.Point(8, 9);
+            this.reporticon.Name = "reporticon";
+            this.reporticon.Size = new System.Drawing.Size(37, 31);
+            this.reporticon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.reporticon.TabIndex = 4;
+            this.reporticon.TabStop = false;
+            this.reporticon.Click += new System.EventHandler(this.reporticon_Click);
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(11, 141);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(50, 48);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 8;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(56, 165);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(139, 24);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 7;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Image = global::NexaMart.Properties.Resources.information;
+            this.pictureBox4.Location = new System.Drawing.Point(8, 9);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(39, 33);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox5.Image = global::NexaMart.Properties.Resources.logout;
+            this.pictureBox5.Location = new System.Drawing.Point(8, 9);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(39, 33);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 4;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -668,43 +668,43 @@
             this.sidebar.ResumeLayout(false);
             this.AdminPanel.ResumeLayout(false);
             this.AdminPanel.PerformLayout();
+            this.HomePanel.ResumeLayout(false);
+            this.HomePanel.PerformLayout();
+            this.CategoryPanel.ResumeLayout(false);
+            this.CategoryPanel.PerformLayout();
+            this.ProfilePanel.ResumeLayout(false);
+            this.ProfilePanel.PerformLayout();
+            this.InventoryPanel.ResumeLayout(false);
+            this.InventoryPanel.PerformLayout();
+            this.DashboardPanel.ResumeLayout(false);
+            this.DashboardPanel.PerformLayout();
+            this.deliveryPanel.ResumeLayout(false);
+            this.deliveryPanel.PerformLayout();
+            this.reportPanel.ResumeLayout(false);
+            this.reportPanel.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.AboutPanel.ResumeLayout(false);
+            this.AboutPanel.PerformLayout();
+            this.LogoutPanel.ResumeLayout(false);
+            this.LogoutPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dashMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeDash)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StraigthLine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.HomePanel.ResumeLayout(false);
-            this.HomePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.CategoryPanel.ResumeLayout(false);
-            this.CategoryPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.ProfilePanel.ResumeLayout(false);
-            this.ProfilePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.InventoryPanel.ResumeLayout(false);
-            this.InventoryPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            this.DashboardPanel.ResumeLayout(false);
-            this.DashboardPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            this.deliveryPanel.ResumeLayout(false);
-            this.deliveryPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deliveryIcon)).EndInit();
-            this.reportPanel.ResumeLayout(false);
-            this.reportPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reporticon)).EndInit();
-            this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.AboutPanel.ResumeLayout(false);
-            this.AboutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.LogoutPanel.ResumeLayout(false);
-            this.LogoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dashMinimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closeDash)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StraigthLine)).EndInit();
             this.ResumeLayout(false);
 
         }

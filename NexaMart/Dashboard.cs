@@ -139,7 +139,7 @@ namespace NexaMart
                     }
                     else if (Reportspanelclicked == true)
                     {
-                        loadform(new DashboardAnalytics());
+                        loadform(new Reports());
                     }
 
                     BarExpand = false;
@@ -197,7 +197,7 @@ namespace NexaMart
                     }
                     else if (Reportspanelclicked == true)
                     {
-                        loadform(new DashboardAnalytics());
+                        loadform(new Reports());
                     }
 
                     BarExpand = true;
@@ -826,19 +826,19 @@ namespace NexaMart
         private void reportxt_Click(object sender, EventArgs e)
         {
             selectpanel("reports");
-            loadform(new DashboardAnalytics());
+            loadform(new Reports());
         }
 
         private void reportPanel_Click(object sender, EventArgs e)
         {
             selectpanel("reports");
-            loadform(new DashboardAnalytics());
+            loadform(new Reports());
         }
 
         private void reporticon_Click(object sender, EventArgs e)
         {
             selectpanel("reports");
-            loadform(new DashboardAnalytics());
+            loadform(new Reports());
         }
 
         private void deliverytext_MouseHover(object sender, EventArgs e)

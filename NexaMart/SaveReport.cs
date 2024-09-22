@@ -77,7 +77,7 @@ namespace NexaMart
             report.SetParameterValue(3, contact);
             report.SetParameterValue(4, address);
             report.SetParameterValue(5, datee);
-            report.SetParameterValue(6, random.Next(100000,999999).ToString());
+            report.SetParameterValue(6, random.Next(100000,999999999).ToString());
             crystalReportViewer1.ReportSource = report;
             crystalReportViewer1.Refresh();
         }
