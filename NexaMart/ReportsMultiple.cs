@@ -28,6 +28,7 @@ namespace NexaMart
                 EmpReport report = new EmpReport();
                 crystalReportViewer2.ReportSource = report;
                 crystalReportViewer2.Refresh();
+                crystalReportViewer2.RefreshReport();
             }
             else if (repo == "Order")
             {
@@ -35,6 +36,8 @@ namespace NexaMart
                 OrdersReport report = new OrdersReport();
                 crystalReportViewer2.ReportSource = report;
                 crystalReportViewer2.Refresh();
+                crystalReportViewer2.RefreshReport();
+            
             }
             else if (repo == "Product")
             {
@@ -42,6 +45,7 @@ namespace NexaMart
                 ProductsReport report = new ProductsReport();
                 crystalReportViewer2.ReportSource = report;
                 crystalReportViewer2.Refresh();
+                crystalReportViewer2.RefreshReport();
             }
             else if (repo == "Supplier")
             {
@@ -49,6 +53,7 @@ namespace NexaMart
                 SupplierReport report = new SupplierReport();
                 crystalReportViewer2.ReportSource = report;
                 crystalReportViewer2.Refresh();
+                crystalReportViewer2.RefreshReport();
             }
             else if (repo == "Customer")
             {
@@ -56,6 +61,7 @@ namespace NexaMart
                 CustomerReport report = new CustomerReport();
                 crystalReportViewer2.ReportSource = report;
                 crystalReportViewer2.Refresh();
+                crystalReportViewer2.RefreshReport();
             }
         }
     }
