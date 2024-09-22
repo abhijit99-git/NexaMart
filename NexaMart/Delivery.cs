@@ -127,9 +127,18 @@ namespace NexaMart
                     OleDbCommand cmdforEmail = new OleDbCommand($"select cust_email from Customers where cust_id={Convert.ToInt32(CustID.Text)}", conforFetch);
                     OleDbCommand cmdforCon = new OleDbCommand($"select cust_number from Customers where cust_id={Convert.ToInt32(CustID.Text)}", conforFetch);
                     conforFetch.Open();
-                    CustName.Text = (cmdforName.ExecuteScalar().ToString());
-                    CustEmail.Text = (cmdforEmail.ExecuteScalar().ToString());
-                    CustContact.Text = (cmdforCon.ExecuteScalar().ToString());
+                    //CustName.Text = (cmdforName.ExecuteScalar().ToString());
+                    //CustEmail.Text = (cmdforEmail.ExecuteScalar().ToString());
+                    //CustContact.Text = (cmdforCon.ExecuteScalar().ToString());
+
+                    var name = cmdforName.ExecuteScalar();
+                    CustName.Text = name != null ? name.ToString() : "Not Found";
+
+                    var email = cmdforEmail.ExecuteScalar();
+                    CustEmail.Text = email != null ? email.ToString() : "";
+
+                    var contact = cmdforCon.ExecuteScalar();
+                    CustContact.Text = contact != null ? contact.ToString() : "";
                     conforFetch.Close();
                 }
                 catch (Exception ex)
@@ -145,7 +154,7 @@ namespace NexaMart
             {
                 DataGridViewRow row = this.DeliveryGrid.Rows[e.RowIndex];
 
-                DeliveryID = Convert.ToInt32(row.Cells["ID"].Value.ToString());
+                updateDeliId= DeliveryID = Convert.ToInt32(row.Cells["ID"].Value.ToString());
                 CustID.Text = "";
                 CustName.Text = row.Cells["Cname"].Value.ToString();
 
@@ -202,44 +211,60 @@ namespace NexaMart
         private void DeliADD_Click(object sender, EventArgs e)
         {
 
-            try
+            if (CustContact.Text == "")
             {
-               
-                con.Open();
-                OleDbCommand cmd = new OleDbCommand($"Insert into Deliveries values({DeliveryID},'{CustName.Text}','{CustContact.Text}','{CustEmail.Text}','{DeliveryAddress.Text}','{StatusSelect.Text}',{OrdIDtxt.Text})", con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Record Added !", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Value Mismatch ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex+"Value Mismatch or Record already present", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                try
+                {
+
+                    con.Open();
+                    OleDbCommand cmd = new OleDbCommand($"Insert into Deliveries values({DeliveryID},'{CustName.Text}','{CustContact.Text}','{CustEmail.Text}','{DeliveryAddress.Text}','{StatusSelect.Text}',{OrdIDtxt.Text})", con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Record Added !", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Value Mismatch or Record already present", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    con.Close();
+                }
+                fill();
             }
-            finally
-            {
-                con.Close();
-            }
-            fill();
             iszeroRecords();
         }
 
+        int updateDeliId = 0;
         private void DeliUPDATE_Click(object sender, EventArgs e)
         {
-
-            try
+            MessageBox.Show(updateDeliId.ToString());
+            if (CustContact.Text == "")
             {
-                con.Open();
-                OleDbCommand cmd = new OleDbCommand($"Update Deliveries set Cname='{CustName.Text}',Ccontact='{CustEmail.Text}',Cemail='{CustContact.Text}',Caddress='{DeliveryAddress.Text}',Status='{StatusSelect.Text}',OrdID={OrdIDtxt.Text} where ID={DeliveryID}", con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Record Updated !", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Value Mismatch ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (Exception ex)
+            else
             {
+                try
+                {
+                    con.Open();
+                    OleDbCommand cmd = new OleDbCommand($"Update Deliveries set Cname='{CustName.Text}',Ccontact='{CustContact.Text}',Cemail='{CustEmail.Text}',Caddress='{DeliveryAddress.Text}',Status='{StatusSelect.Text}',OrdID={OrdIDtxt.Text} where ID={updateDeliId}", con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Record Updated !", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
 
-                MessageBox.Show(ex + "Value Mismatch or Record already present", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                con.Close();
+                    MessageBox.Show(ex + "Value Mismatch or Record already present", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    con.Close();
+                }
+                fill();
             }
             fill();
             iszeroRecords();
