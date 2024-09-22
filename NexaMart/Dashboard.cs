@@ -133,6 +133,14 @@ namespace NexaMart
                     {
                         loadform(new DashboardAnalytics());
                     }
+                    else if (Deliverypanelclicked == true)
+                    {
+                        loadform(new Delivery());
+                    }
+                    else if (Reportspanelclicked == true)
+                    {
+                        loadform(new DashboardAnalytics());
+                    }
 
                     BarExpand = false;
                     FIllDashPanel.Padding = new Padding(80, 0, 0, 0);
@@ -180,6 +188,14 @@ namespace NexaMart
                         loadform(new Inventory());
                     }
                     else if (Dashboardpanelclicked == true)
+                    {
+                        loadform(new DashboardAnalytics());
+                    }
+                    else if (Deliverypanelclicked == true)
+                    {
+                        loadform(new Delivery());
+                    }
+                    else if (Reportspanelclicked == true)
                     {
                         loadform(new DashboardAnalytics());
                     }
@@ -392,6 +408,8 @@ namespace NexaMart
         bool aboutpanelclicked = false;
         bool inventorypanelclicked = false;
         bool Dashboardpanelclicked = false;
+        bool Deliverypanelclicked = false;
+        bool Reportspanelclicked = false;
         void selectpanel(String panel)
         {
             if (panel == "Home")
@@ -402,12 +420,16 @@ namespace NexaMart
                 AboutPanel.BackColor = Color.FromArgb(34, 45, 51);
                 InventoryPanel.BackColor = Color.FromArgb(34, 45, 51);
                 DashboardPanel.BackColor = Color.FromArgb(34, 45, 51);
+                reportPanel.BackColor = Color.FromArgb(34, 45, 51);
+                deliveryPanel.BackColor = Color.FromArgb(34, 45, 51);
                 HomeText.ForeColor = Color.SeaGreen;
                 Categories.ForeColor= Color.FromArgb(224, 224, 244);
                 Aboutus.ForeColor= Color.FromArgb(224, 224, 244);
                 Profile.ForeColor= Color.FromArgb(224, 224, 244);
                 Inventory.ForeColor = Color.FromArgb(224, 224, 244);
                 Dashboardlabel.ForeColor = Color.FromArgb(224, 224, 244);
+                deliverytext.ForeColor = Color.FromArgb(224, 224, 244);
+                reportxt.ForeColor = Color.FromArgb(224, 224, 244);
 
                 homepanelclicked = true;
                 categoripanelclicked = false;
@@ -415,6 +437,8 @@ namespace NexaMart
                 aboutpanelclicked = false;
                 inventorypanelclicked = false;
                 Dashboardpanelclicked = false;
+                Deliverypanelclicked = false;
+                Reportspanelclicked = false;
 
             }
             else if (panel == "Category")
@@ -425,12 +449,16 @@ namespace NexaMart
                 AboutPanel.BackColor = Color.FromArgb(34, 45, 51);
                 InventoryPanel.BackColor = Color.FromArgb(34, 45, 51);
                 DashboardPanel.BackColor = Color.FromArgb(34, 45, 51);
+                reportPanel.BackColor = Color.FromArgb(34, 45, 51);
+                deliveryPanel.BackColor = Color.FromArgb(34, 45, 51);
                 Categories.ForeColor = Color.SeaGreen;
                 HomeText.ForeColor = Color.FromArgb(224, 224, 244);
                 Aboutus.ForeColor = Color.FromArgb(224, 224, 244);
                 Profile.ForeColor = Color.FromArgb(224, 224, 244);
                 Inventory.ForeColor = Color.FromArgb(224, 224, 244);
                 Dashboardlabel.ForeColor = Color.FromArgb(224, 224, 244);
+                deliverytext.ForeColor = Color.FromArgb(224, 224, 244);
+                reportxt.ForeColor = Color.FromArgb(224, 224, 244);
 
                 homepanelclicked = false;
                 categoripanelclicked = true;
@@ -438,6 +466,8 @@ namespace NexaMart
                 aboutpanelclicked = false;
                 inventorypanelclicked = false;
                 Dashboardpanelclicked = false;
+                Deliverypanelclicked = false;
+                Reportspanelclicked = false;
 
             }
             else if (panel == "Profile")
@@ -448,12 +478,16 @@ namespace NexaMart
                 AboutPanel.BackColor = Color.FromArgb(34, 45, 51);
                 InventoryPanel.BackColor = Color.FromArgb(34, 45, 51);
                 DashboardPanel.BackColor = Color.FromArgb(34, 45, 51);
+                reportPanel.BackColor = Color.FromArgb(34, 45, 51);
+                deliveryPanel.BackColor = Color.FromArgb(34, 45, 51);
                 Profile.ForeColor = Color.SeaGreen;
                 Categories.ForeColor = Color.FromArgb(224, 224, 244);
                 Aboutus.ForeColor = Color.FromArgb(224, 224, 244);
                 HomeText.ForeColor = Color.FromArgb(224, 224, 244);
                 Inventory.ForeColor = Color.FromArgb(224, 224, 244);
                 Dashboardlabel.ForeColor = Color.FromArgb(224, 224, 244);
+                deliverytext.ForeColor = Color.FromArgb(224, 224, 244);
+                reportxt.ForeColor = Color.FromArgb(224, 224, 244);
 
                 homepanelclicked = false;
                 categoripanelclicked = false;
@@ -461,6 +495,8 @@ namespace NexaMart
                 aboutpanelclicked = false;
                 inventorypanelclicked = false;
                 Dashboardpanelclicked = false;
+                Deliverypanelclicked = false;
+                Reportspanelclicked = false;
             }
             else if (panel == "about")
             {
@@ -470,12 +506,16 @@ namespace NexaMart
                 HomePanel.BackColor = Color.FromArgb(34, 45, 51);
                 InventoryPanel.BackColor = Color.FromArgb(34, 45, 51);
                 DashboardPanel.BackColor = Color.FromArgb(34, 45, 51);
+                reportPanel.BackColor = Color.FromArgb(34, 45, 51);
+                deliveryPanel.BackColor = Color.FromArgb(34, 45, 51);
                 Aboutus.ForeColor = Color.SeaGreen;
                 Categories.ForeColor = Color.FromArgb(224, 224, 244);
                 HomeText.ForeColor = Color.FromArgb(224, 224, 244);
                 Profile.ForeColor = Color.FromArgb(224, 224, 244);
                 Inventory.ForeColor = Color.FromArgb(224, 224, 244);
                 Dashboardlabel.ForeColor = Color.FromArgb(224, 224, 244);
+                deliverytext.ForeColor = Color.FromArgb(224, 224, 244);
+                reportxt.ForeColor = Color.FromArgb(224, 224, 244);
 
                 homepanelclicked = false;
                 categoripanelclicked = false;
@@ -483,6 +523,8 @@ namespace NexaMart
                 aboutpanelclicked = true;
                 inventorypanelclicked = false;
                 Dashboardpanelclicked = false;
+                Deliverypanelclicked = false;
+                Reportspanelclicked = false;
 
             }
             else if (panel == "inventory")
@@ -493,12 +535,16 @@ namespace NexaMart
                 HomePanel.BackColor = Color.FromArgb(34, 45, 51);
                 AboutPanel.BackColor = Color.FromArgb(34, 45, 51);
                 DashboardPanel.BackColor = Color.FromArgb(34, 45, 51);
+                reportPanel.BackColor = Color.FromArgb(34, 45, 51);
+                deliveryPanel.BackColor = Color.FromArgb(34, 45, 51);
                 Inventory.ForeColor = Color.SeaGreen;
                 Categories.ForeColor = Color.FromArgb(224, 224, 244);
                 HomeText.ForeColor = Color.FromArgb(224, 224, 244);
                 Profile.ForeColor = Color.FromArgb(224, 224, 244);
                 Aboutus.ForeColor = Color.FromArgb(224, 224, 244);
                 Dashboardlabel.ForeColor = Color.FromArgb(224, 224, 244);
+                deliverytext.ForeColor = Color.FromArgb(224, 224, 244);
+                reportxt.ForeColor = Color.FromArgb(224, 224, 244);
 
                 homepanelclicked = false;
                 categoripanelclicked = false;
@@ -506,6 +552,8 @@ namespace NexaMart
                 aboutpanelclicked = false;
                 inventorypanelclicked = true;
                 Dashboardpanelclicked = false;
+                Deliverypanelclicked = false;
+                Reportspanelclicked = false;
 
             }
             else if (panel == "dashboard")
@@ -516,12 +564,16 @@ namespace NexaMart
                 HomePanel.BackColor = Color.FromArgb(34, 45, 51);
                 AboutPanel.BackColor = Color.FromArgb(34, 45, 51);
                 InventoryPanel.BackColor = Color.FromArgb(34, 45, 51);
+                reportPanel.BackColor = Color.FromArgb(34, 45, 51);
+                deliveryPanel.BackColor = Color.FromArgb(34, 45, 51);
                 Dashboardlabel.ForeColor = Color.SeaGreen;
                 Categories.ForeColor = Color.FromArgb(224, 224, 244);
                 HomeText.ForeColor = Color.FromArgb(224, 224, 244);
                 Profile.ForeColor = Color.FromArgb(224, 224, 244);
                 Inventory.ForeColor = Color.FromArgb(224, 224, 244);
                 Aboutus.ForeColor = Color.FromArgb(224, 224, 244);
+                deliverytext.ForeColor = Color.FromArgb(224, 224, 244);
+                reportxt.ForeColor = Color.FromArgb(224, 224, 244);
 
                 homepanelclicked = false;
                 categoripanelclicked = false;
@@ -529,6 +581,66 @@ namespace NexaMart
                 aboutpanelclicked = false;
                 inventorypanelclicked = false;
                 Dashboardpanelclicked = true;
+                Deliverypanelclicked = false;
+                Reportspanelclicked = false;
+
+            }
+            else if (panel == "delivery")
+            {
+                deliveryPanel.BackColor = Color.FromArgb(206, 237, 200);
+                CategoryPanel.BackColor = Color.FromArgb(34, 45, 51);
+                ProfilePanel.BackColor = Color.FromArgb(34, 45, 51);
+                HomePanel.BackColor = Color.FromArgb(34, 45, 51);
+                AboutPanel.BackColor = Color.FromArgb(34, 45, 51);
+                InventoryPanel.BackColor = Color.FromArgb(34, 45, 51);
+                reportPanel.BackColor = Color.FromArgb(34, 45, 51);
+                DashboardPanel.BackColor = Color.FromArgb(34, 45, 51);
+                deliverytext.ForeColor = Color.SeaGreen;
+                Categories.ForeColor = Color.FromArgb(224, 224, 244);
+                HomeText.ForeColor = Color.FromArgb(224, 224, 244);
+                Profile.ForeColor = Color.FromArgb(224, 224, 244);
+                Inventory.ForeColor = Color.FromArgb(224, 224, 244);
+                Aboutus.ForeColor = Color.FromArgb(224, 224, 244);
+                reportxt.ForeColor = Color.FromArgb(224, 224, 244);
+                Dashboardlabel.ForeColor = Color.FromArgb(224, 224, 244);
+
+                homepanelclicked = false;
+                categoripanelclicked = false;
+                profilepanelclicked = false;
+                aboutpanelclicked = false;
+                inventorypanelclicked = false;
+                Dashboardpanelclicked = false;
+                Deliverypanelclicked = true;
+                Reportspanelclicked = false;
+
+            }
+            else if (panel == "reports")
+            {
+                reportPanel.BackColor = Color.FromArgb(206, 237, 200);
+                CategoryPanel.BackColor = Color.FromArgb(34, 45, 51);
+                ProfilePanel.BackColor = Color.FromArgb(34, 45, 51);
+                HomePanel.BackColor = Color.FromArgb(34, 45, 51);
+                AboutPanel.BackColor = Color.FromArgb(34, 45, 51);
+                InventoryPanel.BackColor = Color.FromArgb(34, 45, 51);
+                DashboardPanel.BackColor = Color.FromArgb(34, 45, 51);
+                deliveryPanel.BackColor = Color.FromArgb(34, 45, 51);
+                reportxt.ForeColor = Color.SeaGreen;
+                Categories.ForeColor = Color.FromArgb(224, 224, 244);
+                HomeText.ForeColor = Color.FromArgb(224, 224, 244);
+                Profile.ForeColor = Color.FromArgb(224, 224, 244);
+                Inventory.ForeColor = Color.FromArgb(224, 224, 244);
+                Aboutus.ForeColor = Color.FromArgb(224, 224, 244);
+                deliverytext.ForeColor = Color.FromArgb(224, 224, 244);
+                Dashboardlabel.ForeColor = Color.FromArgb(224, 224, 244);
+
+                homepanelclicked = false;
+                categoripanelclicked = false;
+                profilepanelclicked = false;
+                aboutpanelclicked = false;
+                inventorypanelclicked = false;
+                Dashboardpanelclicked = false;
+                Deliverypanelclicked = false;
+                Reportspanelclicked = true;
 
             }
         }
@@ -691,6 +803,68 @@ namespace NexaMart
         {
             selectpanel("dashboard");
             loadform(new DashboardAnalytics());
+        }
+
+        private void deliverytext_Click(object sender, EventArgs e)
+        {
+            selectpanel("delivery");
+            loadform(new Delivery());
+        }
+
+        private void deliveryPanel_Click(object sender, EventArgs e)
+        {
+            selectpanel("delivery");
+            loadform(new Delivery());
+        }
+
+        private void deliveryIcon_Click(object sender, EventArgs e)
+        {
+            selectpanel("delivery");
+            loadform(new Delivery());
+        }
+
+        private void reportxt_Click(object sender, EventArgs e)
+        {
+            selectpanel("reports");
+            loadform(new DashboardAnalytics());
+        }
+
+        private void reportPanel_Click(object sender, EventArgs e)
+        {
+            selectpanel("reports");
+            loadform(new DashboardAnalytics());
+        }
+
+        private void reporticon_Click(object sender, EventArgs e)
+        {
+            selectpanel("reports");
+            loadform(new DashboardAnalytics());
+        }
+
+        private void deliverytext_MouseHover(object sender, EventArgs e)
+        {
+            deliverytext.ForeColor = Color.SeaGreen;
+        }
+
+        private void deliverytext_MouseLeave(object sender, EventArgs e)
+        {
+            if (Deliverypanelclicked != true)
+            {
+                deliverytext.ForeColor = Color.FromArgb(224, 224, 244);
+            }
+        }
+
+        private void reportxt_MouseHover(object sender, EventArgs e)
+        {
+            reportxt.ForeColor = Color.SeaGreen;
+        }
+
+        private void reportxt_MouseLeave(object sender, EventArgs e)
+        {
+            if (Reportspanelclicked != true)
+            {
+                reportxt.ForeColor = Color.FromArgb(224, 224, 244);
+            }
         }
     }
 }
