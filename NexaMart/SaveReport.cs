@@ -1,9 +1,12 @@
-﻿using System;
+﻿using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -80,6 +83,31 @@ namespace NexaMart
             report.SetParameterValue(6, random.Next(100000,999999999).ToString());
             crystalReportViewer1.ReportSource = report;
             crystalReportViewer1.Refresh();
+
+
+            try
+            {
+                string mainNexaMartDirectory = Directory.GetParent(Directory.GetParent(Directory.GetParent(Application.StartupPath).FullName).FullName).FullName;
+                string outputDirectory = Path.Combine(mainNexaMartDirectory, "Bills");
+
+                if (!Directory.Exists(outputDirectory))
+                {
+                    Directory.CreateDirectory(outputDirectory);
+                }
+
+                string fileN = name + " " + DateTime.Now.ToString("dddd, dd MMMM yyyy HH-mm-ss");
+                string fileName = $"{fileN}.pdf";
+                string fullFilePath = Path.Combine(outputDirectory, fileName);
+
+         
+                report.ExportToDisk(ExportFormatType.PortableDocFormat, fullFilePath);
+
+                MessageBox.Show($"Report saved as PDF at: {fullFilePath}", "Export Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
     }

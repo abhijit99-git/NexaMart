@@ -249,5 +249,12 @@ namespace NexaMart
             }
 
         }
+
+        SearchBill b = new SearchBill();
+        private void button1_Click(object sender, EventArgs e)
+        {
+            b.Show();
+            b.BringToFront();
+        }
     }
 }
