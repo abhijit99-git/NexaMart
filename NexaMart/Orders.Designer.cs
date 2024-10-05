@@ -34,6 +34,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Orders));
             this.OrderGrid = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.SearchCustomerID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -62,12 +63,11 @@
             this.usernameProfile = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // OrderGrid
@@ -141,6 +141,16 @@
             this.panel2.Size = new System.Drawing.Size(431, 265);
             this.panel2.TabIndex = 13;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(390, 18);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 47;
+            this.pictureBox2.TabStop = false;
+            // 
             // SearchCustomerID
             // 
             this.SearchCustomerID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -212,6 +222,7 @@
             this.ordDelete.TabIndex = 7;
             this.ordDelete.Text = "DELETE";
             this.ordDelete.UseVisualStyleBackColor = false;
+            this.ordDelete.Visible = false;
             this.ordDelete.Click += new System.EventHandler(this.ordDelete_Click);
             // 
             // ordUPDATE
@@ -225,7 +236,7 @@
             this.ordUPDATE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ordUPDATE.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ordUPDATE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(126)))), ((int)(((byte)(139)))));
-            this.ordUPDATE.Location = new System.Drawing.Point(168, 134);
+            this.ordUPDATE.Location = new System.Drawing.Point(250, 134);
             this.ordUPDATE.Name = "ordUPDATE";
             this.ordUPDATE.Size = new System.Drawing.Size(105, 46);
             this.ordUPDATE.TabIndex = 6;
@@ -244,7 +255,7 @@
             this.ordADD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ordADD.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ordADD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(126)))), ((int)(((byte)(139)))));
-            this.ordADD.Location = new System.Drawing.Point(14, 134);
+            this.ordADD.Location = new System.Drawing.Point(62, 134);
             this.ordADD.Name = "ordADD";
             this.ordADD.Size = new System.Drawing.Size(107, 46);
             this.ordADD.TabIndex = 5;
@@ -518,16 +529,6 @@
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(390, 18);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(29, 27);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 47;
-            this.pictureBox2.TabStop = false;
-            // 
             // Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -547,10 +548,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
