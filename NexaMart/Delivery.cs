@@ -241,7 +241,7 @@ namespace NexaMart
         int updateDeliId = 0;
         private void DeliUPDATE_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(updateDeliId.ToString());
+            
             if (CustContact.Text == "")
             {
                 MessageBox.Show("Value Mismatch ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
