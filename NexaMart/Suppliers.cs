@@ -64,7 +64,7 @@ namespace NexaMart
         {
             SupplierGrid.ClearSelection();
             con.Open();
-            OleDbDataAdapter da = new OleDbDataAdapter("Select *from SUPPLIERS order by supp_id", con);
+            OleDbDataAdapter da = new OleDbDataAdapter("Select *from SUPPLIERS where 1=0 order by supp_id", con);
             DataTable dt = new DataTable();
             da.Fill(dt);
             SupplierGrid.DataSource = dt;
@@ -91,6 +91,7 @@ namespace NexaMart
             SupAddress.Text = "";
             SearchCustomerName.Text = "";
             this.Hide();
+            fill();
         }
 
         private void Suppliers_Load(object sender, EventArgs e)

@@ -69,7 +69,7 @@ namespace NexaMart
         {
             CustomerGrid.ClearSelection();
             con.Open();
-            OleDbDataAdapter da = new OleDbDataAdapter("Select *from Customers order by cust_id", con);
+            OleDbDataAdapter da = new OleDbDataAdapter("Select *from Customers where 1=0 order by cust_id", con);
             DataTable dt = new DataTable();
             da.Fill(dt);
             CustomerGrid.DataSource = dt;

@@ -71,7 +71,7 @@ namespace NexaMart
         {
             OrderGrid.ClearSelection();
             con.Open();
-            OleDbDataAdapter da = new OleDbDataAdapter("Select *from Orders order by order_id", con);
+            OleDbDataAdapter da = new OleDbDataAdapter("Select *from Orders where 1=0 order by order_id", con);
             DataTable dtt= new DataTable();
             da.Fill(dtt);
             OrderGrid.DataSource = dtt;
@@ -122,7 +122,7 @@ namespace NexaMart
             ProductSelect.Text = "Select Product";
             ProductSelect.Items.Clear();
             SearchCustomerID.Text = "";
-
+            fill();
             this.Hide();
         }
 

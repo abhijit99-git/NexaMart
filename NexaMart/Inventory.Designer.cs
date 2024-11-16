@@ -34,18 +34,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventory));
             this.InventoryGrid = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.inventoryUPDATE = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ResetInv = new System.Windows.Forms.Button();
+            this.SelectStatus = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.stock = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.prodStock = new System.Windows.Forms.Label();
-            this.SelectStatus = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.ResetInv = new System.Windows.Forms.Button();
+            this.inventoryUPDATE = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.SearchProd = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryGrid)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // InventoryGrid
@@ -116,6 +121,87 @@
             this.panel2.Size = new System.Drawing.Size(1127, 251);
             this.panel2.TabIndex = 33;
             // 
+            // ResetInv
+            // 
+            this.ResetInv.BackColor = System.Drawing.Color.Transparent;
+            this.ResetInv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ResetInv.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ResetInv.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(159)))), ((int)(((byte)(193)))));
+            this.ResetInv.FlatAppearance.BorderSize = 2;
+            this.ResetInv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(159)))), ((int)(((byte)(193)))));
+            this.ResetInv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ResetInv.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetInv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(82)))), ((int)(((byte)(115)))));
+            this.ResetInv.Location = new System.Drawing.Point(591, 148);
+            this.ResetInv.Name = "ResetInv";
+            this.ResetInv.Size = new System.Drawing.Size(381, 46);
+            this.ResetInv.TabIndex = 30;
+            this.ResetInv.Text = "RESET";
+            this.ResetInv.UseVisualStyleBackColor = false;
+            this.ResetInv.Click += new System.EventHandler(this.ResetInv_Click);
+            // 
+            // SelectStatus
+            // 
+            this.SelectStatus.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(120)))), ((int)(((byte)(167)))));
+            this.SelectStatus.FormattingEnabled = true;
+            this.SelectStatus.Items.AddRange(new object[] {
+            "ACTIVE",
+            "INACTIVE"});
+            this.SelectStatus.Location = new System.Drawing.Point(727, 65);
+            this.SelectStatus.Name = "SelectStatus";
+            this.SelectStatus.Size = new System.Drawing.Size(245, 28);
+            this.SelectStatus.TabIndex = 29;
+            this.SelectStatus.Text = "Select Status";
+            this.SelectStatus.DropDownClosed += new System.EventHandler(this.SelectStatus_DropDownClosed);
+            this.SelectStatus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SelectStatus_KeyPress);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label9.Location = new System.Drawing.Point(628, 65);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(50, 20);
+            this.label9.TabIndex = 28;
+            this.label9.Text = "Status";
+            // 
+            // stock
+            // 
+            this.stock.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.stock.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.stock.Location = new System.Drawing.Point(283, 63);
+            this.stock.Name = "stock";
+            this.stock.Size = new System.Drawing.Size(258, 20);
+            this.stock.TabIndex = 27;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(120)))), ((int)(((byte)(167)))));
+            this.label5.Location = new System.Drawing.Point(279, 73);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(261, 20);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "__________________________________________";
+            // 
+            // prodStock
+            // 
+            this.prodStock.AutoSize = true;
+            this.prodStock.BackColor = System.Drawing.Color.Transparent;
+            this.prodStock.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prodStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.prodStock.Location = new System.Drawing.Point(178, 65);
+            this.prodStock.Name = "prodStock";
+            this.prodStock.Size = new System.Drawing.Size(46, 20);
+            this.prodStock.TabIndex = 25;
+            this.prodStock.Text = "Stock";
+            // 
             // inventoryUPDATE
             // 
             this.inventoryUPDATE.BackColor = System.Drawing.Color.Transparent;
@@ -157,92 +243,60 @@
             this.pictureBox1.TabIndex = 35;
             this.pictureBox1.TabStop = false;
             // 
-            // stock
+            // pictureBox2
             // 
-            this.stock.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.stock.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.stock.Location = new System.Drawing.Point(283, 63);
-            this.stock.Name = "stock";
-            this.stock.Size = new System.Drawing.Size(258, 20);
-            this.stock.TabIndex = 27;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1104, 22);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 51;
+            this.pictureBox2.TabStop = false;
             // 
-            // label5
+            // SearchProd
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(120)))), ((int)(((byte)(167)))));
-            this.label5.Location = new System.Drawing.Point(279, 73);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(261, 20);
-            this.label5.TabIndex = 26;
-            this.label5.Text = "__________________________________________";
+            this.SearchProd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SearchProd.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchProd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.SearchProd.Location = new System.Drawing.Point(840, 22);
+            this.SearchProd.Name = "SearchProd";
+            this.SearchProd.Size = new System.Drawing.Size(258, 27);
+            this.SearchProd.TabIndex = 50;
+            this.SearchProd.TextChanged += new System.EventHandler(this.SearchCustomerID_TextChanged);
             // 
-            // prodStock
+            // label3
             // 
-            this.prodStock.AutoSize = true;
-            this.prodStock.BackColor = System.Drawing.Color.Transparent;
-            this.prodStock.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prodStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.prodStock.Location = new System.Drawing.Point(178, 65);
-            this.prodStock.Name = "prodStock";
-            this.prodStock.Size = new System.Drawing.Size(46, 20);
-            this.prodStock.TabIndex = 25;
-            this.prodStock.Text = "Stock";
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(115)))), ((int)(((byte)(141)))));
+            this.label3.Location = new System.Drawing.Point(836, 40);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(255, 20);
+            this.label3.TabIndex = 49;
+            this.label3.Text = "_________________________________________";
             // 
-            // SelectStatus
+            // label7
             // 
-            this.SelectStatus.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SelectStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(120)))), ((int)(((byte)(167)))));
-            this.SelectStatus.FormattingEnabled = true;
-            this.SelectStatus.Items.AddRange(new object[] {
-            "ACTIVE",
-            "INACTIVE"});
-            this.SelectStatus.Location = new System.Drawing.Point(727, 65);
-            this.SelectStatus.Name = "SelectStatus";
-            this.SelectStatus.Size = new System.Drawing.Size(245, 28);
-            this.SelectStatus.TabIndex = 29;
-            this.SelectStatus.Text = "Select Status";
-            this.SelectStatus.DropDownClosed += new System.EventHandler(this.SelectStatus_DropDownClosed);
-            this.SelectStatus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SelectStatus_KeyPress);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(628, 65);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 20);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "Status";
-            // 
-            // ResetInv
-            // 
-            this.ResetInv.BackColor = System.Drawing.Color.Transparent;
-            this.ResetInv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ResetInv.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ResetInv.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(159)))), ((int)(((byte)(193)))));
-            this.ResetInv.FlatAppearance.BorderSize = 2;
-            this.ResetInv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(159)))), ((int)(((byte)(193)))));
-            this.ResetInv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ResetInv.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResetInv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(82)))), ((int)(((byte)(115)))));
-            this.ResetInv.Location = new System.Drawing.Point(591, 148);
-            this.ResetInv.Name = "ResetInv";
-            this.ResetInv.Size = new System.Drawing.Size(381, 46);
-            this.ResetInv.TabIndex = 30;
-            this.ResetInv.Text = "RESET";
-            this.ResetInv.UseVisualStyleBackColor = false;
-            this.ResetInv.Click += new System.EventHandler(this.ResetInv_Click);
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label7.Location = new System.Drawing.Point(705, 24);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(125, 20);
+            this.label7.TabIndex = 48;
+            this.label7.Text = "PRODUCT NAME";
             // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1151, 755);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.SearchProd);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.InventoryGrid);
             this.Controls.Add(this.panel2);
@@ -257,6 +311,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,5 +330,9 @@
         private System.Windows.Forms.ComboBox SelectStatus;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button ResetInv;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox SearchProd;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -58,6 +58,8 @@ namespace NexaMart
         {
             stock.Text = "";
             SelectStatus.Text = "Select Status";
+            SearchProd.Text = "";
+            fill();
         }
 
         private void inventoryUPDATE_Click(object sender, EventArgs e)
@@ -82,7 +84,21 @@ namespace NexaMart
             {
                 con.Close();
             }
-            fill();
+            InventoryGrid.ClearSelection();
+            con.Open();
+            OleDbDataAdapter da = new OleDbDataAdapter($"Select *from Inventory order by pro_id", con);
+            if (SearchProd.Text != "")
+            {
+                 da = new OleDbDataAdapter($"Select *from Inventory where pro_name='{SearchProd.Text}'order by pro_id", con);
+            }
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            InventoryGrid.DataSource = dt;
+            con.Close();
+            InventoryGrid.Columns[0].HeaderText = "ID";
+            InventoryGrid.Columns[1].HeaderText = "Product Name";
+            InventoryGrid.Columns[2].HeaderText = "Stock";
+            InventoryGrid.Columns[3].HeaderText = "Status";
         }
 
         string prodid = "";
@@ -97,6 +113,28 @@ namespace NexaMart
                 stock.Text = row.Cells["stock"].Value.ToString();
                 SelectStatus.Text = row.Cells["status"].Value.ToString();
                 prodid = row.Cells["pro_id"].Value.ToString();
+            }
+        }
+
+        private void SearchCustomerID_TextChanged(object sender, EventArgs e)
+        {
+            if (SearchProd.Text == "")
+            {
+                fill();
+            }
+            else
+            {
+                InventoryGrid.ClearSelection();
+                con.Open();
+                OleDbDataAdapter da = new OleDbDataAdapter($"Select *from Inventory where pro_name='{SearchProd.Text}'order by pro_id", con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                InventoryGrid.DataSource = dt;
+                con.Close();
+                InventoryGrid.Columns[0].HeaderText = "ID";
+                InventoryGrid.Columns[1].HeaderText = "Product Name";
+                InventoryGrid.Columns[2].HeaderText = "Stock";
+                InventoryGrid.Columns[3].HeaderText = "Status";
             }
         }
     }

@@ -34,7 +34,7 @@ namespace NexaMart
         {
             BillingOrderGrid.ClearSelection();
             con.Open();
-            OleDbDataAdapter da = new OleDbDataAdapter("Select *from Orders order by order_id", con);
+            OleDbDataAdapter da = new OleDbDataAdapter("Select *from Orders where 1=0 order by order_id", con);
             DataTable dt = new DataTable();
             da.Fill(dt);
             BillingOrderGrid.DataSource = dt;
@@ -53,7 +53,7 @@ namespace NexaMart
         {
             BillingSelectPrint.ClearSelection();
             con.Open();
-            OleDbDataAdapter daa = new OleDbDataAdapter("Select *from Billing order by order_id", con);
+            OleDbDataAdapter daa = new OleDbDataAdapter("Select *from Billing  order by order_id", con);
             DataTable dtt = new DataTable();
             daa.Fill(dtt);
             BillingSelectPrint.DataSource = dtt;
@@ -98,6 +98,7 @@ namespace NexaMart
             if (SearchCustomerID.Text == "")
             {
                 fill();
+                BillingSelectPrint.ClearSelection();
             }
             else
             {
@@ -129,7 +130,7 @@ namespace NexaMart
                 OleDbCommand cmd = new OleDbCommand($"Insert into Billing values({OID},'{CustID}','{Pname}','{ODATE}',{Quantity},{Amt})", con);
                 cmd.ExecuteNonQuery();
                 con.Close();
-                fillBill();
+               fillBill();
                 OID = "";
                 CustID = "";
                  Pname = "";

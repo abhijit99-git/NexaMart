@@ -65,7 +65,7 @@ namespace NexaMart
         {
             ProductGrid.ClearSelection();
             con.Open();
-            OleDbDataAdapter da = new OleDbDataAdapter("Select *from Products order by product_id", con);
+            OleDbDataAdapter da = new OleDbDataAdapter("Select *from Products where  1 = 0 order by product_id", con);
             DataTable dt = new DataTable();
             da.Fill(dt);
             ProductGrid.DataSource = dt;
@@ -168,7 +168,7 @@ namespace NexaMart
             {
                 con.Close();
             }
-            fill();
+            //fill();
             SearchCustomerName.Text = "";
             iszeroRecords();
         }
@@ -214,6 +214,7 @@ namespace NexaMart
             StockProd.Text = "";
             SearchCustomerName.Text = "";
             this.Hide();
+            fill();
         }
 
         private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -249,6 +250,7 @@ namespace NexaMart
             if (SearchCustomerName.Text == "")
             {
                 fill();
+                ProductGrid.ClearSelection();
             }
             else
             {
@@ -266,7 +268,7 @@ namespace NexaMart
 
         private void label11_Click(object sender, EventArgs e)
         {
-           
+            fill();
             ProdNAME.Text = "";
             ProdPRICE.Text = "";
             ProdCategory.Text = "Select Category";
@@ -299,6 +301,24 @@ namespace NexaMart
                         MessageBox.Show("Something Went Wrong , TRY AGAIN");
                     }
                 }
+            }
+        }
+
+        private void ProdCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(ProdID.Text=="" && ProdNAME.Text =="")
+            {
+                ProductGrid.ClearSelection();
+                con.Open();
+                OleDbDataAdapter da = new OleDbDataAdapter($"Select *from Products where Category_name='{ProdCategory.Text}' order by product_id", con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                ProductGrid.DataSource = dt;
+                con.Close();
+                ProductGrid.Columns[0].HeaderText = "ID";
+                ProductGrid.Columns[1].HeaderText = "Product Name";
+                ProductGrid.Columns[2].HeaderText = "Price";
+                ProductGrid.Columns[3].HeaderText = "Category";
             }
         }
     }
