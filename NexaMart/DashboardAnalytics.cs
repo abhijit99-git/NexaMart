@@ -103,7 +103,7 @@ namespace NexaMart
         {
             Form1 formtot = new Form1();
             OleDbConnection contot = formtot.con;
-            OleDbCommand cmd = new OleDbCommand("Select sum(total_amt) from Orders", contot);
+            OleDbCommand cmd = new OleDbCommand("Select sum(total_amt) from Orders where status='PAID'", contot);
             try
             {
                 contot.Open();
@@ -121,6 +121,7 @@ namespace NexaMart
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+                
             }
 
             contot.Close();
@@ -158,6 +159,11 @@ namespace NexaMart
             ProdFill();
             fillTotal();
             filltoday();
+        }
+
+        private void TotalEarnText_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

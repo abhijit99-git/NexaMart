@@ -157,6 +157,7 @@
             this.TotalEarnText.Size = new System.Drawing.Size(77, 37);
             this.TotalEarnText.TabIndex = 14;
             this.TotalEarnText.Text = "₹ 0.0";
+            this.TotalEarnText.Click += new System.EventHandler(this.TotalEarnText_Click);
             // 
             // label2
             // 

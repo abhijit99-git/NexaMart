@@ -28,13 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employees));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employees));
             this.empAdd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.SearchCustomerName = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.empHireDate = new System.Windows.Forms.DateTimePicker();
             this.empSalary = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -56,16 +61,11 @@
             this.empUpdate = new System.Windows.Forms.Button();
             this.EmployeesGrid = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.SearchCustomerName = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeesGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // empAdd
@@ -81,7 +81,7 @@
             this.empAdd.ForeColor = System.Drawing.Color.DarkGreen;
             this.empAdd.Location = new System.Drawing.Point(12, 98);
             this.empAdd.Name = "empAdd";
-            this.empAdd.Size = new System.Drawing.Size(107, 46);
+            this.empAdd.Size = new System.Drawing.Size(182, 46);
             this.empAdd.TabIndex = 5;
             this.empAdd.Text = "ADD";
             this.empAdd.UseVisualStyleBackColor = false;
@@ -125,6 +125,65 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(431, 382);
             this.panel1.TabIndex = 7;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(372, 301);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 51;
+            this.pictureBox2.TabStop = false;
+            // 
+            // SearchCustomerName
+            // 
+            this.SearchCustomerName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SearchCustomerName.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchCustomerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.SearchCustomerName.Location = new System.Drawing.Point(108, 301);
+            this.SearchCustomerName.Name = "SearchCustomerName";
+            this.SearchCustomerName.Size = new System.Drawing.Size(258, 27);
+            this.SearchCustomerName.TabIndex = 50;
+            this.SearchCustomerName.TextChanged += new System.EventHandler(this.SearchCustomerName_TextChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(115)))), ((int)(((byte)(141)))));
+            this.label10.Location = new System.Drawing.Point(104, 319);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(255, 20);
+            this.label10.TabIndex = 49;
+            this.label10.Text = "_________________________________________";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label11.Location = new System.Drawing.Point(45, 303);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 20);
+            this.label11.TabIndex = 48;
+            this.label11.Text = "NAME";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label8.Location = new System.Drawing.Point(368, 353);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(50, 20);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "RESET";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // empHireDate
             // 
@@ -339,18 +398,20 @@
             this.empDelete.BackColor = System.Drawing.Color.Transparent;
             this.empDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.empDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.empDelete.Enabled = false;
             this.empDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(156)))), ((int)(((byte)(113)))));
             this.empDelete.FlatAppearance.BorderSize = 2;
             this.empDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(156)))), ((int)(((byte)(113)))));
             this.empDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.empDelete.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empDelete.ForeColor = System.Drawing.Color.DarkGreen;
-            this.empDelete.Location = new System.Drawing.Point(318, 98);
+            this.empDelete.Location = new System.Drawing.Point(165, 98);
             this.empDelete.Name = "empDelete";
             this.empDelete.Size = new System.Drawing.Size(100, 46);
             this.empDelete.TabIndex = 7;
             this.empDelete.Text = "DELETE";
             this.empDelete.UseVisualStyleBackColor = false;
+            this.empDelete.Visible = false;
             this.empDelete.Click += new System.EventHandler(this.empDelete_Click);
             // 
             // empUpdate
@@ -364,9 +425,9 @@
             this.empUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.empUpdate.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empUpdate.ForeColor = System.Drawing.Color.DarkGreen;
-            this.empUpdate.Location = new System.Drawing.Point(166, 98);
+            this.empUpdate.Location = new System.Drawing.Point(237, 98);
             this.empUpdate.Name = "empUpdate";
-            this.empUpdate.Size = new System.Drawing.Size(105, 46);
+            this.empUpdate.Size = new System.Drawing.Size(181, 46);
             this.empUpdate.TabIndex = 6;
             this.empUpdate.Text = "UPDATE";
             this.empUpdate.UseVisualStyleBackColor = false;
@@ -435,65 +496,6 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(368, 353);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 20);
-            this.label8.TabIndex = 26;
-            this.label8.Text = "RESET";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(372, 301);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(29, 27);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 51;
-            this.pictureBox2.TabStop = false;
-            // 
-            // SearchCustomerName
-            // 
-            this.SearchCustomerName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SearchCustomerName.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchCustomerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SearchCustomerName.Location = new System.Drawing.Point(108, 301);
-            this.SearchCustomerName.Name = "SearchCustomerName";
-            this.SearchCustomerName.Size = new System.Drawing.Size(258, 27);
-            this.SearchCustomerName.TabIndex = 50;
-            this.SearchCustomerName.TextChanged += new System.EventHandler(this.SearchCustomerName_TextChanged);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(115)))), ((int)(((byte)(141)))));
-            this.label10.Location = new System.Drawing.Point(104, 319);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(255, 20);
-            this.label10.TabIndex = 49;
-            this.label10.Text = "_________________________________________";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label11.Location = new System.Drawing.Point(45, 303);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(53, 20);
-            this.label11.TabIndex = 48;
-            this.label11.Text = "NAME";
-            // 
             // Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -512,10 +514,10 @@
             this.Load += new System.EventHandler(this.Employees_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.EmployeesGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
