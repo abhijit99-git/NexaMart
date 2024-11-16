@@ -27,7 +27,7 @@ namespace NexaMart
         {
             DeliveryGrid.ClearSelection();
             con.Open();
-            OleDbDataAdapter da = new OleDbDataAdapter("Select *from Deliveries order by ID", con);
+            OleDbDataAdapter da = new OleDbDataAdapter("Select *from Deliveries where 1=0 order by ID", con);
             DataTable dtt = new DataTable();
             da.Fill(dtt);
             DeliveryGrid.DataSource = dtt;
@@ -267,6 +267,7 @@ namespace NexaMart
                 fill();
             }
             fill();
+            SearchCustomerName.Text = "";
             iszeroRecords();
         }
 

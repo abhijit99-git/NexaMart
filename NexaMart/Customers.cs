@@ -173,6 +173,7 @@ namespace NexaMart
                     con.Close();
                 }
                 fill();
+                SearchCustomerName.Text = "";
                 iszeroRecords();
             }
             else

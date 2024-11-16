@@ -68,7 +68,7 @@ namespace NexaMart
         void fill()
         {
             con.Open();
-            OleDbDataAdapter da = new OleDbDataAdapter("Select *from Employees order by ID", con);
+            OleDbDataAdapter da = new OleDbDataAdapter("Select *from Employees where 1=0 order by ID", con);
             DataTable dt = new DataTable();
             da.Fill(dt);
             EmployeesGrid.DataSource = dt;
