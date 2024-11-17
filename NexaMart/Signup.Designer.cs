@@ -35,6 +35,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.checkpass = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.signupClick)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -45,12 +46,13 @@
             // 
             this.signupClick.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.signupClick.BackColor = System.Drawing.Color.Transparent;
-            this.signupClick.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("signupClick.BackgroundImage")));
             this.signupClick.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.signupClick.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.signupClick.Location = new System.Drawing.Point(827, 454);
+            this.signupClick.Image = ((System.Drawing.Image)(resources.GetObject("signupClick.Image")));
+            this.signupClick.Location = new System.Drawing.Point(166, 563);
             this.signupClick.Name = "signupClick";
-            this.signupClick.Size = new System.Drawing.Size(205, 72);
+            this.signupClick.Size = new System.Drawing.Size(185, 54);
+            this.signupClick.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.signupClick.TabIndex = 7;
             this.signupClick.TabStop = false;
             this.signupClick.Click += new System.EventHandler(this.pictureBox4_Click);
@@ -61,8 +63,8 @@
             this.signupPass.BackColor = System.Drawing.Color.White;
             this.signupPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.signupPass.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signupPass.ForeColor = System.Drawing.Color.Indigo;
-            this.signupPass.Location = new System.Drawing.Point(769, 394);
+            this.signupPass.ForeColor = System.Drawing.Color.DarkGreen;
+            this.signupPass.Location = new System.Drawing.Point(78, 428);
             this.signupPass.Name = "signupPass";
             this.signupPass.PasswordChar = '*';
             this.signupPass.Size = new System.Drawing.Size(263, 20);
@@ -75,8 +77,8 @@
             this.signupUser.BackColor = System.Drawing.Color.White;
             this.signupUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.signupUser.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signupUser.ForeColor = System.Drawing.Color.Indigo;
-            this.signupUser.Location = new System.Drawing.Point(769, 273);
+            this.signupUser.ForeColor = System.Drawing.Color.DarkGreen;
+            this.signupUser.Location = new System.Drawing.Point(78, 362);
             this.signupUser.Name = "signupUser";
             this.signupUser.Size = new System.Drawing.Size(263, 20);
             this.signupUser.TabIndex = 5;
@@ -87,7 +89,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::NexaMart.Properties.Resources.minimize_sign;
-            this.pictureBox3.Location = new System.Drawing.Point(1082, 12);
+            this.pictureBox3.Location = new System.Drawing.Point(525, 2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(22, 19);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -101,7 +103,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::NexaMart.Properties.Resources.cancel;
-            this.pictureBox1.Location = new System.Drawing.Point(1123, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(553, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(20, 19);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -114,13 +116,26 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(23, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(8, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 28);
+            this.pictureBox2.Size = new System.Drawing.Size(19, 19);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // checkpass
+            // 
+            this.checkpass.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.checkpass.BackColor = System.Drawing.Color.White;
+            this.checkpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkpass.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkpass.ForeColor = System.Drawing.Color.DarkGreen;
+            this.checkpass.Location = new System.Drawing.Point(78, 501);
+            this.checkpass.Name = "checkpass";
+            this.checkpass.PasswordChar = '*';
+            this.checkpass.Size = new System.Drawing.Size(263, 20);
+            this.checkpass.TabIndex = 14;
             // 
             // Signup
             // 
@@ -129,6 +144,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1155, 703);
+            this.Controls.Add(this.checkpass);
             this.Controls.Add(this.signupClick);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
@@ -158,5 +174,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox checkpass;
     }
 }

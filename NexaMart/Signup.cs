@@ -78,26 +78,34 @@ namespace NexaMart
             }
             else
             {
-                try
-                {
-                    con.Open();
-                    string query = "INSERT INTO Admin (ad_name, ad_password) VALUES ('" + signupUser.Text + "', '" + signupPass.Text + "')";
-                    OleDbCommand cmd = new OleDbCommand(query, con);
-                    cmd.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("error "+ex);
-                }
-                finally
-                {
-                    con.Close();
-                }
 
-                MessageBox.Show(" ㅤ  Sign up Sucessfully!    ㅤ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Form1 f= new Form1();
-                f.Show();
-                this.Close();
+                if (checkpass.Text != signupPass.Text)
+                {
+                    MessageBox.Show("Confirm Password Incorrect ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    try
+                    {
+                        con.Open();
+                        string query = "INSERT INTO Admin (ad_name, ad_password) VALUES ('" + signupUser.Text + "', '" + signupPass.Text + "')";
+                        OleDbCommand cmd = new OleDbCommand(query, con);
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("error " + ex);
+                    }
+                    finally
+                    {
+                        con.Close();
+                    }
+
+                    MessageBox.Show(" ㅤ  Sign up Sucessfully!    ㅤ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Form1 f = new Form1();
+                    f.Show();
+                    this.Close();
+                }
             }
         }
 

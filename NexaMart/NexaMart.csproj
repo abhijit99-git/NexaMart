@@ -135,6 +135,12 @@
     <Compile Include="Employees.Designer.cs">
       <DependentUpon>Employees.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmployeesDuty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeesDuty.Designer.cs">
+      <DependentUpon>EmployeesDuty.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmpReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -284,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Employees.resx">
       <DependentUpon>Employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeesDuty.resx">
+      <DependentUpon>EmployeesDuty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmpReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

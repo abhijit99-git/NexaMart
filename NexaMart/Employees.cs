@@ -154,6 +154,8 @@ namespace NexaMart
                     con.Open();
                     OleDbCommand cmd = new OleDbCommand("Insert into Employees values(" + Convert.ToInt32(empID.Text) + ",'" + empName.Text + "','" + empContact.Text + "','" + empHireDate.Value.ToString("d-M-yyyy") + "'," + Convert.ToInt32(empSalary.Text) + ",'" + empRole.Text + "')", con);
                     cmd.ExecuteNonQuery();
+                    cmd = new OleDbCommand($"Insert into EmployeesDuty values({Convert.ToInt32(empID.Text)},'{empName.Text}','Working','{Empaddr.Text}')", con);
+                    cmd.ExecuteNonQuery();
                     MessageBox.Show("Added Successfully");
                 }
                 catch (Exception ex)
@@ -299,6 +301,14 @@ namespace NexaMart
                 EmployeesGrid.Columns[4].HeaderText = "Salary";
                 EmployeesGrid.Columns[5].HeaderText = "Role";
             }
+        }
+
+        private void statusbtn_Click(object sender, EventArgs e)
+        {
+
+            EmployeesDuty em= new EmployeesDuty();
+            em.Show();
+            
         }
     }
 }
