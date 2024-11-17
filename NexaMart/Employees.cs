@@ -306,8 +306,9 @@ namespace NexaMart
         private void statusbtn_Click(object sender, EventArgs e)
         {
 
-            EmployeesDuty em= new EmployeesDuty();
-            em.Show();
+            EmployeesDuty em= new EmployeesDuty(CurrD);
+            CurrD.loadform(em);
+            CurrD.employeeduty = true;
             
         }
     }

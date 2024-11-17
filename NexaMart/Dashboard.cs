@@ -85,6 +85,7 @@ namespace NexaMart
 
         private Form activeForm = null;
 
+        public bool employeeduty = false;
         private void SidebarTimer_Tick(object sender, EventArgs e)
         {
      
@@ -105,6 +106,10 @@ namespace NexaMart
                     if (homepanelclicked == true)
                     {
                         loadHomeOption();
+                        if (employeeduty)
+                        {
+                            loadform(new EmployeesDuty(this));
+                        }
                     }
                     else if (categoripanelclicked == true)
                     {
@@ -163,6 +168,11 @@ namespace NexaMart
                     if (homepanelclicked == true)
                     {
                         loadHomeOption();
+                       
+                        if (employeeduty)
+                        {
+                            loadform(new EmployeesDuty(this));
+                        }
                     }
                     else if (categoripanelclicked == true)
                     {
