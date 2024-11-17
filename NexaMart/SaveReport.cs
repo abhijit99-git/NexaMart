@@ -81,6 +81,11 @@ namespace NexaMart
             report.SetParameterValue(4, address);
             report.SetParameterValue(5, datee);
             report.SetParameterValue(6, random.Next(100000,999999999).ToString());
+
+            UpdateReportDatabaseConnection(report); 
+
+
+
             crystalReportViewer1.ReportSource = report;
             crystalReportViewer1.Refresh();
 
@@ -109,6 +114,44 @@ namespace NexaMart
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        void UpdateReportDatabaseConnection(ReportDocument report)
+        {
+            // Dynamic database path
+            string databasePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "NexaMartDB.accdb");
+
+            // Update connection for main report tables
+            foreach (Table table in report.Database.Tables)
+            {
+                TableLogOnInfo logOnInfo = table.LogOnInfo;
+                logOnInfo.ConnectionInfo.DatabaseName = databasePath;
+                table.ApplyLogOnInfo(logOnInfo);
+            }
+
+            // Update connection for all subreports
+            foreach (Section section in report.ReportDefinition.Sections)
+            {
+                foreach (ReportObject reportObject in section.ReportObjects)
+                {
+                    if (reportObject.Kind == ReportObjectKind.SubreportObject)
+                    {
+                        SubreportObject subreportObject = (SubreportObject)reportObject;
+                        ReportDocument subReportDocument = subreportObject.OpenSubreport(subreportObject.SubreportName);
+
+                        foreach (Table table in subReportDocument.Database.Tables)
+                        {
+                            TableLogOnInfo logOnInfo = table.LogOnInfo;
+                            logOnInfo.ConnectionInfo.DatabaseName = databasePath;
+                            table.ApplyLogOnInfo(logOnInfo);
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
 
     }
 }

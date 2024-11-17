@@ -24,7 +24,7 @@ namespace NexaMart
 
         private void crystalReportViewer2_Load(object sender, EventArgs e)
         {
-            
+            /*
             if (repo =="Employee")
             {
                 EmpReport report = new EmpReport();
@@ -65,9 +65,9 @@ namespace NexaMart
                 crystalReportViewer2.Refresh();
                 crystalReportViewer2.RefreshReport();
             }
+            */
 
-
-            /*
+            
             //change
             // Define the dynamic database path
             string databasePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "NexaMartDB.accdb");
@@ -112,19 +112,19 @@ namespace NexaMart
                 crystalReportViewer2.Refresh();
                 crystalReportViewer2.RefreshReport();
             }
-            */
+            
         }
 
 
         //change
-        //private void UpdateReportDatabaseConnection(ReportDocument report, string databasePath)
-        //{
-        //    foreach (Table table in report.Database.Tables)
-        //    {
-        //        TableLogOnInfo logOnInfo = table.LogOnInfo;
-        //        logOnInfo.ConnectionInfo.DatabaseName = databasePath; // Set dynamic database path
-        //        table.ApplyLogOnInfo(logOnInfo);
-        //    }
-        //}
+        private void UpdateReportDatabaseConnection(ReportDocument report, string databasePath)
+        {
+            foreach (Table table in report.Database.Tables)
+           {
+                TableLogOnInfo logOnInfo = table.LogOnInfo;
+               logOnInfo.ConnectionInfo.DatabaseName = databasePath; // Set dynamic database path
+              table.ApplyLogOnInfo(logOnInfo);
+           }
+        }
     }
 }
