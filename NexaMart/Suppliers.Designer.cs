@@ -193,7 +193,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(53, 20);
             this.label12.TabIndex = 48;
-            this.label12.Text = "NAME";
+            this.label12.Text = "Phone";
             // 
             // supEXIT
             // 

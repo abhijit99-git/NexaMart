@@ -28,13 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employees));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employees));
             this.empAdd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Empaddr = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.SearchCustomerName = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -54,22 +58,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.usernameProfile = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.statusbtn = new System.Windows.Forms.Button();
             this.EmpExit = new System.Windows.Forms.Button();
             this.empRole = new System.Windows.Forms.ComboBox();
             this.empDelete = new System.Windows.Forms.Button();
             this.empUpdate = new System.Windows.Forms.Button();
             this.EmployeesGrid = new System.Windows.Forms.DataGridView();
-            this.Empaddr = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.statusbtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeesGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // empAdd
@@ -133,6 +133,50 @@
             this.panel1.Size = new System.Drawing.Size(431, 382);
             this.panel1.TabIndex = 7;
             // 
+            // Empaddr
+            // 
+            this.Empaddr.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Empaddr.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Empaddr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Empaddr.Location = new System.Drawing.Point(143, 266);
+            this.Empaddr.Name = "Empaddr";
+            this.Empaddr.Size = new System.Drawing.Size(258, 20);
+            this.Empaddr.TabIndex = 54;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label12.Location = new System.Drawing.Point(139, 276);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(249, 20);
+            this.label12.TabIndex = 53;
+            this.label12.Text = "________________________________________";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label13.Location = new System.Drawing.Point(49, 266);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(63, 20);
+            this.label13.TabIndex = 52;
+            this.label13.Text = "Address";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(377, 314);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 51;
+            this.pictureBox2.TabStop = false;
+            // 
             // SearchCustomerName
             // 
             this.SearchCustomerName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -162,11 +206,11 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label11.Location = new System.Drawing.Point(50, 316);
+            this.label11.Location = new System.Drawing.Point(49, 316);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 20);
             this.label11.TabIndex = 48;
-            this.label11.Text = "NAME";
+            this.label11.Text = "Phone";
             // 
             // label8
             // 
@@ -354,6 +398,25 @@
             this.panel2.Size = new System.Drawing.Size(431, 227);
             this.panel2.TabIndex = 8;
             // 
+            // statusbtn
+            // 
+            this.statusbtn.BackColor = System.Drawing.Color.Transparent;
+            this.statusbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.statusbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.statusbtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(156)))), ((int)(((byte)(113)))));
+            this.statusbtn.FlatAppearance.BorderSize = 2;
+            this.statusbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(156)))), ((int)(((byte)(113)))));
+            this.statusbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.statusbtn.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusbtn.ForeColor = System.Drawing.Color.DarkGreen;
+            this.statusbtn.Location = new System.Drawing.Point(300, 98);
+            this.statusbtn.Name = "statusbtn";
+            this.statusbtn.Size = new System.Drawing.Size(118, 46);
+            this.statusbtn.TabIndex = 10;
+            this.statusbtn.Text = "STATUS";
+            this.statusbtn.UseVisualStyleBackColor = false;
+            this.statusbtn.Click += new System.EventHandler(this.statusbtn_Click);
+            // 
             // EmpExit
             // 
             this.EmpExit.BackColor = System.Drawing.Color.Transparent;
@@ -484,59 +547,6 @@
             this.EmployeesGrid.TabIndex = 9;
             this.EmployeesGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EmployeesGrid_CellContentClick);
             // 
-            // Empaddr
-            // 
-            this.Empaddr.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Empaddr.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Empaddr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Empaddr.Location = new System.Drawing.Point(143, 266);
-            this.Empaddr.Name = "Empaddr";
-            this.Empaddr.Size = new System.Drawing.Size(258, 20);
-            this.Empaddr.TabIndex = 54;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label12.Location = new System.Drawing.Point(139, 276);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(249, 20);
-            this.label12.TabIndex = 53;
-            this.label12.Text = "________________________________________";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label13.Location = new System.Drawing.Point(49, 266);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(63, 20);
-            this.label13.TabIndex = 52;
-            this.label13.Text = "Address";
-            // 
-            // statusbtn
-            // 
-            this.statusbtn.BackColor = System.Drawing.Color.Transparent;
-            this.statusbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.statusbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.statusbtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(156)))), ((int)(((byte)(113)))));
-            this.statusbtn.FlatAppearance.BorderSize = 2;
-            this.statusbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(156)))), ((int)(((byte)(113)))));
-            this.statusbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.statusbtn.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusbtn.ForeColor = System.Drawing.Color.DarkGreen;
-            this.statusbtn.Location = new System.Drawing.Point(300, 98);
-            this.statusbtn.Name = "statusbtn";
-            this.statusbtn.Size = new System.Drawing.Size(118, 46);
-            this.statusbtn.TabIndex = 10;
-            this.statusbtn.Text = "STATUS";
-            this.statusbtn.UseVisualStyleBackColor = false;
-            this.statusbtn.Click += new System.EventHandler(this.statusbtn_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -546,16 +556,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(377, 314);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(29, 27);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 51;
-            this.pictureBox2.TabStop = false;
             // 
             // Employees
             // 
@@ -575,10 +575,10 @@
             this.Load += new System.EventHandler(this.Employees_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.EmployeesGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

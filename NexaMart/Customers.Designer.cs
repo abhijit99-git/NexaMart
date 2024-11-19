@@ -232,7 +232,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 20);
             this.label10.TabIndex = 44;
-            this.label10.Text = "NAME";
+            this.label10.Text = "Phone";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // custUPDATE

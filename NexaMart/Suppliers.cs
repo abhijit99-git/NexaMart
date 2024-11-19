@@ -253,7 +253,7 @@ namespace NexaMart
             }
             else
             {
-                OleDbDataAdapter daS = new OleDbDataAdapter($"Select *from SUPPLIERS where supp_name='{SearchCustomerName.Text}'", con);
+                OleDbDataAdapter daS = new OleDbDataAdapter($"Select *from SUPPLIERS where supp_phone='{SearchCustomerName.Text}'", con);
                 DataTable dtS = new DataTable();
                 daS.Fill(dtS);
                 SupplierGrid.DataSource = dtS;

@@ -289,7 +289,7 @@ namespace NexaMart
             }
             else
             {
-                OleDbDataAdapter daS = new OleDbDataAdapter($"Select *from Employees where Ename='{SearchCustomerName.Text}' ", con);
+                OleDbDataAdapter daS = new OleDbDataAdapter($"Select *from Employees where Ephone='{SearchCustomerName.Text}' ", con);
                 DataTable dtS = new DataTable();
                 daS.Fill(dtS);
                 EmployeesGrid.DataSource = dtS;

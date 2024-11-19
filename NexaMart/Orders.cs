@@ -272,7 +272,7 @@ namespace NexaMart
             {
                 cn.Open();
 
-                OleDbCommand cm = new OleDbCommand($"select *from Inventory where pro_name='{ProductSelect.Text}' and stock>{Convert.ToInt32(orderQTY.Text)}", cn);
+                OleDbCommand cm = new OleDbCommand($"select *from Inventory where pro_name='{ProductSelect.Text}' and stock>={Convert.ToInt32(orderQTY.Text)}", cn);
 
                 OleDbDataReader read = cm.ExecuteReader();
                 if (read.HasRows)

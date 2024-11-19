@@ -227,7 +227,7 @@ namespace NexaMart
             }
             else
             {
-                OleDbDataAdapter daS = new OleDbDataAdapter($"Select *from Customers where cust_name='{SearchCustomerName.Text}' order by cust_id", con);
+                OleDbDataAdapter daS = new OleDbDataAdapter($"Select *from Customers where cust_number='{SearchCustomerName.Text}' order by cust_id", con);
                 DataTable dtS = new DataTable();
                 daS.Fill(dtS);
                 CustomerGrid.DataSource = dtS;
